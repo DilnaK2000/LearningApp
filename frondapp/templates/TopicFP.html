@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>functional Programming topic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="#" class="nav-item nav-link" style="margin-right:150px">Request Demo</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+    <div class="row" style="width:1400px;overflow: hidden;overflow-y: scroll;height:700px" >
+      <div class="row">
+        <div class="col-4" style="margin-top:50px;width:300px;">
+          <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+              <nav class="nav nav-pills flex-column" style="gap: 20px;">
+                <a class="nav-link" href="#item-1">Introduction to Functional Programming</a>
+                <a class="nav-link" href="#item-2">What is functional programming?</a>
+                <a class="nav-link" href="#item-3">Functional Programming Concepts</a>
+                <a class="nav-link" href="#item-4">Advantages of functional programming </a>
+                <a class="nav-link" href="#item-5">Drawbacks of Functional Programming </a>
+                <a class="nav-link" href="#item-6">Functional programming languages</a>
+                <a class="nav-link" href="#item-7">Interview Questions</a>
+              </nav>
+            </nav>
+        </div>
+
+        <div class="col-8" style="margin-top:50px">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="#item-1">
+              <h2>Introduction to Functional Programming</h2>
+                <div style="width:980px;height:2px;background-color:#adb5bd;"></div>
+              <p>In this current remote work setup, employers have upgraded their standards when it comes
+                  to hiring programmers. They look for individuals who possess the ability to use multiple
+                  functional paradigms to solve business problems. Functional programming has gained popularity
+                  due to its adaptability and efficiency to solve real-world problems. This article will cover
+                  the core concepts and the advantages of functional programming.</p>
+            </div>
+
+            <div id="#item-2">
+              <h3>What is functional programming?</h3>
+              <p>Functional programming is a declarative programming paradigm style where one applies pure functions
+                  in sequence to solve complex problems. Functions take an input value and produce an output value
+                  without being affected by the program. Functional programming mainly focuses on what to solve and
+                  uses expressions instead of statements. Functional programming excels mostly at mathematical
+                  functions where the values don’t have any correlation and doesn’t make use of concepts like shared
+                  state and mutable data used in object-oriented programming.</p>
+            </div>
+
+
+            <div id="item-3">
+              <h3>Functional Programming Concepts</h3>
+                <p>Functional programming is built with various core concepts which we will explore below:</p>
+                <a><p  style="font-size:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                First-class functions</p></a>
+                <p>First-class functions in functional programming are treated as data type variables and can be
+                    used like any other variables. These first-class variables can be passed to functions as
+                    parameters, or stored in data structures.</p>
+                <a><p  style="font-size:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Recursion</p></a>
+                <p>Unlike object-oriented programming, functional programming doesn’t make use of “while” or ”for”
+                    loops or “if-else” statements. Functional programs avoid constructions that create different
+                    outputs on every execution. Instead, recursive functions call themselves repeatedly until they
+                    reach the desired state or solution known as the base case.</p>
+                <a><p  style="font-size:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Immutability</p></a>
+                <p>In functional programming, we can’t modify a variable after being created. The reason for this
+                    is that we would want to maintain the program's state throughout the runtime of the program.
+                    It is best practice to program each function to produce the same result irrespective of the
+                    program's state. This means that when we create a variable and assign a value, we can run the
+                    program with ease fully knowing that the value of the variables will remain constant and can
+                    never change.</p>
+
+                <a><p  style="font-size:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Pure functions</p></a>
+                <p>Pure functions form the foundation of functional programming and have two major properties:</p>
+                <a><p  style="font-size:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                    </svg>
+                They produce the same output if the given input is the same</p></a>
+                <a><p  style="font-size:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                    </svg>They have no side effects</p></a>
+                <p>Pure functions work well with immutable values as they describe how inputs relate to outputs in
+                    declarative programs. Because pure functions are independent this means that they are reusable,
+                    easy to organize, and debug, making programs flexibly and adaptable to changes. Another advantage
+                    of using pure functions is memoization. This is when we cache and reuse the results after computing
+                    the outputs from the given inputs.</p>
+                <a><p  style="font-size:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                High order functions</p></a>
+                <p>A function that accepts other functions as parameters or returns functions as outputs is
+                    called a high order function. This process applies a function to its parameters at each
+                    iteration while returning a new function that accepts the next parameter.</p>
+            </div>
+
+
+            <div id="item-4" style="margin-top:30px">
+              <h3>Advantages of functional programming</h3>
+                <a><h4  style="font-size:20px"><b></b>
+                Easy to debug</h4></a>
+                 <p>Since pure functions produce the same output as the given input, this means they aren’t
+                     any changes or any other hidden output produced. Functional programming functions are
+                     immutable, this also means that it’s easier to check for errors in code faster.</p>
+                <a><h4 style="margin-top:-20px;font-size:18px">
+                Supports parallel programming</h4></a>
+                 <p>Because functional programming uses immutable variables, creating parallel programs is
+                     easy as they reduce the amount of change within the program. Each function only has to
+                     deal with an input value and have the guarantee that the program state will remain constant.</p>
+                <a><h4 style="margin-top:-20px;font-size:18px">
+                Easy to read</h4></a>
+                 <p>Functions in functional programming are easy to read and understand. Since functions are
+                     treated as values, immutable, and can be passed as parameters, it is easier to understand
+                     the codebase and purpose.</p>
+                <a><h4 style="margin-top:-20px;font-size:18px">
+                Efficient</h4></a>
+                <p>Since functional programs don’t rely on any external sources or variables to function, they
+                    are easily reusable across the program. This makes them more efficient as there isn’t extra
+                    computation needed to source the programs or run operations on runtime.</p>
+            </div>
+
+
+            <div id="item-5">
+              <h3>Drawbacks of Functional Programming</h3>
+               <a><h4 style="margin-top:10px;font-size:18px">
+                Terminology Problems</h4></a>
+                 <p>Because of its mathematical roots, functional programming has a lot of terminologies that may be
+                     difficult to explain to a layman. Terms like “pure functions” can easily scare off people looking
+                     to learn more about functional programming.</p>
+                <a><h4 style="margin-top:-20px;font-size:18px">
+                Recursion</h4></a>
+                <p>Although recursion is one of the best features in functional programming, it is very expensive to
+                    use. Writing recursive functions requires higher memory usage which can be costly.</p>
+            </div>
+
+
+            <div id="item-6">
+              <h3>Functional programming languages</h3>
+              <p>Now as you can imagine not all programming languages support functional programming. Some languages however were designed to be
+                  specifically for functional programming, while others do support both functional and object-oriented programming. Below is a list
+                  of some of these programming languages:</p>
+              <p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Haskell - Made specifically for functional programming, Haskell is a statically typed programming language. It compiles code faster,
+                  is memory safe, efficient, and easier to read.</p>
+                <p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Python - Although python supports functional programming, however, it was designed to prioritize object-oriented programming first.</p>
+                <p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Erlang - Although it is not popularly used like Haskell, Erlang is best suited for concurrent systems. Messaging apps like
+                    WhatsApp and Discord make use of Erlang because of its scalability.</p>
+                <p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JavaScript - Similar to Python, JavaScript isn't specifically designed
+                    for functional programming. However, functional programming features like lambda expressions and attributes are supported
+                    making JavaScript a top used language among multi-paradigm languages.</p>
+                <p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Clojure - Clojure is a functional programming language that provides tools to avoid mutable states. Although it supports both
+                    mutable and immutable data types, it is less strict than other languages.</p>
+                <p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Scala - Supporting both functional and object-oriented programming, Scala was designed to address the shortcomings of Java. It also
+                    comes with a built-in static typed system similar to Haskell.</p>
+            </div>
+
+
+              <div id="item-7">
+              <h3>Interview Questions</h3>
+              <p>This section offers a collection of practice Quiz designed to test and support understanding of various concepts in JavaScript.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 Functional Programming</p></a>
+             </div>
+
+          </div>
+            <div style="height:100px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="#" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Artificial Intelligence</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>POPULAR COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Database</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data Structure</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Python Programming</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Linux Shell</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Screen</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SkillUp</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Practice</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>SOLUTION</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Set Up a Skills Strategy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Showcase Your Talent Brand</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Optimize Your Hiring Process</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mobilize Your Internal Talent</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Embrace AI</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+<style>
+  .div1{
+    width:750px;
+    height:50px;
+    background-color:rgb(197, 197, 197);
+    margin-left:50px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  span{
+    font-size:17px;
+    color:rgb(91, 91, 91);
+  }
+  h3{
+    margin-top:50px
+  }
+  p{
+    font-size: 18px;
+    gap: 7px;
+    margin-top:10px
+
+  }
+  h4{
+    margin-top:50px
+  }
+  h4{
+    gap: 5px;
+  }
+</style>

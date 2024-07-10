@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends 'Adminpage.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col-md-10">
+    <h5 class="mt-3">Custom File Input</h5>
+    <hr>
+    <form method="post" action="{% url 'update_image' pro_id=data.id %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div style="text-align:center">
+            <h1>Enter Course Details</h1>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Course Name" name="coursename" value="{{data.cname}}">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="price" value="{{data.price}}">
+            <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+            </div>
+        </div>
+        <div style="text-align:center">
+            <input  type="file"  name="Img" >
+            <img src="{{data.image.url}}" height="100px" width="200px">
+        </div>
+
+        <button type="submit" class="btn btn-primary has-ripple">Submit<span class="ripple ripple-animate" style="height: 85.9625px; width: 85.9625px; animation-duration: 0.7s; animation-timing-function: linear; background: rgb(255, 255, 255); opacity: 0.4; top: -24.5813px; left: 13.0187px;"></span></button>
+    </form>
+</div>
+</body>
+</html>
+{% endblock %}

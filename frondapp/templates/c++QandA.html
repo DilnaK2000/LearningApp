@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Q&A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="#" class="nav-item nav-link" style="margin-right:150px">Request Demo</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+
+    <div class="row">
+        <div class="col-4">
+             <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center"
+                  style="width:300px;overflow: hidden;overflow-y: scroll;height:700px;margin-top:27px;">
+                 <p class="p-1 rounded" style="text-align:center;" ><u>Basic C++ Interview Questions & Answers</u></p>
+                 <a class="p-1 rounded" href="#item-1">1. What is C++? What are the advantages of C++?</a>
+                 <a class="p-1 rounded" href="#item-2">2. What are the different data types present in C++?</a>
+                 <a class="p-1 rounded" href="#item-3">3.What do you mean by Call by Value and Call by Reference?</a>
+                 <a class="p-1 rounded" href="#item-4">4. Define ‘std’? </a>
+                 <a class="p-1 rounded" href="#item-5">5. What are references in C++? </a>
+                 <a class="p-1 rounded" href="#item-6">6. What is the difference between C and C++?</a>
+                 <a class="p-1 rounded" href="#item-7">7. What is the difference between struct and class?</a>
+                 <a class="p-1 rounded" href="#item-8">8. What is the difference between reference and pointer?</a>
+                 <a class="p-1 rounded" href="#item-9">9. What is the difference between reference and pointer?</a>
+                 <a class="p-1 rounded" href="#item-10">10. What is the difference between an array and a list?</a>
+                 <a class="p-1 rounded" href="#item-11">11. What is the difference between a while loop and a do-while loop?</a>
+                 <a class="p-1 rounded" href="#item-12">12.Discuss the difference between prefix and postfix?</a>
+                 <a class="p-1 rounded" href="#item-13">13.What are classes and objects in C++?</a>
+                 <a class="p-1 rounded" href="#item-14">14. What is Function Overriding? </a>
+                 <a class="p-1 rounded" href="#item-15">15. What are the various OOPs concepts in C++?</a>
+                 <a class="p-1 rounded" href="#item-16">16. Explain inheritance </a>
+                 <a class="p-1 rounded" href="#item-17">17. When should we use multiple inheritance? </a>
+                 <a class="p-1 rounded" href="#item-18">18. What is virtual inheritance?</a>
+                 <a class="p-1 rounded" href="#item-19">19. What is polymorphism in C++?</a>
+                 <a class="p-1 rounded" href="#item-20">20. What are the different types of polymorphism in C++?</a>
+
+             </div>
+        </div>
+    </div>
+
+    <div class="row" style="overflow: hidden;overflow-y: scroll;height:700px;margin-left:370px;width:1000px;margin-top:-720px" >
+      <div class="row">
+        <div class="col-8" style="margin-top:50px;width:950px;">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="#item-1">
+              <h2>Top 50 C++ Interview Questions and Answers</h2>
+                <div style="width:850px;height:2px;background-color:#adb5bd;"></div>
+              <p>C++ is one of the most popular languages in the software industry for developing software
+                  ranging from operating systems, and DBMS to games. That is why it is also popular to be
+                  asked to write C++ Programs in live coding sessions in job placement interviews.</p>
+            </div>
+
+
+            <div id="#item-2">
+                <h3 style="margin-top:20px">1. What is C++? What are the advantages of C++?</h3>
+                <p>C++ is an object-oriented programming language that was introduced to overcome the
+                    jurisdictions where C was lacking. By object-oriented we mean that it works with the
+                    concept of polymorphism, inheritance, abstraction, encapsulation, object, and class.</p>
+                <p>Advantages of C++:</p>
+                <p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C++ is an OOPs language that means the data is considered as objects.</p>
+              <p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C++ is a multi-paradigm language; In simple terms, it means that we can program the logic, structure, and procedure of the program.</p>
+              <p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Memory management is a key feature in C++ as it enables dynamic memory allocation</p>
+            </div>
+
+
+
+              <div id="item-3">
+              <h3>2. What are the different data types present in C++?</h3>
+                <img style="height:400px;width:700px;margin-left:20px;border-radius:7px;" src="{% static 'load/img/DatatypesInC.png' %}">
+                  <p>Different types of data types in C++</p>
+              </div>
+
+
+
+            <div id="item-4">
+              <h3>3.What do you mean by Call by Value and Call by Reference?</h3>
+                  <p>In this programming language to call a function we have 2 methods: Call by Value and Call by Reference</p>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">Call by Value</th>
+                      <th scope="col">Call by Reference</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>A copy of a variable is passed. </td>
+                      <td>A variable itself is passed fundamentally. </td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>Calling a function by sending the values by copying variables.,</td>
+                      <td>Calling a function by sending the address of the passed variable.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>The changes made in the function are never reflected outside the function
+                          on the variable. In short, the original value is never altered in Call by Value. </td>
+                      <td>The changes made in the functions can be seen outside the function on the passed function.
+                          In short, the original value is altered in Call by reference.</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+
+            <div id="item-5" style="margin-top:30px">
+              <h3>4. Define ‘std’?</h3>
+              <p>‘std’ is also known as Standard or it can be interpreted as a namespace. The command
+                  “using namespace std” informs the compiler to add everything under the std namespace
+                  and inculcate them in the global namespace. This all inculcation of global namespace
+                  benefits us to use “cout” and “cin” without using “std::_operator_”.</p>
+            </div>
+
+
+            <div id="item-6">
+              <h3>5. What are references in C++?</h3>
+              <p>When a variable is described as a reference it becomes an alias of the already existing
+                  variable. In simple terms, a referenced variable is another named variable of an
+                  existing variable keeping in mind that changes made in the reference variable will
+                  be reflected in the already existing variable. A reference variable is preceded with
+                  a ‘&’ symbol.</p>
+            </div>
+
+
+
+
+            <div id="item-7">
+              <h3>6. Define token in C++</h3>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Keywords – That contain a special meaning to the compiler</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Identifiers –That hold a unique value/identity</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Constants – That never change their value throughout the program</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Strings –That contains the homogenous sequence of data</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Special Symbols – They have some special meaning and cannot be used for another purpose; eg: [] () {}, ; * = #</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Operators – Who perform operations on the operand</p></a>
+            </div>
+
+
+
+            <div id="item-8">
+              <h3>7. What is the difference between C and C++?</h3>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">Call by Value</th>
+                      <th scope="col">Call by Reference</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>It is a procedural programming language. In simple words,
+                          it does not support classes and objects</td>
+                      <td>It is a mixture of both procedural and object-oriented programming languages.
+                          In simple words, it supports classes and objects.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>It does not support any OOPs concepts like polymorphism, data abstraction,
+                          encapsulation, classes, and objects.</td>
+                      <td>It supports all concepts of data </td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>It does not support Function and Operator Overloading</td>
+                      <td>It supports Function and Operator Overloading respectively</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>It is a function-driven language	</td>
+                      <td>It is an object-driven language</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+
+
+          <div id="item-9">
+              <h3>8. What is the difference between struct and class?</h3>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">Struct</th>
+                      <th scope="col">Class</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>Members of the struct are always by default public mode</td>
+                      <td>Members of the class can be in private, protected, and public modes.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>It does not support any OOPs concepts like polymorphism, data abstraction,
+                          encapsulation, classes, and objects.</td>
+                      <td>It supports all concepts of data </td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Structures are of the value type. They only hold value in memory.</td>
+                      <td>	Classes are of reference type. It holds a reference of an object in memory.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>The memory in structures is stored as stacks</td>
+                      <td>The memory in classes is stored as heaps</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+
+             <div id="item-10">
+              <h3>9. What is the difference between reference and pointer?</h3>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">Reference</th>
+                      <th scope="col">Pointer</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>The value of a reference cannot be reassigned</td>
+                      <td>The value of a pointer can be reassigned</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>It can never hold a null value as it needs an existing value to become an alias of </td>
+                      <td>It can hold or point at a null value and be termed as a nullptr or null pointer </td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>It cannot work with arrays</td>
+                      <td>It can work with arrays</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>To access the members of class/struct it uses a ‘ . ‘	</td>
+                      <td>To access the members of class/struct it uses a ‘ -> ‘ </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+
+            <div id="item-11">
+              <h3>10.  What is the difference between an array and a list?</h3>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">Arrays</th>
+                      <th scope="col">Lists</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>Array are contiguous memory locations of homogenous data types stored in a fixed location or size.</td>
+                      <td>Lists are classic individual elements that are linked or connected to each other with the help of pointers and do not have a fixed size.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>It does not support any OOPs concepts like polymorphism, data abstraction,
+                          encapsulation, classes, and objects.</td>
+                      <td>It supports all concepts of data </td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Arrays are static in nature.</td>
+                      <td>Lists are dynamic in nature</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Uses less memory than linked lists.</td>
+                      <td>Uses more memory as it has to store the value and the pointer memory location</td>
+                    </tr>
+                  </tbody>
+                </table>
+             </div>
+
+
+
+            <div id="item-12">
+              <h3>11. What is the difference between a while loop and a do-while loop?</h3>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">While Loop</th>
+                      <th scope="col">do-while Loop</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>While loop is also termed an entry-controlled loop</td>
+                      <td>The do-while loop is termed an exit control loop</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>If the condition is not satisfied the statements inside the loop will not execute  </td>
+                      <td>Even if the  condition is not satisfied the statements inside the loop will execute for at least one time</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Structures are of the value type. They only hold value in memory.</td>
+                      <td>	Classes are of reference type. It holds a reference of an object in memory.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>The memory in structures is stored as stacks</td>
+                      <td>The memory in classes is stored as heaps</td>
+                    </tr>
+                  </tbody>
+                </table>
+             </div>
+
+
+            <div id="item-13">
+              <h3>12. Discuss the difference between prefix and postfix?</h3>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">prefix</th>
+                      <th scope="col">postfix</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>It simply means putting the operator before the operand</td>
+                      <td>It simply means putting the operator after the operand</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>It executes itself before ‘; ‘</td>
+                      <td>	 It executes itself after ‘; ‘ </td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Associativity of prefix ++ is right to left</td>
+                      <td>Associativity of postfix ++ is left to right</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+
+
+             <div id="item-14">
+                <h3>13.  What are classes and objects in C++?</h3>
+                    <p>A class is a user-defined data type where all the member functions and data members are
+                        tailor-made according to demands and requirements in addition to which these all can be
+                        accessed with the help of an object. To declare a user-defined data type we use a keyword class.
+                        An object is an instance of a class and an entity with value and state; In simple terms,
+                        it is used as a catalyst or to represent a class member. It may contain different parameters
+                        or none.</p>
+                    <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">Note: A class is a blueprint that defines functions which are used by an object.</p>
+                    </div>
+              </div>
+
+
+              <div id="item-15">
+                <h3>14. 17. What is Function Overriding?</h3>
+                    <p>When a function of the same name, same arguments or parameters, and same return
+                        type already present/declared in the base class is used in a derived class is known
+                        as Function Overriding. It is an example of Runtime Polymorphism or Late Binding which
+                        means the overridden function will be executed at the run time of the execution.</p>
+              </div>
+
+
+              <div id="item-16">
+                  <h3>15. What are the various OOPs concepts in C++?</h3>
+                    <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Classes: It is a user-defined datatype</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Objects: It is an instance of a class</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Abstraction: It is a technique of showing only necessary details</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Encapsulation: Wrapping of data in a single unit</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+               Inheritance: The capability of a class to derive properties and characteristics from another class</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Polymorphism: Polymorphism is known as many forms of the same thing</p></a>
+              </div>
+
+
+
+              <div id="item-17">
+                  <h3>16. Explain inheritance</h3>
+                     <p>The capability or ability of a class to derive properties and characteristics
+                         from another class is known as inheritance. In simple terms, it is a system or
+                         technique of reusing and extending existing classes without modifying them.</p>
+              </div>
+
+
+
+              <div id="item-18">
+                  <h3>17. When should we use multiple inheritance?</h3>
+                     <p>Multiple inheritances mean that a derived class can inherit two or more base/parent
+                         classes. It is useful when a derived class needs to combine numerous attributes/contracts
+                         and inherit some, or all, of the implementation from these attributes/contracts. To take
+                         a real-life example consider your Parents where Parent A is your DAD Parent B is your MOM
+                         and Chid C is you.</p>
+                     <img style="height:400px;width:700px;margin-left:20px;border-radius:7px;" src="{% static 'load/img/sc11.png' %}">
+              </div>
+
+
+              <div id="item-19">
+                  <h3>18.  What is virtual inheritance?</h3>
+                     <p>Virtual inheritance is a technique that ensures only one copy of a base class’s
+                         member variables is inherited by grandchild-derived classes. Or in simple terms,
+                         virtual inheritance is used when we are dealing with a situation of multiple inheritances
+                         but want to prevent multiple instances of the same class from appearing in the inheritance
+                         hierarchy.</p>
+              </div>
+
+
+              <div id="item-20">
+                  <h3>19. What is polymorphism in C++?</h3>
+                     <p>Polymorphism is known as many forms of the same thing. In simple terms, we can say that Polymorphism
+                         is the ability to display a member function in multiple forms depending on the type of object that calls
+                         them. </p>
+                  <p>1. Compile Time Polymorphism</p>
+                  <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Function Overloading</p></a>
+                  <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                      Operator Overloading</p></a>
+
+                  <p>2. Run Time Polymorphism</p>
+                  <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                  Function Overriding</p></a>
+                  <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                    Virtual Function</p></a>
+              </div>
+
+
+
+             <div id="item-21">
+              <h3>20.  What are the different types of polymorphism in C++?</h3>
+                 <p>There is 2 type of polymorphism</p>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Compile Time Polymorphism or Static Binding</p></a>
+              <p>This type of polymorphism is achieved during the compile time of the program which
+                  results in it making a bit faster than Run time. Also, Inheritance is not involved in it.
+                  It is comprised of 2 further techniques:</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Function Overloading:</p></a>
+               <p> When there are multiple functions with the same name but different
+                   parameters then this is known as function overloading.</p>
+
+               <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Run-Time Polymorphism or Late Binding</p></a>
+               <p>Run-time polymorphism takes place when functions are invoked during run time.</p>
+
+                <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Function Overriding:</p></a>
+               <p>Function overriding occurs when a base class member function is redefined in a derived class
+                   with the same arguments and return type.</p>
+
+             </div>
+
+
+              <div id="item-22">
+                <h3>21. Explain the constructor in C++.</h3>
+                <p>A constructor is a special type of member function of a class, whose name is the same as that
+                    of the class by whom it is invoked and initializes value to the object of a class. <br>
+                    There are 3 types of constructors:</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Default constructor: It is the most basic type of constructor which accepts no arguments or
+                     parameters. Even if it is not called the compiler calls it automatically when an object
+                     is created.</p></a>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Parameterized constructor: It is a type of constructor which accepts arguments or parameters.
+                     It has to be called explicitly by passing values in the arguments as these arguments help
+                     initialize an object when it is created. It also has the same name as that of the class. </p></a>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Copy Constructor: A copy constructor is a member function that initializes an object using
+                     another object of the same class. Also, the Copy constructor takes a reference to an
+                     object of the same class as an argument.</p></a>
+              </div>
+
+
+               <div id="item-23">
+                <h3>22. What are destructors in C++?</h3>
+                <p>Destructors are members of functions in a class that delete an object when an object of the
+                    class goes out of scope. Destructors have the same name as the class preceded by a tilde (~)
+                    sign. Also, destructors follow a down-to-top approach, unlike constructors which follow a top-to-
+                    down.</p>
+                   <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">~constructor_name(); // tilde sign signifies that it is a destructor</p>
+                    </div>
+              </div>
+
+
+               <div id="item-24">
+                <h3>23. What is a virtual destructor?</h3>
+                <p>When destroying instances or objects of a derived class using a base class pointer object a virtual destructor is invoked to free up memory space allocated by the derived class object or instance.
+                    Virtual destructor guarantees that first the derived class’ destructor is called. Then the base class’s destructor is called to release the space occupied by both destructors in the inheritance class which saves us from the memory leak. It is advised to make your destructor virtual whenever your class is polymorphic.</p>
+              </div>
+
+
+
+               <div id="item-25">
+                <h3>24.  Is destructor overloading possible? If yes then explain and if no then why?</h3>
+                <p>The simple answer is NO we cannot overload a destructor. It is mandatory to only destructor per class in C++. Also to mention, Destructor neither take arguments nor they have a parameter that might help to overload.</p>
+              </div>
+
+
+
+               <div id="item-26">
+                <h3>25. What is an Overflow Error?</h3>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Model and View are both driven by the controller in MVC, whereas Views in MVT are used to receive HTTP requests and return HTTP responses.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                We must write all of the control-specific code in MVC whereas, We must write all of the control-specific code in MVC.</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                MVC is Highly coupled whereas, MVT is loosely coupled.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                In MVC, it is difficult to modify whereas, Modification is easy in MVT.</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                MVC is suitable for large applications, but MVT is suitable for both small and large applications.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                MVC does not involve any URL mapping, whereas in MVT URL pattern mapping takes place.</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Flow is clear and easy to understand, whereas MVT is sometimes harder to understand.</p></a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="#" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Artificial Intelligence</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>POPULAR COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Database</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data Structure</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Python Programming</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Linux Shell</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Screen</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SkillUp</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Practice</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>SOLUTION</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Set Up a Skills Strategy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Showcase Your Talent Brand</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Optimize Your Hiring Process</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mobilize Your Internal Talent</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Embrace AI</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+<style>
+  .div1{
+    width:700px;
+    height:80px;
+    background-color:rgb(205, 205, 205);
+    margin-left:60px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  span{
+    font-size:17px;
+    color:rgb(91, 91, 91);
+  }
+  h3{
+    margin-top:50px
+  }
+  p{
+    font-size: 19px;
+    gap: 5px;
+    margin-top:10px
+  }
+  h4{
+    margin-top:50px
+  }
+  h4{
+    gap: 5px;
+  }
+  .p-1{
+    text-decoration: none;
+    text-align: left;
+  }
+  .p-1 :hover{
+     color: black
+  }
+</style>

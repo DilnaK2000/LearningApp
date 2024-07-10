@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Structure Topics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="#" class="nav-item nav-link" style="margin-right:150px">Request Demo</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+    <div class="row" style="width:1400px;overflow: hidden;overflow-y: scroll;height:700px" >
+      <div class="row">
+        <div class="col-4" style="margin-top:50px;width:300px;">
+          <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+              <nav class="nav nav-pills flex-column" style="gap: 20px;">
+                <a class="nav-link" href="#item-1">Data Structures Tutorial</a>
+                <a class="nav-link" href="#item-2">What is Data Structure?</a>
+                <a class="nav-link" href="#item-3">Classification of Data Structure:</a>
+                <a class="nav-link" href="#item-4">Array Data Structure:</a>
+                <a class="nav-link" href="#item-5">Advanced Data Structure</a>
+                <a class="nav-link" href="#item-6">Linked List Data Structure:</a>
+                <a class="nav-link" href="#item-7">Matrix Data Structure:</a>
+                <a class="nav-link" href="#item-8">Stack Data Structure:</a>
+                <a class="nav-link" href="#item-9">Queue Data Structure:</a>
+                <a class="nav-link" href="#item-10">Binary Tree Data Structure:</a>
+                <a class="nav-link" href="#item-11">Heap Data Structure:</a>
+                <a class="nav-link" href="#item-12">Hashing Data Structure:</a>
+                <a class="nav-link" href="#item-13">Graph Data Structure:</a>
+                <a class="nav-link" href="#item-14">Advanced Data Structure:</a>
+
+
+              </nav>
+            </nav>
+        </div>
+
+        <div class="col-8" style="margin-top:50px">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="#item-1">
+              <h2>Data Structures Tutorial</h2>
+                <div style="width:980px;height:2px;background-color:#adb5bd;"></div>
+              <p>Data structures are the fundamental building blocks of computer programming.
+                  They define how data is organized, stored, and manipulated within a program.
+                  Understanding data structures is very important for developing efficient and effective
+                  algorithms. In this tutorial, we will explore the most commonly used data structures, including
+                  arrays, linked lists, stacks, queues, trees, and graphs.
+                 </p>
+            </div>
+
+            <div id="#item-2">
+              <h3>What is Data Structure?</h3>
+              <p>A data structure is a storage that is used to store and organize data. It is a way of arranging
+                  data on a computer so that it can be accessed and updated efficiently.
+                  A data structure is not only used for organizing the data. It is also used for processing,
+                  retrieving, and storing data. There are different basic and advanced types of data structures
+                  that are used in almost every program or software system that has been developed. So we must have
+                  good knowledge about data structures. </p>
+            </div>
+
+
+            <div id="item-3">
+              <h4>Classification of Data Structure:</h4>
+                 <img style="height:400px;width:800px;margin-left:40px;border-radius:7px;" src="{% static 'load/img/dstopic.jpg' %}">
+                  <h5>1.Linear Data Structure:<span> Data structure in which data elements are arranged sequentially or
+                      linearly, where each element is attached to its previous and next adjacent elements, is called a
+                      linear data structure.<br><b>Example:</b> Array, Stack, Queue, Linked List, etc. </span> </h5>
+                  <h5>2.Static Data Structure:  <span> Static data structure has a fixed memory size. It is easier to access the
+                      elements in a static data structure.<br><b>Example:</b>  array.</span> </h5>
+                  <h5>3.Dynamic Data Structure: <span> In dynamic data structure, the size is not fixed. It can be randomly updated during the runtime which may be considered efficient concerning the memory (space) complexity of the code.
+                       <br><b>Example:</b> Queue, Stack, etc.</span> </h5>
+                  <h5>4.Non-Linear Data Structure:<span>Data structures where data elements are not placed sequentially or linearly are called non-linear data structures. In a non-linear data structure, we can’t traverse all the elements in a single run only.
+                      <br><b>Examples:</b> Trees and Graphs.</span> </h5>
+            </div>
+
+
+
+            <div id="item-4" style="margin-top:30px">
+              <h3>Array Data Structure:</h3>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Search, insert and delete in an unsorted array</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Search, insert and delete in a sorted array </p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Write a program to reverse an array</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Leaders in an array</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Given an array A[] and a number x, check for pair in A[] with sum as x</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Majority Element</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Find the Number Occurring Odd Number of Times</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Largest Sum Contiguous Subarray</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Find the Missing Number</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Search an element in a sorted and pivoted array</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Merge an array of size n into another array of size m+n</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Median of two sorted arrays</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Program for array rotation</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Reversal algorithm for array rotation</p></a>
+            </div>
+
+
+            <div id="item-5">
+              <h3>Advanced Data Structure</h3>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 What is Data Structure: Types, Classifications and Applications</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Introduction to Data Structures</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Common operations on various Data Structures</p></a>
+            </div>
+
+
+            <div id="item-6">
+              <h3>Linked List Data Structure:</h3>
+              <p>Linked List is a linear data structure, in which elements are not stored at a contiguous location,
+                  rather they are linked using pointers. Linked List forms a series of connected nodes, where each node
+                  stores the data and the address of the next node.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Introduction to Linked List</p></a>
+            </div>
+
+
+            <div id="item-7">
+              <h3>Matrix Data Structure:</h3>
+               <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Search in a row wise and column wise sorted matrix</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Print a given matrix in spiral form</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                A Boolean Matrix Question</p></a>
+            </div>
+
+
+             <div id="item-8">
+              <h3>Stack Data Structure:</h3>
+              <p>A Stack is a linear data structure that follows a particular order in which the operations are
+                  performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out). LIFO implies that
+                  the element that is inserted last, comes out first and FILO implies that the element that is inserted
+                  first, comes out last.</p>
+                  <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                  Introduction to Stack</p></a>
+            </div>
+
+
+             <div id="item-9">
+              <h3>Queue Data Structure:</h3>
+              <p> Similar to Stack, Queue is a linear data structure that follows a particular order in which the
+                  operations are performed for storing data. The order is First In First Out (FIFO). One can imagine
+                  a queue as a line of people waiting to receive something in sequential order which starts from the
+                  beginning of the line. </p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Queue Introduction and Array Implementation</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Linked List Implementation of Queue</p></a>
+            </div>
+
+
+             <div id="item-10">
+              <h3>Binary Tree Data Structure:</h3>
+              <p> Binary Tree is a non-linear data structure where each node has at most two children. In this
+                  article, we will cover all the basics of Binary Tree, Operations on Binary Tree, its implementation,
+                  advantages, disadvantages which will help you solve all the problems based on Binary Tree.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Binary Tree Introduction</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Types of Binary Tree</p></a>
+            </div>
+
+
+
+              <div id="item-11">
+              <h3>Heap Data Structure:</h3>
+              <p> Binary Tree is a non-linear data structure where each node has at most two children. In this
+                  article, we will cover all the basics of Binary Tree, Operations on Binary Tree, its implementation,
+                  advantages, disadvantages which will help you solve all the problems based on Binary Tree.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Binary Heap</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Heap Sort</p></a>
+            </div>
+
+
+             <div id="item-12">
+              <h3>Hashing Data Structure:</h3>
+              <p> Hashing refers to the process of generating a fixed-size output from an input of variable size
+                  using the mathematical formulas known as hash functions. This technique determines an index or
+                  location for the storage of an item in a data structure.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Hashing Introduction</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Heap Sort</p></a>
+            </div>
+
+
+             <div id="item-13">
+              <h3>Graph Data Structure:</h3>
+              <p>A Graph is a non-linear data structure consisting of vertices and edges.</p>
+              <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Graph and its representations</p></a>
+              </div>
+
+
+             <div id="item-14">
+              <h3>Advanced Data Structure:</h3>
+                <a><p style="margin-top:10px;font-size:18px">1. Advanced Lists:</p></a>
+                <a><p style="margin-top:-20px;font-size:18px">2. Segment Tree Data Structure:</p></a>
+                 <h5>All Articles on Segment Tre</h5>
+                <a><p style="margin-top:10px;font-size:18px">3. Trie Data Structure:</p></a>
+                <a><p style="margin-top:-20px;font-size:18px">4. Binary Indexed Tree Data Structure:</p></a>
+                <a><p style="margin-top:-20px;font-size:18px">5. Suffix Array and Suffix Tree:</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                6. AVL Tree:</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                7. Splay Tree:</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                8. B Tree:</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                9. Red-Black Tree:</p></a>
+                  <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                10. K Dimensional Tree:</p></a>
+             </div>
+          </div>
+            <div style="height:100px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="#" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Artificial Intelligence</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>POPULAR COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Database</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data Structure</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Python Programming</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Linux Shell</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Screen</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SkillUp</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Practice</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>SOLUTION</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Set Up a Skills Strategy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Showcase Your Talent Brand</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Optimize Your Hiring Process</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mobilize Your Internal Talent</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Embrace AI</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+<style>
+  .div1{
+    width:750px;
+    height:50px;
+    background-color:rgb(197, 197, 197);
+    margin-left:50px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  span{
+    font-size:17px;
+    color:rgb(91, 91, 91);
+  }
+  h3{
+    margin-top:50px
+  }
+  p{
+    font-size: 18px;
+    gap: 7px;
+    margin-top:10px
+
+  }
+  h4{
+    margin-top:50px;
+    gap: 5px;
+  }
+  h5{
+    margin-top:10px
+
+  }
+</style>

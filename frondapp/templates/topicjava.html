@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript Topic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="#" class="nav-item nav-link" style="margin-right:150px">Request Demo</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+    <div class="row" style="width:1400px;overflow: hidden;overflow-y: scroll;height:700px" >
+      <div class="row">
+        <div class="col-4" style="margin-top:50px;width:300px;">
+          <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+              <nav class="nav nav-pills flex-column" style="gap: 20px;">
+                <a class="nav-link" href="#item-1">JavaScript Tutorial</a>
+                <a class="nav-link" href="#item-2">What is JavaScript?</a>
+                <a class="nav-link" href="#item-3">Hello World Program in JavaScript</a>
+                <a class="nav-link" href="#item-4">JavaScript Libraries and Frameworks</a>
+                <a class="nav-link" href="#item-5">JavaScript Libraries</a>
+                <a class="nav-link" href="#item-6">JavaScript Frameworks</a>
+                <a class="nav-link" href="#item-7">JavaScript Basics</a>
+                <a class="nav-link" href="#item-8">JavaScript Control Flow Statements</a>
+                <a class="nav-link" href="#item-9">JavaScript Loops</a>
+                <a class="nav-link" href="#item-10">JavaScript Expression and Operators</a>
+                <a class="nav-link" href="#item-11">JavaScript Objects</a>
+                <a class="nav-link" href="#item-12">JavaScript Functions</a>
+                <a class="nav-link" href="#item-13">Why to learn JavaScript </a>
+                <a class="nav-link" href="#item-14">Python Quiz</a>
+                <a class="nav-link" href="#item-15">JavaScript Functions</a>
+                <a class="nav-link" href="#item-16">JavaScript Events</a>
+                <a class="nav-link" href="#item-17">JavaScript OOPs</a>
+                <a class="nav-link" href="#item-18">JavaScript Inheritance and Prototype Chain</a>
+                <a class="nav-link" href="#item-19">JavaScript Memory Management</a>
+                <a class="nav-link" href="#item-20">JavaScript Promises</a>
+                <a class="nav-link" href="#item-21">JavaScript Exception Handling</a>
+                <a class="nav-link" href="#item-22">JavaScript Miscellaneous</a>
+                <a class="nav-link" href="#item-23">JavaScript Practice Quiz</a>
+                <a class="nav-link" href="#item-23">History of javascript</a>
+
+
+              </nav>
+            </nav>
+        </div>
+
+        <div class="col-8" style="margin-top:50px">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="#item-1">
+              <h2>JavaScript Tutorial</h2>
+                <div style="width:980px;height:2px;background-color:#adb5bd;"></div>
+              <p>JavaScript is the most powerful and versatile web programming language. It is used for making the websites
+                  interactive. JavaScript helps us add features like animations, interactive forms and dynamic content to web
+                  pages.<br><br> In this JavaScript Tutorial, we’ll learn all the basics to advanced topics and concepts of JavaScript.
+                  This JavaScript tutorial includes operators, control flow, functions, objects, Asynchronous JavaScript,
+                  Events, DOM manipulation, OOPs, Closures, Event loops etc.</p>
+            </div>
+            <div id="#item-2">
+              <h3>What is JavaScript?</h3>
+              <p>JavaScript is a programming language used for creating dynamic content on websites. It is a lightweight,
+                  cross-platform and single-threaded programming language. JavaScript is an interpreted language that executes
+                  code line by line providing more flexibility. It is a commonly used programming language to create dynamic
+                  and interactive elements in web applications. It is easy to learn.</p>
+            </div>
+            <div id="item-2-1">
+              <h4>Hello World Program in JavaScript</h4>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                This JavaScript Compiler is completely free and easy to use. Here, you can practice various JS Exercises.</p></a>
+              <div class="div1" >
+                <p style="text-align:center;font-size:17px;padding-top:10px;">console.log("Hello World! I Don't Give a Bug");</p>
+              </div>
+            </div>
+            <div id="item-4" style="margin-top:30px">
+              <h3>JavaScript Libraries and Frameworks</h3>
+              <p>JavaScript libraries and frameworks play a important role in modern web development. They offer built-in
+                  functions and methods that enhance web pages, making them more dynamic and interactive. They handle repetitive
+                  tasks, allowing developers to focus on core functionality.<br><br> Also, they provide project structure and data flow
+                  structure that helps to create fast and more reliable applications.</p>
+                <img style="height:400px;width:700px;margin-left:20px;border-radius:7px;" src="{% static 'load/img/jsim.png' %}">
+
+                <h3>JavaScript Libraries</h3>
+                <p>Libraries provide pre-built solutions for common tasks. Developers can leverage these functions instead of
+                    writing code from scratch, saving valuable time. Here are a few popular libraries of JavaScript.</p>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                ReactJS</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                jQuery</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                p5.js</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                D3.js</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Collect.js</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Underscore.js</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Lodash</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Tensorflow.js</p></a>
+            </div>
+
+            <div id="item-5">
+              <h3>JavaScript Frameworks</h3>
+              <p>Frameworks, offer a comprehensive structure for building applications. Here are a few popular frameworks of JavaScript.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                AngularJS</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Vue.js</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                NuxtJS</p></a>
+            </div>
+
+            <div id="item-6">
+              <h3>JavaScript Basics</h3>
+              <p>Let’s Explore JavaScript’s fundamentals: variables, data types, operators, and control flow for web page dynamism.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Introduction to JavaScript</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                History of JavaScript</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JavaScript Code Execution</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Console in JavaScript</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JavaScript Versions</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JavaScript Syntax</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JavaScript Comments</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JavaScript Data types</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JavaScript Variables</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>
+                let Keyword</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>
+                var Keyword</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>
+                const Keyword</p></a>
+            </div>
+
+
+            <div id="item-7">
+              <h3>JavaScript Control Flow Statements</h3>
+              <p>Conditional Statements and Loops in JavaScript (Using if…else structures and loops (like for and while) to
+                  control program flow based on conditions and execute code repeatedly).</p>
+               <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS return Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS break Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS continue Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS throw Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS if…else Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS switch Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS try…catch Statement</p></a>
+            </div>
+
+
+             <div id="item-8">
+              <h3>JavaScript Loops</h3>
+              <p>Repetition Made Easy (Navigate for, while, and do…while for Efficient Code).</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 JS for Loop</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS do…while Loop</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS while Loop</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS for…in Loop</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS for…of Loop</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS labeled Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS break Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS continue Statement</p></a>
+            </div>
+
+
+             <div id="item-9">
+              <h3>JS Expression and Operators</h3>
+              <p>You’ll learn the syntax and usage of expressions, which are combinations of values, variables, operators,
+                  and functions that produce a result.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Assignment operators</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Comparison operators</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Arithmetic operators</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Bitwise operators</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Logical operators</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS BigInt Operators</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS JS String operators</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS JS Ternary operator</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Comma operator</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Unary operators</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Relational operators</p></a>
+            </div>
+
+             <div id="item-10">
+              <h3>JavaScript Objects</h3>
+              <p>Objects in JavaScript are complex data types that allow for the creation of structured entities with properties and methods.</p>
+              <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                  JS Array</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS String</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Date</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Number</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Math</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Object</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Boolean</p></a>
+                      <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS JSON</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Map</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Set</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Atomics</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS BigInt</p></a>
+                  <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Promise</p></a>
+                  <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Proxy</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Reflect</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS WeakMap</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS WeakSet</p></a>
+              </div>
+
+             <div id="item-11">
+              <h3>JavaScript Functions</h3>
+              <p>Functions in JavaScript are reusable blocks of code that perform a specific task.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 JS Functions</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Definitions</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Call</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Expression</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Pure Functions</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Parameters</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Invocation</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Anonymous Functions</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Arrow functions</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Nested functions</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Generator</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function binding</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Async/Await Function</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Hoisting in JavaScript</p></a>
+             </div>
+
+
+              <div id="item-12">
+                <h3>Why to learn JavaScript?</h3>
+                <p>JavaScript is an essential programming language for web developers to learn as it grows rapidly. JavaScript
+                    is responsible for behaviour of the web pages. By learning it, you will develop skills in web development.</p>
+                  <h4>Key Features of JavaScript:</h4>
+                  <h5>1.Versatility:<span>Python is used to build web applications using frameworks like Django, Flask, and Pyramid. These frameworks provide tools and libraries for handling web requests, managing databases, and more.</span></h5>
+                  <h5>2.Client and Server-Side:<span>Python is popular in data science and machine learning due to libraries like NumPy, pandas, Matplotlib, and scikit-learn. These libraries provide tools for data manipulation, analysis, visualization, and machine learning algorithms.</span> </h5>
+                  <h5>3.Artificial Intelligence and Natural Language Processing:<span>Python is widely used in AI and NLP applications. Libraries like TensorFlow, Keras, PyTorch, and NLTK provide tools for building and training neural networks, processing natural language, and more.</span> </h5>
+                  <h5>4.Game Development:<span>Python can be used for game development using libraries like Pygame and Panda3D. These libraries provide tools for creating 2D and 3D games, handling graphics, and more.</span> </h5>
+                  <h5>5.Desktop Applications:<span>Python can be used to build desktop applications using libraries like Tkinter, PyQt, and wxPython. These libraries provide tools for creating graphical user interfaces (GUIs), handling user input, and more.</span> </h5>
+                  <h5>6.Scripting and Automation:<span>Python is commonly used for scripting and automation tasks due to its simplicity and readability. It can be used to automate repetitive tasks, manage files and directories, and more.</span> </h5>
+                  <h5>7.Web Scraping and Crawling:<span> Python is widely used for web scraping and crawling using libraries like BeautifulSoup and Scrapy. These libraries provide tools for extracting data from websites, parsing HTML and XML, and more.</span> </h5>
+                  <h5>8.Education and Research:<span> Python is commonly used in education and research due to its simplicity and readability. Many universities and research institutions use Python for teaching programming and conducting research in various fields.</span> </h5>
+                  <h5>9.Community and Ecosystem:<span> Python has a large and active community, which contributes to its ecosystem. There are many third-party libraries and frameworks available for various purposes, making Python a versatile language for many applications.</span> </h5>
+                  <h5>10.Cross-Platform:<span>Python is a cross-platform language, which means that Python code can run on different operating systems without modification. This makes it easy to develop and deploy Python applications on different platforms.</span> </h5>
+              </div>
+
+              <div id="item-13">
+              <h3>Python Quiz</h3>
+              <p>To achieve a solid understanding of Python, it’s very important to engage with Python quizzes.
+                  These quizzes can enhance your ability to solve similar questions and improve your problem-solving skills.</p>
+                  <p>Here are some quiz articles related to Python Tutorial:</p>
+                <a href="{% url 'interview_page' %}" style="text-decoration: none;"><p style="margin-top:10px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16" >
+                  <circle cx="4" cy="4" r="4" /></svg>
+                Python Quiz</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Python Sets Quiz</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Python List Quiz</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Python String Quiz</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Python Tuple Quiz</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Python Dictionary Quiz</p></a>
+             </div>
+
+                   <div id="item-14">
+              <h3>JavaScript Functions</h3>
+              <p>Functions in JavaScript are reusable blocks of code that perform a specific task.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 JS Functions</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Definitions</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Call</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Expression</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Pure Functions</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Parameters</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Invocation</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Anonymous Functions</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Arrow functions</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Nested functions</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function Generator</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Function binding</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Async/Await Function</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Hoisting in JavaScript</p></a>
+             </div>
+
+                   <div id="item-15">
+              <h3>JavaScript Events</h3>
+              <p>Events are actions that happen in the browser, such as mouse clicks, keyboard input, or page loading.
+                  This part of the content explores how to work with events in JavaScript, including event handling, event
+                  listeners, event propagation, event objects.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 JS Events</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS onclick Event</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS dblclick Event</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS onload Event</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS onresize Event</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS onblur Event</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS onchange Event</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Focus Event </p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Clipboard Event</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS onscroll Event</p></a>
+
+             </div>
+
+                   <div id="item-16">
+              <h3>JavaScript OOPs</h3>
+              <p>Object-Oriented Programming (OOP) in JavaScript, a concept that enables the structure of code
+                  by modeling real-world entities as objects with properties and behaviors.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 JS Classes In JavaScript</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS class expression</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Object Constructors</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JJS Static Methods</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Prototype</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Constructor Method</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Encapsulation</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Inheritance</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Polymorphism</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Abstraction</p></a>
+             </div>
+
+              <div id="item-17">
+              <h3>JavaScript Inheritance and Prototype Chain</h3>
+              <p>Inheritance allows objects to inherit properties and methods from other objects, enabling code reuse and creating hierarchical relationships between objects.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                  Prototype Inheritance in JavaScript </p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Prototype Chain in JavaScript</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Object Constructors</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Prototype in JavaScript</p></a>
+             </div>
+
+              <div id="item-18">
+              <h3>JavaScript Memory Management</h3>
+              <p>JavaScript uses automatic memory management, known as garbage collection, to allocate and deallocate memory dynamically.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                  JS Memory Management </p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Garbage Collection</p></a>
+
+             </div>
+
+              <div id="item-19">
+              <h3>JavaScript Promises</h3>
+              <p>JS Promises provide a cleaner and more intuitive way to work with asynchronous code compared to traditional callback-based approaches..</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 JS Promise</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Promise Chaining</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Errors Throw and Try to Catch</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Class compositions in JavaScript</p></a>
+             </div>
+
+               <div id="item-20">
+              <h3>JavaScript Exception Handling</h3>
+              <p>Exception handling is crucial for ensuring the reliability and stability of JavaScript applications by handling errors effectively.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 JS Exception Handling</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS try-catch Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Promises</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS async/await</p></a>
+             </div>
+
+
+               <div id="item-21">
+              <h3>JavaScript Miscellaneous</h3>
+              <p>This section serves as a repository for miscellaneous JavaScript topics that don’t fit neatly into other categories but are still valuable for JavaScript developers to understand.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                    JS this Keyword</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Strict Mode</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS setTimeOut() and setInterval() Method</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS typeOf Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Debugging</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Local Storage</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Callback</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Closures</p></a>
+                  <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS defer</p></a>
+                  <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS scope</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                JS Void</p></a>
+             </div>
+
+              <div id="item-22">
+              <h3>JavaScript Practice Quiz</h3>
+              <p>This section offers a collection of practice Quiz designed to test and support understanding of various concepts in JavaScript.</p>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 Practice Quiz</p></a>
+             </div>
+
+              <div id="item-23">
+              <h3>History of javascript</h3>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 JavaScript was developed by Brendan Eich in May 1995.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                First name of the JavaScript was Mocha, it later underwent a name change to LiveScript before finally settling on JavaScript.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                In 1997, JavaScript was recognized as an ECMA standard (ECMA-262).</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                ECMAScript 6 (ES6), released in 2015.</p></a>
+             </div>
+          </div>
+            <div style="height:100px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="#" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Artificial Intelligence</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>POPULAR COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Database</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data Structure</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Python Programming</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Linux Shell</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Screen</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SkillUp</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Practice</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>SOLUTION</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Set Up a Skills Strategy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Showcase Your Talent Brand</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Optimize Your Hiring Process</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mobilize Your Internal Talent</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Embrace AI</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+<style>
+  .div1{
+    width:700px;
+    height:50px;
+    background-color:rgb(205, 205, 205);
+    margin-left:60px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  span{
+    font-size:17px;
+    color:rgb(91, 91, 91);
+  }
+  h3{
+    margin-top:30px
+  }
+  p{
+    font-size: 18px;
+    gap: 5px;
+    margin-top:10px
+  }
+  h4{
+    margin-top:50px
+  }
+  h4{
+    gap: 5px;
+  }
+</style>

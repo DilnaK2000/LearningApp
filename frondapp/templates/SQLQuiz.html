@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQLQuiz</title>
+
+</head>
+<body>
+
+
+     <div class="app">
+            <h1>SQL Quiz</h1>
+            <div class="quiz">
+                <h2 id="question">Question goes here</h2>
+                <div id="answer_button">
+
+                    <button class="btn"> Answer 1</button>
+                    <button class="btn"> Answer 2</button>
+                    <button class="btn"> Answer 3</button>
+                    <button class="btn"> Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+
+     <div >
+         <a href="{% url 'fordeveloper_page' %}"><button style="width:150px;height:40px;margin-top:40px;margin-left:1005px;border-radius: 10px; background: none;
+            font-size: 18px;color: #033256; font-weight: 600;" type="button" class=" btn-outline-info">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+             Back to Skill
+         </button></a>
+     </div>
+
+
+
+
+<script>
+        const questions = [
+        {
+            questions:"What does SQL stand for?",
+            answers:[
+                { text : "Strong Question Language" , correct: false},
+                { text : "Structuerd Quary Language" , correct: true},
+                { text : "Structuerd Question Language" , correct: false},
+                { text : "Standerd Quary Language" , correct: false},
+            ]
+        },
+        {
+            questions:"Which SQL statement is used to extract data from a database?",
+            answers:[
+                { text : "GET " , correct: false},
+                { text : "EXTRACT" , correct: false},
+                { text : "OPEN", correct: false},
+                { text : "SELECT " , correct: true},
+            ]
+
+        },
+        {
+            questions:"Which SQL statement is used to delete data from a database?",
+            answers:[
+                { text : "COLLAPES" , correct: false},
+                { text : "DELETE" , correct: true},
+                { text : "-REMOVE" , correct: false},
+                { text : "POP" , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which SQL statement is used to insert new data in a database?",
+            answers:[
+                { text : "INSERT INTO"  , correct: true},
+                { text : "ADD RECORD"  , correct: false},
+                { text : "ADD NEW"  , correct: false},
+                { text : "INSERT NEW"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"With SQL, how do you select a column named 'FirstName' from a table named 'Persons'?",
+            answers:[
+                { text : "SELECT Firstname from Person"  , correct: true},
+                { text : "SELECT Person.firstname"  , correct: false},
+                { text : "EXTRACT Firstname From Person"  , correct: false},
+                { text : "EXTARACT Person.Firstname"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"With SQL, how do you select all the columns from a table named 'Persons'?",
+            answers:[
+                { text : "SELECT *.[P]erson"  , correct: false},
+                { text : "SELECT Person"  , correct: false},
+                { text : "SELECT All FROM Person"  , correct: false},
+                { text : "SELECT * FROM person"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"With SQL, how do you select all the records from a table named 'Persons' where the value of the column 'FirstName' is 'Peter'?",
+            answers:[
+                { text : "SELECT * FROM Persons WHERE FirstName='peter' "  , correct: false},
+                { text : "SELECT [all] FROM Persons WHERE FirstName='peter' "  , correct: false},
+                { text : "SELECT [all]] FROM Persons WHERE FirstName like 'peter' "  , correct: false},
+                { text : "SELECT * FROM Persons WHERE FirstName <> 'peter'"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"With SQL, how do you select all the records from a table named 'Persons' where the 'FirstName' is 'Peter' and the 'LastName' is Jackson'?",
+            answers:[
+                { text : " SELECT * FROM Persons WHERE FirstName<>;'Peter' AND LastName<>'Jackson'"  , correct: true},
+                { text : " SELECT  FirstName'Peter' AND LastName<>'Jackson' FROM person"  , correct: false},
+                { text : " SELECT * FROM Persons WHERE FirstName=;'Peter' AND LastName='Jackson'"  , correct: false},
+                { text : " SELECT [all] FROM Persons WHERE FirstName<>;'Peter' AND LastName<>'Jackson'"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which SQL statement is used to return only different values?",
+            answers:[
+                { text : " SELECT UNIQUE "  , correct: false},
+                { text : " SELECT DISTINCT "  , correct: true},
+                { text : " SELECT DIFFERND "  , correct: false},
+                { text : " SELECT  "  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which SQL keyword is used to sort the result-set?",
+            answers:[
+                { text : "ORDER BY"  , correct: true},
+                { text : "SORT"  , correct: false},
+                { text : "ORDER"  , correct: false},
+                { text : "SORT BY"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"With SQL, how can you return all the records from a table named 'Persons' sorted descending by 'FirstName'?",
+            answers:[
+                { text : "SELECT * FROM Persons ORDER 'FirstName' DESC"  , correct: false},
+                { text : "SELECT * FROM Persons SORT 'FirstName' DESC"  , correct: false},
+                { text : "SELECT * FROM Persons SORT BY 'FirstName' DESC"  , correct: true},
+                { text : "SELECT * FROM Persons ORDER BY 'FirstName' DESC"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"With SQL, how can you insert a new record into the 'Persons' table?",
+            answers:[
+                { text : "INSERT VALUES('Jimmy','Jackson') INTO Person"  , correct: true},
+                { text : "INSERT ('Jimmy','Jackson') INTO Person"  , correct: false},
+                { text : "INSERT INTO Person VALUES('Jimmy','Jackson') "  , correct: false},
+                { text : "INSERT VALUE Jimmy,Jackson INTO Person"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"With SQL, how can you insert 'Olsen' as the 'LastName' in the 'Persons' table?",
+            answers:[
+                { text : "INSERT INTO Persons ('Olsen') VALUES LastName"  , correct: false},
+                { text : "INSERT INTO Persons (LastName) VALUES ('Olsen')"  , correct: false},
+                { text : "INSERT VALUES ('Olsen') INTO Persons (LastName) "  , correct: false},
+                { text : "INSERT INTO Persons (LastName) VALUES ('Olsen')"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"How can you change 'Hansen' into 'Nilsen' in the 'LastName' column in the Persons table?",
+            answers:[
+                { text : "UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen'"  , correct: true},
+                { text : "MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen'"  , correct: false},
+                { text : "UPDATE Persons SET LastName='Nilsen' INTO LastName='Hansen'"  , correct: false},
+                { text : "MODIFY Persons SET LastName='Nilsen' INTO LastName='Hansen'"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"With SQL, how can you delete the records where the 'FirstName' is 'Peter' in the Persons Table?",
+            answers:[
+                { text : "DELETE ROW FirstName = 'Peter' FROM Persons  ;" , correct: false},
+                { text : "DELETE FROM Persons WHERE FirstName = 'Peter';" , correct: true},
+                { text : "DELETE Persons WHERE FirstName = 'Peter';"  , correct: false},
+                { text : "DELETE WHERE FirstName = 'Peter'  FROM Persons;"   , correct: false},
+            ]
+
+        },
+        {
+            questions:"With SQL, how can you return the number of records in the 'Persons' table?",
+            answers:[
+                { text : "SELECT LEN(*) FROM Persons"  , correct: false},
+                { text : "SELECT NO(*) FROM Persons"  , correct: false},
+                { text : "SELECT COUNT(*) FROM Persons"  , correct: false},
+                { text : "SELECT COLUMNS(*) FROM Persons"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"What is the most common type of join?",
+            answers:[
+                { text : "INSIDE JOIN"  , correct: false},
+                { text : "JOINED"  , correct: false},
+                { text : "JOINED TABLE"  , correct: false},
+                { text : "INNER JOIN"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"Which operator is used to select values within a range?",
+            answers:[
+                { text : "BETWEEN"  , correct: true},
+                { text : "WITHIN"  , correct: false},
+                { text : "RANGE"  , correct: false},
+                { text : "USED"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which operator is used to search for a specified pattern in a column?",
+            answers:[
+                { text : "FROM"  , correct: false},
+                { text : "LIKE"  , correct: true},
+                { text : "GET"  , correct: false},
+                { text : "IN"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which SQL statement is used to create a database table called 'Customers'?",
+            answers:[
+                { text : " CREATE DATABASE TAB Customers"  , correct: false},
+                { text : " CREATE DATABASE TABLE Customers"  , correct: false},
+                { text : " CREATE TABLE Customers"  , correct: true},
+                { text : " CREATE  DB Customers"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which of the following command is used to delete a table in SQL?",
+            answers:[
+                { text : " delete"  , correct: false},
+                { text : " truncate"  , correct: false},
+                { text : " remove"  , correct: false},
+                { text : " drop"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"Select operation in SQL is equivalent to",
+            answers:[
+                { text : " the selection operation in relational algebra"  , correct: false},
+                { text : " the selection operation in relational algebra, except that select in SQL retains duplicates"  , correct: false},
+                { text : " the projection operation in relational algebra, except that select in SQL retains duplicates"  , correct: true},
+                { text : " the projection operation in relational algebra"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"The statement that is executed automatically by the system as a side effect of the modification of the database is",
+            answers:[
+                { text : " backup"  , correct: false},
+                { text : " assertion"  , correct: false},
+                { text : " recovery"  , correct: false},
+                { text : " trigger"  , correct: true },
+            ]
+
+        },
+        {
+            questions:"An Assertion is a predicate expressing a condition we wish database to always satisfy. The correct syntax for Assertion is :",
+            answers:[
+                { text : " SELECT ASSERTION"  , correct: false},
+                { text : " CREATE ASSERTION, CHECK Predicate"  , correct: false},
+                { text : " CREATE ASSERTION ‘ASSERTION Name’"  , correct: false},
+                { text : " CREATE ASSERTION ‘ASSERTION Name’ CHECK ‘Predicate’"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"Which of the following is aggregate function in SQL?",
+            answers:[
+                { text : " Avg"  , correct: true},
+                { text : " Select"  , correct: false},
+                { text : " Ordered by"  , correct: false},
+                { text : " distinct"  , correct: false},
+            ]
+
+        }
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButton = document.getElementById("answer_button");
+    const nextbutton = document.getElementById("next-btn");
+
+    let currectquestionindex = 0;
+    let score = 0;
+
+    function startQuiz(){
+        currectquestionindex = 0;
+        score = 0;
+        nextbutton.innerHTML = "Next";
+        showQuestion();
+
+    }
+
+    function showQuestion(){
+        resetState();
+        let currectquestion = questions[currectquestionindex];
+        let questionNo = currectquestionindex + 1;
+        questionElement.innerHTML = questionNo + ". " + currectquestion.questions;
+
+
+        currectquestion.answers.forEach(answers =>{
+            const button = document.createElement("button")
+            button.innerHTML=answers.text;
+            button.classList.add("btn");
+            answerButton.appendChild(button)
+            if(answers.correct){
+                button.dataset.correct = answers.correct;
+            }
+            button.addEventListener("click",selectAnswer)
+        });
+    }
+
+    function resetState(){
+        nextbutton.style.display = "none";
+        while(answerButton.firstChild){
+            answerButton.removeChild(answerButton.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectbtn = e.target;
+        const iscorrect = selectbtn.dataset.correct == "true";
+        if(iscorrect){
+            selectbtn.classList.add("correct");
+            score++;
+        }else{
+            selectbtn.classList.add("incorrect");
+        }
+        Array.from(answerButton.children).forEach(button => {
+            if(button.dataset.correct == "true"){
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+        });
+        nextbutton.style.display = "block";
+    }
+    function showscore(){
+        resetState();
+        questionElement.innerHTML = `you score ${score} out of ${questions.length}!`;
+        nextbutton.innerHTML  = "Play Again";
+        nextbutton.style.display = "block"
+    }
+
+    function handlenextbtn(){
+        currectquestionindex++;
+        if(currectquestionindex < questions.length){
+            showQuestion();
+        }else{
+            showscore();
+
+        }
+    }
+
+    nextbutton.addEventListener("click",()=>{
+        if(currectquestionindex < questions.length){
+            handlenextbtn();
+
+        }else{
+            startQuiz();
+        }
+    })
+
+    startQuiz();
+
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+  {% for i in messages %}
+    {% if i.tags == 'warning' %}
+      <script>
+        swal('{{i}}','','warning')
+      </script>
+    {% elif i.tags == 'error' %}
+      <script>
+        swal('{{i}}','','error')
+      </script>
+    {% elif i.tags == 'info' %}
+      <script>
+        swal('{{i}}','','info')
+      </script>
+    {% else %}
+      <script>
+        swal('{{i}}','','success')
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+</body>
+</html>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: url({% static 'load/img/quiz6.jpg' %});
+    background-size: cover;
+    background-position: center;
+}
+.app{
+    background: none;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.app h1{
+    font-size: 50px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+
+}
+.quiz h2{
+    font-size: 30px;
+    color: #001e4d;
+    font-weight: 600px;
+}
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}
+</style>

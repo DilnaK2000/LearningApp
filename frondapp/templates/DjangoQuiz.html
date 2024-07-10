@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DjangoQuiz</title>
+
+</head>
+<body>
+
+
+     <div class="app">
+            <h1>Django Quiz</h1>
+            <div class="quiz">
+                <h2 id="question">Question goes here</h2>
+                <div id="answer_button">
+
+                    <button class="btn"> Answer 1</button>
+                    <button class="btn"> Answer 2</button>
+                    <button class="btn"> Answer 3</button>
+                    <button class="btn"> Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+
+     <div >
+         <a href="{% url 'fordeveloper_page' %}"><button style="width:150px;height:40px;margin-top:40px;margin-left:1005px;border-radius: 10px; background: none;
+            font-size: 18px;color: #033256; font-weight: 600;" type="button" class=" btn-outline-info">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+             Back to Skill
+         </button></a>
+     </div>
+
+
+
+
+<script>
+    const questions = [
+    {
+        questions:"What is a correct syntax for creating a Django project?",
+        answers:[
+            { text : "manage.py start-django projectname" , correct: false},
+            { text : "django start projectname" , correct: false},
+            { text : "django-admin startproject projectname" , correct: true},
+            { text : "py manage.py startproject projectname" , correct: false},
+        ]
+    },
+    {
+        questions:"What is a correct syntax to start a Django development server on your computer?",
+        answers:[
+            { text : "py manage.py run " , correct: false},
+            { text : "mange.py runserver" , correct: false},
+            { text : "python manage.py runserver", correct: true},
+            { text : "mange.py run " , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which language is Django written in?",
+        answers:[
+            { text : "java" , correct: false},
+            { text : "python" , correct: true},
+            { text : "c" , correct: false},
+            { text : "c++" , correct: false},
+        ]
+
+    },
+    {
+        questions:"In Django, incomming request is handled in which file?",
+        answers:[
+            { text : "urls.py"  , correct: true},
+            { text : "manage.py"  , correct: false},
+            { text : "settings.py"  , correct: false},
+            { text : "settings"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"In Django, incomming requests are redirected to specific functions, what are these functions called?",
+        answers:[
+            { text : "controls"  , correct: false},
+            { text : "views"  , correct: true},
+            { text : "models"  , correct: false},
+            { text : "Templates"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"In Django, data is created in objects, what are these objects called in Django?",
+        answers:[
+            { text : "Tables"  , correct: false},
+            { text : "SQLite"  , correct: false},
+            { text : "Models"  , correct: true},
+            { text : "rows"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"When you have done changes in a model, which command has to be executed in order to make the changes take effect in the database?",
+        answers:[
+            { text : "python manage.py runmigrations"  , correct: false},
+            { text : "python mange.py makemigrations"  , correct: true},
+            { text : "python manage.py getmigrations"  , correct: false},
+            { text : "python mange.py MakeMigrations"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"If you have a Django application named members, and a model named Member, what is a correct syntax to import the model?",
+        answers:[
+            { text : "members.member import"  , correct: false},
+            { text : "from members.models import Member."  , correct: true},
+            { text : "import member from member"  , correct: false},
+            { text : "import members.member"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"To use a Django variable named firstname in a Django template, use this syntax:",
+        answers:[
+            { text : "{{firstname}}"  , correct: true},
+            { text : "#firstname#"  , correct: false},
+            { text : "'firstname'"  , correct: false},
+            { text : "/firstname/"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"In Django, Views are written as:",
+        answers:[
+            { text : "Python dictionary"  , correct: false},
+            { text : "Python functions"  , correct: true},
+            { text : "Python views"  , correct: false},
+            { text : "Python tuple"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Django comes with a file containing all the configuration of your Django installation, what is the file's name?",
+        answers:[
+            { text : "views.py"  , correct: false},
+            { text : "config.py"  , correct: false},
+            { text : "setting.py"  , correct: true},
+            { text : "models.py"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"In the configuration file, what the correct syntax to turn off debugging?",
+        answers:[
+            { text : "DEBUG = False;"  , correct: true},
+            { text : "DEBUG = off;"  , correct: false},
+            { text : "DEBUG = OFF;; "  , correct: false},
+            { text : "DEBUG = 0;;"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Django comes with a built-in user interface that allows you to administrate your data. To access this interface you have to create a user name and password. What is a correct syntax to create such user?",
+        answers:[
+            { text : "python manage.py CREATESUPERUSER"  , correct: false},
+            { text : "python manage.py createminuser"  , correct: false},
+            { text : "python manage.py createuser"  , correct: false},
+            { text : "python manage.py createsuperuser"  , correct: true},
+        ]
+
+    },
+    {
+        questions:"For a model to be visible in the admin interface it has to be registered in which file?",
+        answers:[
+            { text : "admin.py"  , correct: true},
+            { text : "setting.py"  , correct: false},
+            { text : "views.py"  , correct: false},
+            { text : "models.py"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"What is the correct syntax to sort the queryset alphabetically by 'firstname'?",
+        answers:[
+            { text : "sort('firstname')" , correct: false},
+            { text : "orderby('firstname')" , correct: false},
+            { text : "order_by('firstname')"  , correct: true},
+            { text : "sortby('firstname')"   , correct: false},
+        ]
+
+    },
+    {
+        questions:"What is the correct Django tag to use when writing a comment?",
+        answers:[
+            { text : "exclude"  , correct: false},
+            { text : "include"  , correct: false},
+            { text : "comment"  , correct: true},
+            { text : "remove"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"What is the correct Django tag to use when writing a conditional (if) statement?",
+        answers:[
+            { text : "if"  , correct: true},
+            { text : "!!"  , correct: false},
+            { text : "when"  , correct: false},
+            { text : "*"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"What is the correct tag to use when ending an if statement?",
+        answers:[
+            { text : "endif"  , correct: true},
+            { text : "/if"  , correct: false},
+            { text : "end if"  , correct: false},
+            { text : "end "  , correct: false},
+        ]
+
+    },
+    {
+        questions:"What is the correct operator to use in if statements to evaulate if A is equal to B?",
+        answers:[
+            { text : "if A = B"  , correct: false},
+            { text : "if A equal B"  , correct: false},
+            { text : "if A == B"  , correct: true},
+            { text : "if A like B"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"What tag can be used to create a variable inside a template?",
+        answers:[
+            { text : " let"  , correct: false},
+            { text : "get"  , correct: false},
+            { text : "with"  , correct: true},
+            { text : "var"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"QuerySets can be used to query data in Django. What is a correct syntax to get data where 'firstname' is 'Emil'?",
+        answers:[
+            { text : "where (firstname like 'email')"  , correct: false},
+            { text : "get (firstname='email')"  , correct: false},
+            { text : "filter(firstname='email')"  , correct: true},
+            { text : "where firstname='email'"  , correct: false},
+        ]
+
+    }
+];
+
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("answer_button");
+const nextbutton = document.getElementById("next-btn");
+
+let currectquestionindex = 0;
+let score = 0;
+
+function startQuiz(){
+    currectquestionindex = 0;
+    score = 0;
+    nextbutton.innerHTML = "Next";
+    showQuestion();
+
+}
+
+function showQuestion(){
+    resetState();
+    let currectquestion = questions[currectquestionindex];
+    let questionNo = currectquestionindex + 1;
+    questionElement.innerHTML = questionNo + ". " + currectquestion.questions;
+
+
+    currectquestion.answers.forEach(answers =>{
+        const button = document.createElement("button")
+        button.innerHTML=answers.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button)
+        if(answers.correct){
+            button.dataset.correct = answers.correct;
+        }
+        button.addEventListener("click",selectAnswer)
+    });
+}
+
+function resetState(){
+    nextbutton.style.display = "none";
+    while(answerButton.firstChild){
+        answerButton.removeChild(answerButton.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectbtn = e.target;
+    const iscorrect = selectbtn.dataset.correct == "true";
+    if(iscorrect){
+        selectbtn.classList.add("correct");
+        score++;
+    }else{
+        selectbtn.classList.add("incorrect");
+    }
+    Array.from(answerButton.children).forEach(button => {
+        if(button.dataset.correct == "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextbutton.style.display = "block";
+}
+function showscore(){
+    resetState();
+    questionElement.innerHTML = `you score ${score} out of ${questions.length}!`;
+    nextbutton.innerHTML  = "Play Again";
+    nextbutton.style.display = "block"
+}
+
+function handlenextbtn(){
+    currectquestionindex++;
+    if(currectquestionindex < questions.length){
+        showQuestion();
+    }else{
+        showscore();
+
+    }
+}
+
+nextbutton.addEventListener("click",()=>{
+    if(currectquestionindex < questions.length){
+        handlenextbtn();
+
+    }else{
+        startQuiz();
+    }
+})
+
+startQuiz();
+
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+  {% for i in messages %}
+    {% if i.tags == 'warning' %}
+      <script>
+        swal('{{i}}','','warning')
+      </script>
+    {% elif i.tags == 'error' %}
+      <script>
+        swal('{{i}}','','error')
+      </script>
+    {% elif i.tags == 'info' %}
+      <script>
+        swal('{{i}}','','info')
+      </script>
+    {% else %}
+      <script>
+        swal('{{i}}','','success')
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+</body>
+</html>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: url({% static 'load/img/quiz6.jpg' %});
+    background-size: cover;
+    background-position: center;
+}
+.app{
+    background: none;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.app h1{
+    font-size: 50px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+
+}
+.quiz h2{
+    font-size: 30px;
+    color: #001e4d;
+    font-weight: 600px;
+}
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}
+</style>

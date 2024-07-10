@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScriptQuiz</title>
+
+</head>
+<body>
+
+
+     <div class="app">
+            <h1>JavaScript Quiz</h1>
+            <div class="quiz">
+                <h2 id="question">Question goes here</h2>
+                <div id="answer_button">
+
+                    <button class="btn"> Answer 1</button>
+                    <button class="btn"> Answer 2</button>
+                    <button class="btn"> Answer 3</button>
+                    <button class="btn"> Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+
+     <div >
+         <a href="{% url 'fordeveloper_page' %}"><button style="width:150px;height:40px;margin-top:40px;margin-left:1005px;border-radius: 10px; background: none;
+            font-size: 18px;color: #033256; font-weight: 600;" type="button" class=" btn-outline-info">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+             Back to Skill
+         </button></a>
+     </div>
+
+
+
+<script>
+        const questions = [
+        {
+            questions:"Inside which HTML element do we put the JavaScript?",
+            answers:[
+                { text : "'Script'" , correct: true},
+                { text : "'Scripting'" , correct: false},
+                { text : "'JavaScript'" , correct: false},
+                { text : "'js'" , correct: false},
+            ]
+        },
+        {
+            questions:"What is the correct JavaScript syntax to change the content of the HTML element below?   <p id='demo'>This is a demonstration.</p>",
+            answers:[
+                { text : "document. getElementByName(“demo”). innerHTML = 'Hello World';" , correct: false},
+                { text : "document. getElementById(“p”). innerHTML = 'Hello World';" , correct: false},
+                { text : "document. getElementByName(“p”). innerHTML = 'Hello World';", correct: true},
+                { text : "#demo.innerHTML = 'Hello World';" , correct: false},
+            ]
+
+        },
+        {
+            questions:"Where is the correct place to insert a JavaScript?",
+            answers:[
+                { text : "The <head> Section" , correct: false},
+                { text : "The <body> Section" , correct: false},
+                { text : "Both the <head> Section and the <body> Section are same" , correct: true},
+                { text : "None" , correct: false},
+            ]
+
+        },
+        {
+            questions:"What is the correct syntax for referring to an external script called 'xxx.js'?",
+            answers:[
+                { text : "script src=”xxx.js” "  , correct: true},
+                { text : "script href=”xxx.js” "  , correct: false},
+                { text : "script name=”xxx.js” "  , correct: false},
+                { text : "script id=”xxx.js” "  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you write 'Hello World' in an alert box?",
+            answers:[
+                { text : "msgBox('Hello, world!')"  , correct: false},
+                { text : "alert('Hello, world!')"  , correct: true},
+                { text : "alertBox('Hello, world!')"  , correct: false},
+                { text : "msg('Hello, world!')"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you create a function in JavaScript?",
+            answers:[
+                { text : "Function Functionname()"  , correct: true},
+                { text : "function = functionname()"  , correct: false},
+                { text : "function:functionName()"  , correct: false},
+                { text : "None"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you call a function named 'myFunction'?",
+            answers:[
+                { text : "myFunction()"  , correct: true},
+                { text : "call function myFunction()"  , correct: false},
+                { text : "call myFunction()"  , correct: false},
+                { text : "function myFunction()"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How to write an IF statement in JavaScript?",
+            answers:[
+                { text : "if i==5 then"  , correct: false},
+                { text : "if i == 5"  , correct: false},
+                { text : "if (i==5)"  , correct: true},
+                { text : "if(i=5)"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
+            answers:[
+                { text : "if i != 5 then"  , correct: false},
+                { text : "if i<>5"  , correct: false},
+                { text : "if (i<>5)"  , correct: false},
+                { text : "if (i != 5)"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"How does a WHILE loop start?",
+            answers:[
+                { text : "while (i <= 5)"  , correct: true},
+                { text : "while (i < 5;i++)"  , correct: false},
+                { text : "while i <= 5"  , correct: false},
+                { text : "while (i =1 to 5)"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How does a FOR loop start?",
+            answers:[
+                { text : "for (i<=5 ; i++)"  , correct: false},
+                { text : "for i=1 to 5"  , correct: false},
+                { text : "for ( i = 0; i <=5 )"  , correct: false},
+                { text : "for ( i = 0; i <=5 ; i++)"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"How can you add a comment in a JavaScript?",
+            answers:[
+                { text : "*this is a comment"  , correct: false},
+                { text : "// this is a comment"  , correct: true},
+                { text : "/ this is a comment "  , correct: false},
+                { text : "!--this is a comment--!"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How to insert a comment that has more than one line?",
+            answers:[
+                { text : "// this comment has more than one line //"  , correct: false},
+                { text : "/ this comment has more than one line /"  , correct: false},
+                { text : "/* this comment has more than one line */"  , correct: true},
+                { text : "!-- this comment has more than one line --!"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"What is the correct way to write a JavaScript array?",
+            answers:[
+                { text : "var color='red','green','blue'"  , correct: true},
+                { text : "var color=(1:'red',2:'green',3:'blue')"  , correct: false},
+                { text : "var color=['red','green','blue']"  , correct: false},
+                { text : "var color=1=('red'),2=('green'),3=('blue')"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you round the number 7.25, to the nearest integer?",
+            answers:[
+                { text : "round(7.25)" , correct: false},
+                { text : "Math.rnd(7.25)" , correct: false},
+                { text : "Math.round(7.25)"  , correct: true},
+                { text : "rnd(7.25)"   , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you find the number with the highest value of x and y?",
+            answers:[
+                { text : "Math.ceil(x,y)"  , correct: false},
+                { text : "ceil(x,y)"  , correct: false},
+                { text : "Math.max(x,y)"  , correct: true},
+                { text : "top(x,y)"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How can you detect the client's browser name?",
+            answers:[
+                { text : "navigator.appName"  , correct: false},
+                { text : "client.navName"  , correct: false},
+                { text : "client.browser"  , correct: false},
+                { text : "browser.name"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"Which event occurs when the user clicks on an HTML element?",
+            answers:[
+                { text : "onclick"  , correct: true},
+                { text : "onmouseover"  , correct: false},
+                { text : "onchange"  , correct: false},
+                { text : "onmouseclick"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you declare a JavaScript variable?",
+            answers:[
+                { text : "v carName"  , correct: false},
+                { text : "varriable carName"  , correct: false},
+                { text : "var carName"  , correct: true},
+                { text : "va carName"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which operator is used to assign a value to a variable?",
+            answers:[
+                { text : " -"  , correct: false},
+                { text : "*"  , correct: false},
+                { text : "="  , correct: true},
+                { text : "+"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"What will the following code return: Boolean(10 > 9)",
+            answers:[
+                { text : "NaN"  , correct: false},
+                { text : "false"  , correct: false},
+                { text : "true"  , correct: true},
+                { text : "No"  , correct: false},
+            ]
+
+        }
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButton = document.getElementById("answer_button");
+    const nextbutton = document.getElementById("next-btn");
+
+    let currectquestionindex = 0;
+    let score = 0;
+
+    function startQuiz(){
+        currectquestionindex = 0;
+        score = 0;
+        nextbutton.innerHTML = "Next";
+        showQuestion();
+
+    }
+
+    function showQuestion(){
+        resetState();
+        let currectquestion = questions[currectquestionindex];
+        let questionNo = currectquestionindex + 1;
+        questionElement.innerHTML = questionNo + ". " + currectquestion.questions;
+
+
+        currectquestion.answers.forEach(answers =>{
+            const button = document.createElement("button")
+            button.innerHTML=answers.text;
+            button.classList.add("btn");
+            answerButton.appendChild(button)
+            if(answers.correct){
+                button.dataset.correct = answers.correct;
+            }
+            button.addEventListener("click",selectAnswer)
+        });
+    }
+
+    function resetState(){
+        nextbutton.style.display = "none";
+        while(answerButton.firstChild){
+            answerButton.removeChild(answerButton.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectbtn = e.target;
+        const iscorrect = selectbtn.dataset.correct == "true";
+        if(iscorrect){
+            selectbtn.classList.add("correct");
+            score++;
+        }else{
+            selectbtn.classList.add("incorrect");
+        }
+        Array.from(answerButton.children).forEach(button => {
+            if(button.dataset.correct == "true"){
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+        });
+        nextbutton.style.display = "block";
+    }
+    function showscore(){
+        resetState();
+        questionElement.innerHTML = `you score ${score} out of ${questions.length}!`;
+        nextbutton.innerHTML  = "Play Again";
+        nextbutton.style.display = "block"
+    }
+
+    function handlenextbtn(){
+        currectquestionindex++;
+        if(currectquestionindex < questions.length){
+            showQuestion();
+        }else{
+            showscore();
+
+        }
+    }
+
+    nextbutton.addEventListener("click",()=>{
+        if(currectquestionindex < questions.length){
+            handlenextbtn();
+
+        }else{
+            startQuiz();
+        }
+    })
+
+    startQuiz();
+
+
+</script>
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+  {% for i in messages %}
+    {% if i.tags == 'warning' %}
+      <script>
+        swal('{{i}}','','warning')
+      </script>
+    {% elif i.tags == 'error' %}
+      <script>
+        swal('{{i}}','','error')
+      </script>
+    {% elif i.tags == 'info' %}
+      <script>
+        swal('{{i}}','','info')
+      </script>
+    {% else %}
+      <script>
+        swal('{{i}}','','success')
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+</body>
+</html>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: url({% static 'load/img/quiz6.jpg' %});
+    background-size: cover;
+    background-position: center;
+}
+.app{
+    background: none;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.app h1{
+    font-size: 50px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+
+}
+.quiz h2{
+    font-size: 30px;
+    color: #001e4d;
+    font-weight: 600px;
+}
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}
+</style>

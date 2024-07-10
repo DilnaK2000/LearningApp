@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>python Q&A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="#" class="nav-item nav-link" style="margin-right:150px">Request Demo</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+
+    <div class="row">
+        <div class="col-4">
+             <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center"
+                  style="width:300px;overflow: hidden;overflow-y: scroll;height:700px;margin-top:27px;">
+                 <p class="p-1 rounded" style="text-align:center;" ><u>Basic Python Interview Questions for Freshers</u></p>
+                 <a class="p-1 rounded" href="#item-1">1. What is Python? List some popular applications of Python in the world of technology.</a>
+                 <a class="p-1 rounded" href="#item-2">2. What are the benefits of using Python language as a tool in the present scenario?</a>
+                 <a class="p-1 rounded" href="#item-3">3. Is Python a compiled language or an interpreted language?</a>
+                 <a class="p-1 rounded" href="#item-4">4. What does the ‘#’ symbol do in Python? </a>
+                 <a class="p-1 rounded" href="#item-5">5. What is the difference between a Mutable datatype and an Immutable data type? </a>
+                 <a class="p-1 rounded" href="#item-6">6. How are arguments passed by value or by reference in Python? </a>
+                 <a class="p-1 rounded" href="#item-7">7. What is the difference between a Set and Dictionary?</a>
+                 <a class="p-1 rounded" href="#item-8">8. What is List Comprehension? Give an Example.</a>
+                 <a class="p-1 rounded" href="#item-9">9. What is a lambda functions</a>
+                 <a class="p-1 rounded" href="#item-10">10. What is a pass in Python?</a>
+                 <a class="p-1 rounded" href="#item-11">11. What is the difference between / and // in Python?</a>
+                 <a class="p-1 rounded" href="#item-12">12. How is Exceptional handling done in Python?</a>
+                 <a class="p-1 rounded" href="#item-13">13. What is swapcase function in Python?</a>
+                 <a class="p-1 rounded" href="#item-14">14. Difference between for loop and while loop in Python </a>
+                 <a class="p-1 rounded" href="#item-15">15. Can we Pass a function as an argument in Python? </a>
+                 <a class="p-1 rounded" href="#item-16">16. What are *args and *kwargs? </a>
+                 <a class="p-1 rounded" href="#item-17">17. Is Indentation Required in Python? </a>
+                 <a class="p-1 rounded" href="#item-18">18. What is Scope in Python? </a>
+                 <a class="p-1 rounded" href="#item-19">19. What is docstring in Python? </a>
+                 <a class="p-1 rounded" href="#item-20">20. What is a dynamically typed language? </a>
+                 <a class="p-1 rounded" href="#item-21">21. What is a break, continue, and pass in Python? </a>
+                 <a class="p-1 rounded" href="#item-22">22. What are Built-in data types in Python? </a>
+                 <a class="p-1 rounded" href="#item-23">23. How do you floor a number in Python? </a>
+                 <a class="p-1 rounded" href="#item-24">24. What is the difference between xrange and range functions? </a>
+                 <a class="p-1 rounded" href="#item-25">25. What is Dictionary Comprehension? Give an Example </a>
+                 <a class="p-1 rounded" href="#item-26">26.Is Tuple Comprehension? If yes, how, and if not why? </a>
+                 <a class="p-1 rounded" href="#item-27">27. Differentiate between List and Tuple? </a>
+                 <a class="p-1 rounded" href="#item-28">28. What is the difference between a shallow copy and a deep copy? </a>
+                 <a class="p-1 rounded" href="#item-29">29. Which sorting technique is used by sort() and sorted() functions of python? </a>
+                 <a class="p-1 rounded" href="#item-30">30. What are Decorators? </a>
+                 <a class="p-1 rounded" href="#item-31">31. How do you debug a Python program? </a>
+                 <a class="p-1 rounded" href="#item-32">32. What are Iterators in Python? </a>
+                 <a class="p-1 rounded" href="#item-33">33. What are Generators in Python? </a>
+                 <a class="p-1 rounded" href="#item-34">34. Does Python supports multiple Inheritance? </a>
+                 <a class="p-1 rounded" href="#item-35">35. What is Polymorphism in Python? </a>
+                 <a class="p-1 rounded" href="#item-36">36. Define encapsulation in Python? </a>
+                 <a class="p-1 rounded" href="#item-37">37. How do you do data abstraction in Python? </a>
+                 <a class="p-1 rounded" href="#item-38">38. How is memory management done in Python? </a>
+                 <a class="p-1 rounded" href="#item-39">39. How to delete a file using Python? </a>
+                 <a class="p-1 rounded" href="#item-40">40. What is slicing in Python?</a>
+
+             </div>
+        </div>
+    </div>
+
+    <div class="row" style="overflow: hidden;overflow-y: scroll;height:700px;margin-left:370px;width:1000px;margin-top:-720px" >
+      <div class="row">
+        <div class="col-8" style="margin-top:50px;width:950px;">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="#item-1">
+              <h2>Top 50+ Python Interview Questions and Answers (Latest 2024)</h2>
+                <div style="width:850px;height:2px;background-color:#adb5bd;"></div>
+              <p>Python is the most used language in top companies such as Intel, IBM, NASA, Pixar, Netflix, Facebook, JP Morgan Chase, Spotify,
+                  and many more because of its performance and its powerful libraries. To get into these companies and organizations as a Python
+                  developer, you need to master some important Python Interview Questions to crack their Python Online Assessment Round and Python
+                  Interview Round. We have prepared a list of the Top 50 Python Interview
+                  Questions along with their answers to ace interviews.</p><br>
+                <p>Supercharge your Python interview success with our Python course here you will get all the insights into Python
+                    programming and a practice set that will help you leverage your Python skills.</p>
+            </div>
+            <div id="#item-2">
+                <h3><u>Basic Python Interview Questions for Freshers</u></h3>
+                <h3 style="margin-top:20px">1. What is Python? List some popular applications of Python in the world of technology.</h3>
+                <p>Python is a widely-used general-purpose, high-level programming language. It was created by Guido van
+                    Rossum in 1991 and further developed by the Python Software Foundation. It was designed with an emphasis
+                    on code readability, and its syntax allows programmers to express their concepts in fewer lines of code.<br>It is used for:</p>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                System Scripting</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Web Development </p></a>
+                <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Game Development </p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Software Development </p></a>
+                <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Complex Mathematics</p></a>
+            </div>
+
+
+
+            <div id="item-3">
+              <h3>2. What are the benefits of using Python language as a tool in the present scenario?</h3>
+                <p>The following are the benefits of using Python language:</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Object-Oriented Language</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                High-Level Language</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Dynamically Typed language</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Extensive support Libraries</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Presence of third-party modules</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Open source and community development</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Portable and Interactive</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Portable across Operating systems</p></a>
+            </div>
+
+
+            <div id="item-4" style="margin-top:30px">
+              <h3>3. Is Python a compiled language or an interpreted language?</h3>
+              <p>Actually, Python is a partially compiled language and partially interpreted language. The
+                  compilation part is done first when we execute our code and this will generate byte code internally
+                  this byte code gets converted by the Python virtual machine(p.v.m) according to the underlying
+                  platform(machine+operating system).</p>
+            </div>
+
+
+            <div id="item-5">
+              <h3>4. What does the ‘#’ symbol do in Python?</h3>
+              <p>‘#’ is used to comment on everything that comes after on the line.</p>
+            </div>
+
+
+            <div id="item-6">
+              <h3>5. What is the difference between a Mutable datatype and an Immutable data type?</h3>
+              <p>Mutable data types can be edited i.e., they can change at runtime. Eg – List, Dictionary, etc.
+               Immutable data types can not be edited i.e., they can not change at runtime. Eg – String, Tuple, etc.</p>
+            </div>
+
+
+            <div id="item-7">
+              <h3>6. How are arguments passed by value or by reference in Python?</h3>
+              <p>Everything in Python is an object and all variables hold references to the objects. The reference values
+                  are according to the functions; as a result, you cannot change the value of the references. However,
+                  you can change the objects if it is mutable.</p>
+            </div>
+
+
+             <div id="item-8">
+              <h3>7. What is the difference between a Set and Dictionary?</h3>
+              <p>The set is an unordered collection of data types that is iterable, mutable and has no duplicate elements.
+                A dictionary in Python is an ordered collection of data values, used to store data values like a map.</p>
+            </div>
+
+
+
+             <div id="item-9">
+              <h3>8. What is List Comprehension? Give an Example.</h3>
+              <p>List comprehension is a syntax construction to ease the creation of a list based on existing iterable.<br>For Example:</p>
+              <div class="div1" >
+                <p style="text-align:center;font-size:17px;padding-top:10px;">my_list = [i for i in range(1, 10)]</p>
+              </div>
+            </div>
+
+
+             <div id="item-10">
+                <h3>9. What is a lambda functions</h3>
+                    <p>A lambda function is an anonymous function. This function can have any number of parameters but, can have
+                  just one statement.<br> For Example:</p>
+                    <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">a = lambda x, y : x*y <br>print(a(7, 19))</p>
+                    </div>
+              </div>
+
+
+              <div id="item-11">
+                <h3>10. What is a pass in Python?</h3>
+                    <p>Pass means performing no operation or in other words, it is a placeholder in the compound statement,
+                        where there should be a blank left and nothing has to be written there.</p>
+              </div>
+
+
+              <div id="item-12">
+                  <h3>11. What is the difference between / and // in Python?</h3>
+                     <p>/ represents precise division (result is a floating point number)
+                         whereas // represents floor division (result is an integer).<br> For Example:</p>
+                  <div class="div1" >
+                      <p style="margin-left:40px;font-size:17px;padding-top:10px;">5//2 = 2<br>5/2 = 2.5 </p>
+                  </div>
+              </div>
+
+
+              <div id="item-13">
+                  <h3>12. How is Exceptional handling done in Python?</h3>
+                     <p>There are 3 main keywords i.e. try, except, and finally which are used to catch exceptions
+                         and handle the recovering mechanism accordingly. Try is the block of a code that is monitored
+                         for errors. Except block gets executed when an error occurs.</p>
+                  <p>The beauty of the final block is to execute the code after trying for an error. This block gets
+                      executed irrespective of whether an error occurred or not. Finally, block is used to do the required
+                      cleanup activities of objects/variables.</p>
+              </div>
+
+
+
+              <div id="item-14">
+                  <h3>13. What is swapcase function in Python?</h3>
+                     <p>It is a string’s function that converts all uppercase characters into lowercase and vice versa.
+                         It is used to alter the existing case of the string. This method creates a copy of the string which
+                         contains all the characters in the swap case.<br> For Example:</p>
+                  <div class="div1" style="height:100px" >
+                      <p style="margin-left:40px;font-size:17px;padding-top:10px;">string = "LeArNLeAf"<br>string.swapcase() ---> "lEaRnlEaF" </p>
+                  </div>
+              </div>
+
+
+              <div id="item-15">
+                  <h3>14. Difference between for loop and while loop in Python</h3>
+                     <p>The “for” Loop is generally used to iterate through the elements of various collection types
+                         such as List, Tuple, Set, and Dictionary. Developers use a “for” loop where they have both the
+                         conditions start and the end. Whereas, the “while” loop is the actual looping feature that is
+                         used in any other programming language. Programmers use a Python while loop where they just have the
+                         end conditions.</p>
+              </div>
+
+
+              <div id="item-16">
+                  <h3>15. Can we Pass a function as an argument in Python?</h3>
+                     <p>Yes, Several arguments can be passed to a function, including objects, variables
+                         (of the same or distinct data types), and functions. Functions can be passed as parameters
+                         to other functions because they are objects. Higher-order functions are functions that can take
+                         other functions as arguments.</p>
+              </div>
+
+
+             <div id="item-17">
+              <h3>16. What are *args and *kwargs?</h3>
+              <p>To pass a variable number of arguments to a function in Python, use the special syntax *args and
+                  **kwargs in the function specification. It is used to pass a variable-length, keyword-free argument
+                  list. By using the *, the variable we associate with the * becomes iterable, allowing you to do operations
+                  on it such as iterating over it and using higher-order operations like map and filter.</p>
+             </div>
+
+
+              <div id="item-18">
+                <h3>17. Is Indentation Required in Python?</h3>
+                <p>Yes, indentation is required in Python. A Python interpreter can be informed that a group of
+                    statements belongs to a specific block of code by using Python indentation. Indentations make the
+                    code easy to read for developers in all programming languages but in Python, it is very important to
+                    indent the code in a specific order.</p>
+              </div>
+
+
+               <div id="item-19">
+                <h3>18. What is Scope in Python?</h3>
+                <p>The location where we can find a variable and also access it if required is called the scope of a variable.</p>
+               <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                <b>Python Local variable:</b> Local variables are those that are initialized within a function and are unique to that function. It cannot be accessed outside of the function.</p></a>
+               <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                <b> Python Global variables:</b> Global variables are the ones that are defined and declared outside any function and are not specified to any function.</p></a>
+               <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                <b>Module-level scope:</b> It refers to the global objects of the current module accessible in the program.</p></a>
+               <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                <b>Outermost scope:</b> It refers to any built-in names that the program can call. The name referenced is located last among the objects in this scope.</p></a>
+              </div>
+
+
+               <div id="item-20">
+                <h3>19. What is docstring in Python?</h3>
+                <p>Python documentation strings (or docstrings) provide a convenient way of associating
+                    documentation with Python modules, functions, classes, and methods.</p>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Declaring Docstrings:</b>The docstrings are declared using ”’triple single quotes”’ or
+                       “””triple double quotes””” just below the class, method, or function declaration. All functions
+                       should have a docstring.</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Accessing Docstrings: </b> The docstrings can be accessed using the __doc__ method of the object or using the help function.</p></a>
+
+              </div>
+
+
+
+               <div id="item-21">
+                <h3>20. What is a dynamically typed language?</h3>
+                <p>Typed languages are the languages in which we define the type of data type and it will be
+                    known by the machine at the compile-time or at runtime. Typed languages can be classified into
+                    two categories:</p>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Statically typed languages:</b>In this type of language, the data type of a variable is known at the
+                       compile time which means the programmer has to specify the data type of a variable at the time of its
+                       declaration. </p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Dynamically typed languages: </b> These are the languages that do not require any pre-defined
+                       data type for any variable as it is interpreted at runtime by the machine itself. In these languages,
+                       interpreters assign the data type to a variable at runtime depending on its value.</p></a>
+              </div>
+
+
+
+               <div id="item-22">
+                <h3>21. What is a break, continue, and pass in Python?</h3>
+                <p>The break statement is used to terminate the loop or statement in which it is present. After that,
+                    the control will pass to the statements that are present after the break statement, if available.<br>
+                    Continue is also a loop control statement just like the break statement. continue statement is opposite to
+                    that of the break statement, instead of terminating the loop, it forces to execute the next iteration of the
+                    loop.<br>
+                    Pass means performing no operation or in other words, it is a placeholder in the compound statement,
+                    where there should be a blank left and nothing has to be written there.</p>
+              </div>
+
+
+
+
+               <div id="item-23">
+                <h3>22. What are Built-in data types in Python?</h3>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Numeric:</b>The numeric data type in Python represents the data that has a numeric value. A numeric
+                    value can be an integer, a floating number, a Boolean, or even a complex number.</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Sequence Type:</b>The sequence Data Type in Python is the ordered collection of similar or
+                       different data types. There are several sequence types in Python:</p></a>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                           </svg>Python String</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        </svg>Python List</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            </svg>Python Tuple</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            </svg>Python range</p>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Mapping Types:</b>In Python, hashable data can be mapped to random objects using a mapping object.
+                       There is currently only one common mapping type, the dictionary, and mapping objects are mutable. </p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Set Types: </b>  In Python, a Set is an unordered collection of data types that is iterable,
+                       mutable, and has no duplicate elements. The order of elements in a set is undefined though it may
+                       consist of various elements.</p></a>
+              </div>
+
+
+
+               <div id="item-24">
+                <h3>23. How do you floor a number in Python?</h3>
+                   <p>The Python math module includes a method that can be used to calculate the floor of a number.</p>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    floor() method in Python returns the floor of x i.e., the largest integer not greater than x.</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    Also, The method ceil(x) in Python returns a ceiling value of x i.e., the smallest integer greater than or equal to x.</p></a>
+              </div>
+
+
+
+               <div id="item-25">
+                   <h4><u>Intermediate Python Interview Questions</u></h4>
+                <h3>24. What is the difference between xrange and range functions?</h3>
+                <p>range() and xrange() are two functions that could be used to iterate a certain number of times
+                    in for loops in Python. In Python 3, there is no xrange, but the range function behaves like xrange
+                    in Python 2.</p>
+                    <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    range() – This returns a list of numbers created using the range() function.</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    xrange() – This function returns the generator object that can be used to display numbers only by looping. The only particular range is displayed on demand and hence called lazy evaluation.</p></a>
+
+              </div>
+
+
+               <div id="item-26">
+                <h3>25. What is Dictionary Comprehension? Give an Example</h3>
+                <p>Dictionary Comprehension is a syntax construction to ease the creation of a
+                    dictionary based on the existing iterable.<br>
+                    For Example: my_dict = {i:i+7 for i in range(1, 10)}</p>
+              </div>
+
+
+               <div id="item-27">
+                <h3>26.Is Tuple Comprehension? If yes, how, and if not why?</h3>
+                   <div class="div1" style="height:100px" >
+                      <p style="margin-left:40px;font-size:17px;padding-top:10px;">(i for i in (1, 2, 3))</p>
+                  </div>
+                   <p>Tuple comprehension is not possible in Python because it will end up in a generator, not a tuple comprehension.</p>
+              </div>
+
+
+
+               <div id="item-28">
+                <h3>27. Differentiate between List and Tuple?</h3>
+                <p>YLet’s analyze the differences between List and Tuple:</p>
+                <p><b>List</b></p>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    Lists are Mutable datatype.</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    Lists consume more memory</p></a>
+                    <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    The list is better for performing operations, such as insertion and deletion.</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    The implication of iterations is Time-consuming</p></a>
+                <p><b>Tuple</b></p>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   Tuples are Immutable datatype.</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    Tuple consumes less memory as compared to the list</p></a>
+                    <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    A Tuple data type is appropriate for accessing the elements</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    The implication of iterations is comparatively Faster</p></a>
+
+              </div>
+
+
+              <div id="item-29">
+                <h3>28. What is the difference between a shallow copy and a deep copy?</h3>
+                <p>Shallow copy is used when a new instance type gets created and it keeps values that
+                    are copied whereas deep copy stores values that are already copied.<br>
+                    A shallow copy has faster program execution whereas a deep copy makes it slow.</p>
+              </div>
+
+
+
+              <div id="item-30">
+                <h3>29. Which sorting technique is used by sort() and sorted() functions of python?</h3>
+                <p>Python uses the Tim Sort algorithm for sorting. It’s a stable sorting whose worst case
+                    is O(N log N). It’s a hybrid sorting algorithm, derived from merge sort and insertion sort,
+                    designed to perform well on many kinds of real-world data.</p>
+              </div>
+
+
+
+              <div id="item-31">
+                <h3>30. What are Decorators?</h3>
+                <p>Decorators are a very powerful and useful tool in Python as they are the specific change that
+                    we make in Python syntax to alter functions easily. </p>
+              </div>
+
+
+
+
+              <div id="item-32">
+                <h3>31. How do you debug a Python program?</h3>
+                <p>By using this command we can debug a Python program:</p>
+                  <div class="div1" style="height:100px" >
+                      <p style="margin-left:40px;font-size:17px;padding-top:10px;">$ python -m pdb python-script.py</p>
+                  </div>
+              </div>
+
+
+
+              <div id="item-33">
+                <h3>32. What are Iterators in Python?</h3>
+                <p>In Python, iterators are used to iterate a group of elements, containers like a list. Iterators are
+                    collections of items, and they can be a list, tuples, or a dictionary. Python iterator implements
+                    __itr__ and the next() method to iterate the stored elements. We generally use loops to iterate over the
+                    collections (list, tuple) in Python.</p>
+              </div>
+
+
+              <div id="item-34">
+                <h3>33. What are Generators in Python?</h3>
+                <p>In Python, the generator is a way that specifies how to implement iterators. It is a normal function
+                    except that it yields expression in the function. It does not implement __itr__ and next() method and
+                    reduces other overheads as well.<br> If a function contains at least a yield statement, it becomes a
+                    generator. The yield keyword pauses the current execution by saving its states and then resumes from the
+                    same when required.</p>
+              </div>
+
+
+              <div id="item-35">
+                <h3>34. Does Python supports multiple Inheritance?</h3>
+                <p>Python does support multiple inheritances, unlike Java. Multiple inheritances mean that a class can be
+                    derived from more than one parent class.</p>
+              </div>
+
+
+
+              <div id="item-36">
+                <h3>35. What is Polymorphism in Python?</h3>
+                <p>Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a
+                    method named ABC then the child class also can have a method with the same name ABC having its own
+                    parameters and variables. Python allows polymorphism.</p>
+              </div>
+
+
+
+              <div id="item-37">
+                <h3>36. Define encapsulation in Python?</h3>
+                <p>Encapsulation means binding the code and the data together.
+                    A Python class is an example of encapsulation.</p>
+              </div>
+
+
+
+              <div id="item-38">
+                <h3>37. How do you do data abstraction in Python?</h3>
+                <p>Data Abstraction is providing only the required details and hides the implementation from the world.
+                    It can be achieved in Python by using interfaces and abstract classes.</p>
+              </div>
+
+
+
+              <div id="item-39">
+                <h3>38. How is memory management done in Python?</h3>
+                <p>Python uses its private heap space to manage the memory. Basically, all the objects and data structures
+                    are stored in the private heap space. Even the programmer can not access this private space as the interpreter
+                    takes care of this space. Python also has an inbuilt garbage collector, which recycles all the unused memory
+                    and frees the memory and makes it available to the heap space.</p>
+              </div>
+
+
+              <div id="item-40">
+                <h3>39. How to delete a file using Python?</h3>
+                <p>We can delete a file using Python by following approaches:</p>
+                  <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   os.remove()</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    os.unlink()</p></a>
+              </div>
+
+
+
+              <div id="item-41">
+                <h3>40. What is slicing in Python?</h3>
+                <p>Python Slicing is a string operation for extracting a part of the string, or some part of a list.
+                    With this operator, one can specify where to start the slicing, where to end, and specify the step.
+                    List slicing returns a new list from the existing list.</p>
+                  <div class="div1"  >
+                      <p style="text-align:center;font-size:17px;padding-top:10px;">Syntax: Lst[ Initial : End : IndexJump ]</p>
+                  </div>
+              </div>
+
+
+
+              <div id="item-42">
+                <h3>41. What is a namespace in Python?</h3>
+                <p>A namespace is a naming system used to make sure that names are unique to avoid naming conflicts.</p>
+              </div>
+
+
+              <div id="item-43">
+                <h3>42. What is PIP?</h3>
+                <p>PIP is an acronym for Python Installer Package which provides a seamless interface to install
+                    various Python modules. It is a command-line tool that can search for packages over the internet and
+                    install them without any user interaction.</p>
+              </div>
+
+
+
+              <div id="item-44">
+                <h3>43. What is a zip function?</h3>
+                <p>Python zip() function returns a zip object, which maps a similar index of multiple containers.
+                    It takes an iterable, converts it into an iterator and aggregates the elements based on iterables passed.
+                    It returns an iterator of tuples.</p>
+              </div>
+
+
+
+
+              <div id="item-45">
+                <h3>44. What are Pickling and Unpickling?</h3>
+                <p>The Pickle module accepts any Python object and converts it into a string representation and
+                    dumps it into a file by using the dump function, this process is called pickling. While the process
+                    of retrieving original Python objects from the stored string representation is called unpickling.</p>
+              </div>
+
+
+
+              <div id="item-46">
+                <h3>45. What is monkey patching in Python?</h3>
+                <p>In Python, the term monkey patch only refers to dynamic modifications of a class or module at run-time.</p>
+                <div class="div1" style="height:300px" >
+                      <p style="margin-left:40px;font-size:17px;padding-top:10px;"># g.py
+                        <br>class GeeksClass:<br>
+                            def function(self):<br>
+                                print "function()"<br>
+
+                        import m<br>
+                        def monkey_function(self):<br>
+                            print "monkey_function()"<br>
+
+                        m.GeeksClass.function = monkey_function<br>
+                        obj = m.GeeksClass()<br>
+                        obj.function()</p>
+                  </div>
+              </div>
+
+
+
+              <div id="item-47">
+                <h3>46. What is __init__() in Python?</h3>
+                <p>Equivalent to constructors in OOP terminology, __init__ is a reserved method in Python classes.
+                    The __init__ method is called automatically whenever a new object is initiated. This method allocates
+                    memory to the new object as soon as it is created. This method can also be used to initialize variables.</p>
+              </div>
+
+
+
+              <div id="item-48">
+                <h3>47. What are Access Specifiers in Python?</h3>
+                <p>Python uses the ‘_’ symbol to determine the access control for a specific data member or a member
+                    function of a class. A Class in Python has three types of Python access modifiers:</p>
+                  <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   <b>Public Access Modifier: </b>The members of a class that are declared public are easily accessible
+                      from any part of the program. All data members and member functions of a class are public by default. </p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Protected Access Modifier: </b>The members of a class that are declared protected are only
+                       accessible to a class derived from it. All data members of a class are declared protected by
+                       adding a single underscore ‘_’ symbol before the data members of that class. </p></a>
+                    <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    <b>Private Access Modifier:</b> The members of a class that are declared private are accessible
+                        within the class only, the private access modifier is the most secure access modifier. Data members
+                        of a class are declared private by adding a double underscore ‘__’ symbol before the data member of
+                        that class. </p></a>
+              </div>
+
+
+
+              <div id="item-49">
+                <h3>48. What are unit tests in Python?</h3>
+                <p>Unit Testing is the first level of software testing where the smallest testable parts of the
+                    software are tested. This is used to validate that each unit of the software performs as designed.
+                    The unit test framework is Python’s xUnit style framework. The White Box Testing method is used for
+                    Unit testing.</p>
+              </div>
+
+              <div id="item-50">
+                <h3>49. What are Function Annotations in Python?</h3>
+                <p>Function Annotation is a feature that allows you to add metadata to function parameters and
+                    return values. This way you can specify the input type of the function parameters and the return
+                    type of the value the function returns. <br>Function annotations are arbitrary Python expressions
+                    that are associated with various parts of functions. These expressions are evaluated at compile
+                    time and have no life in Python’s runtime environment. Python does not attach any meaning to these
+                    annotations. They take life when interpreted by third-party libraries, for example, mypy.</p>
+              </div>
+
+
+              <div id="item-51">
+                <h3>50. Python Global Interpreter Lock (GIL)?</h3>
+                <p>Python Global Interpreter Lock (GIL) is a type of process lock that is used by Python
+                    whenever it deals with processes. Generally, Python only uses only one thread to execute the
+                    set of written statements. The performance of the single-threaded process and the multi-threaded
+                    process will be the same in Python and this is because of GIL in Python. We can not achieve
+                    multithreading in Python because we have a global interpreter lock that restricts the threads
+                    and works as a single thread.</p>
+              </div>
+          </div>
+            <div style="height:100px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="#" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Artificial Intelligence</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>POPULAR COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Database</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data Structure</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Python Programming</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Linux Shell</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Screen</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SkillUp</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Practice</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>SOLUTION</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Set Up a Skills Strategy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Showcase Your Talent Brand</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Optimize Your Hiring Process</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mobilize Your Internal Talent</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Embrace AI</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+<style>
+  .div1{
+    width:700px;
+    height:80px;
+    background-color:rgb(205, 205, 205);
+    margin-left:60px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  span{
+    font-size:17px;
+    color:rgb(91, 91, 91);
+  }
+  h3{
+    margin-top:50px
+  }
+  p{
+    font-size: 19px;
+    gap: 5px;
+    margin-top:10px
+  }
+  h4{
+    margin-top:50px
+  }
+  h4{
+    gap: 5px;
+  }
+  .p-1{
+    text-decoration: none;
+    text-align: left;
+  }
+  .p-1 :hover{
+     color: black
+  }
+</style>

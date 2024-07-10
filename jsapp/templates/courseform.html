@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends 'Adminpage.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col-md-10">
+    <h5 class="mt-3">Custom File Input</h5>
+    <hr>
+    <form method="post" action="{% url 'saveform_page' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Upload</span>
+            </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile01" name="Img">
+                <label class="custom-file-label" for="inputGroupFile01">Select File</label>
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Course Name" name="coursename" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="price">
+            <div class="input-group-append">
+                <span class="input-group-text"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary has-ripple">Submit<span class="ripple ripple-animate" style="height: 85.9625px; width: 85.9625px; animation-duration: 0.7s; animation-timing-function: linear; background: rgb(255, 255, 255); opacity: 0.4; top: -24.5813px; left: 13.0187px;"></span></button>
+    </form>
+</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+  {% for i in messages %}
+    {% if i.tags == 'warning' %}
+      <script>
+        swal('{{i}}','','warning')
+      </script>
+    {% elif i.tags == 'error' %}
+      <script>
+        swal('{{i}}','','error')
+      </script>
+    {% elif i.tags == 'info' %}
+      <script>
+        swal('{{i}}','','info')
+      </script>
+    {% else %}
+      <script>
+        swal('{{i}}','','success')
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+
+</body>
+</html>
+{% endblock %}

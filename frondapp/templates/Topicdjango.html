@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Topics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="#" class="nav-item nav-link" style="margin-right:150px">Request Demo</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+    <div class="row" style="width:1400px;overflow: hidden;overflow-y: scroll;height:700px" >
+      <div class="row">
+        <div class="col-4" style="margin-top:50px;width:300px;">
+          <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+              <nav class="nav nav-pills flex-column" style="gap: 20px;">
+                <a class="nav-link" href="#item-1">Python Tutorial </a>
+                <a class="nav-link" href="#item-2">What is Python?</a>
+                <a class="nav-link" href="#item-3">Setting up Python</a>
+                <a class="nav-link" href="#item-4">Python Data Types</a>
+                <a class="nav-link" href="#item-5">Python Operators</a>
+                <a class="nav-link" href="#item-6">Python Conditional Statement</a>
+                <a class="nav-link" href="#item-7">Python Loops</a>
+                <a class="nav-link" href="#item-8">Python Functions</a>
+                <a class="nav-link" href="#item-9">Python OOPs Concepts</a>
+                <a class="nav-link" href="#item-10">Python Exception Handling</a>
+                <a class="nav-link" href="#item-11">Python Collections</a>
+                <a class="nav-link" href="#item-12">Learn More About Python with Different Applications:</a>
+                <a class="nav-link" href="#item-13">Python Quiz</a>
+
+
+              </nav>
+            </nav>
+        </div>
+
+        <div class="col-8" style="margin-top:50px">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="#item-1">
+              <h2>Django Tutorial | Learn Django Framework</h2>
+                <div style="width:980px;height:2px;background-color:#adb5bd;"></div>
+              <p>This tutorial also provides you with Django projects to help you apply your knowledge and build some
+                  cool web applications. These projects not only provide you with experience in building with the
+                  Django framework but will also add value to your resume. This Python Django tutorial teaches basic
+                  to advanced Django concepts for backend development. Learn topics like forms, templates, views, ORM,
+                  etc.</p>
+            </div>
+            <div id="#item-2">
+              <h3>Python Django?</h3>
+              <p>Python-based web framework Django allows you to create efficient web applications quickly. It is also
+                  called batteries included web framework Django because It provides built-in features for everything
+                  including Django Admin Interface, default database – SQLite3, etc.</p>
+              <p>When you’re building a website, you always need a similar set of components: a way to handle user
+                  authentication (signing up, signing in, signing out), a management panel for your website, forms,
+                  a way to upload files, etc. Django Python gives you ready-made components to use for rapid development.
+                  There any many more benefits of using the Django framework. Let’s look at some other reasons why you should
+                  learn Python Frameworks in Django.</p>
+            </div>
+            <div id="item-2-1">
+              <h4>Why Use Django Framework?</h4>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Excellent documentation and high scalability.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Used by Top MNCs and Companies, such as Instagram, Disqus, Spotify, Youtube, Bitbucket, Dropbox, etc.
+                  and the list is never-ending.</p></a>
+              <a><p  style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Web framework Django is easy to learn, rapid development, and Batteries fully included.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                The last but not least reason to learn Django in <a href="{% url 'topicPY_page' %}"> Python </a>, It has a huge library and features such
+                  as Web Scraping, Machine Learning, Image Processing, Scientific Computing, etc. One can integrate
+                  all this with web applications and do lots and lots of advanced stuff.</p></a>
+                <p>VPS servers provide a foundational environment and set of capabilities for integrating Django apps
+                    with developer tools and APIs. With Hostinger VPS services, you have greater flexibility and
+                    control over your hosting environment, and you get far more value for your money.</p>
+                <p>Hostinger offers VPS templates with the most popular frameworks and CMS preinstalled. Applications
+                    built with Node.js, Django, Rails, WordPress, Joomla, and Drupal can be chosen and launched quickly.
+                    The 4 active plans with prices ranging from ₹499/mo to ₹1829/mo :</p>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                KVM1</p></a>
+                <a><p  style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                KVM2</p></a>
+                <a><p  style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                KVM4</p></a>
+                <a><p  style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                KVM8</p></a>
+                <p>These are designed to satisfy various needs. The KVM2 plan is the most affordable and well-liked by
+                    users of lightweight apps.</p>
+              <div class="div1" >
+                <p style="text-align:center;font-size:17px;padding-top:10px;">Full root access, support for many operating systems, excellent performance, improved
+                    security and backup, one-click application, and scalability are features of Hostinger’s VPS service.</p>
+              </div>
+            </div>
+
+
+            <div id="item-4" style="margin-top:30px">
+              <p>Prerequisites to Learn Django</p>
+              <p>Web framework Django based on Python. You have good knowledge about Python. Some other concepts you should be familiar with are:</p>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Understanding of Syntax of Python.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Understanding of importing and exporting modules is required in the project development phase.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Understanding Python path concepts to access the data, images or any kind of data.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Knowledge of Object Oriented concepts as it reduces the code repetition with classes and objects.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Knowledge about HTML, CSS, JavaScript are very important. As they are the building block of Web development.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Knowledge about Data Structures like Tuple and List are important.</p></a>
+            </div>
+
+
+            <div id="item-5">
+              <a><h3>Getting Started with Django</h3></a>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Django Introduction and Installation</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                When to Use Django? Comparison with other Development Stacks</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Django Project MVT Structure</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Django Basics</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Create an App in Django</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Create a Basic Project using MVT in Django</p></a>
+            </div>
+
+
+            <div id="item-6">
+              <h3>Django Views</h3>
+              <p>In Django, views are the backbone of handling user requests and rendering responses. There are two
+                  primary paradigms for implementing views: Function Based Views (FBVs) and Class Based Views (CBVs).
+                  Function Based Views offer simplicity and directness, allowing developers to define views as Python
+                  functions. Within this paradigm, common functionalities like creating, listing, displaying details,
+                  updating, and deleting objects are implemented as separate functions.<br> While both paradigms have their
+                  merits, the choice between FBVs and CBVs ultimately depends on factors such as project requirements,
+                  development preferences, and scalability concerns.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Function Based Views</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Create View</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                List View</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Detail View</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Update View</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Delete View</p></a>
+
+             <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Class Based Generic Views Django</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                CreateView</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                ListView</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                DetailView</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                UpdateView</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                DeleteView</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;margin-left:30px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                FormView</p></a>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 Class Based vs Function Based Views</p></a>
+            </div>
+
+
+            <div id="item-7">
+              <h3>Django URLs</h3>
+              <p>In Django, URL patterns serve as a crucial mechanism for directing incoming requests to the
+                  appropriate views within your web application. With the flexibility of regular expressions,
+                  Django’s URL dispatcher allows you to define patterns that match specific URL patterns and
+                  route them to corresponding views. When dealing with GET parameters passed through URLs in
+                  Django, accessing these parameters within views is straightforward, enabling efficient handling
+                  of user inputs and customization of responses.</p>
+               <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Django URL patterns</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Get parameters passed by urls in Django</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                URL Validator in Django</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                URL Shortener with Django</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Django URLResolver error</p></a>
+            </div>
+
+
+             <div id="item-8">
+              <h3>Django Templates</h3>
+              <p>In Django, URLs play a crucial role in navigating through different views and templates within your web
+                  application. When working with Django templates, several key concepts enhance the flexibility and
+                  functionality of your frontend. Template filters allow you to manipulate variables displayed in your
+                  templates, enabling transformations like date formatting or string manipulation.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 Template Filters</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Template Tags</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                variables</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Boolean Operators</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                for loop</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                if – Django Templates</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Template Inheritance</p></a>
+            </div>
+
+
+             <div id="item-9">
+              <h3>Django Models</h3>
+              <p>Models serve as the backbone of database operations, facilitating seamless management of data. This
+                  guide delves into various aspects of Django Models, starting from the fundamental operations of
+                  inserting, updating, and deleting data using the Object-Relational Mapping (ORM) provided by Django.
+                  <br><br>Here, You’ll learn how to create a basic app model, initialize migrations, and execute them to
+                  synchronize your database schema. Moreover, we delve into built-in field validations, ensuring
+                  data integrity and consistency, while also delving into the customization of these validations
+                  to suit specific application requirements.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                  ORM – Inserting, Updating & Deleting Data</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Basic App Model – Makemigrations and Migrate</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                model data types and fields list</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Add the slug field inside Django Model</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Intermediate fields in Django</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Uploading images in Django</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Render Model in Django Admin Interface</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Change Object Display Name using __str__ function – Django Models</p></a>
+                  <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Built-in Field Validations – Django Models</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Custom Field Validations in Django Models</p></a>
+                  <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                How to use Django Field Choices ?</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Overriding the save method – Django</p></a>
+            </div>
+
+
+             <div id="item-10">
+              <h3>Django Forms</h3>
+              <p>To start, you can create a form using Django Forms by defining a class that inherits from Django’s
+                  forms.Form class. Within this class, you can specify the fields you want to include in your form
+                  using various field types provided by Django, such as CharField, IntegerField, EmailField, etc.
+                  Once you’ve defined your form, you can render HTML forms in Django using both GET and POST methods.
+                  Django’s built-in template tags and filters make it easy to render forms in your HTML templates
+                  while ensuring security and CSRF protection.<br>
+                  Django Forms offer a wide range of field types to cater to different data types and validation
+                  requirements. Additionally, you can customize the appearance and behavior of form fields by using
+                  form field custom widgets, allowing you to enhance user experience and tailor forms to your specific
+                  needs.</p>
+              <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                How to create a form using Django Forms ?</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Render HTML Forms (GET & POST) in Django</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Django Form Fields</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                form field custom widgets</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Initial form data – Django Forms</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                ModelForm – Create form from Models</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Render Form Fields Manually</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Django Formsets</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Django ModelFormSets</p></a>
+                 <p>After completing the tutorial and building some projects you might be interested in starting your
+                     career in Django development. We have provided a guide, that will help you in building your career
+                     as<b> Django developer</b>.</p>
+              </div>
+
+
+              <div id="item-11">
+                <h3>Python Django Interview Question</h3>
+                <p>Interviews are most important aspect of job recruitment and you need to prepare for interviews if
+                    you want to get job sooner. We have compiled some of the most asked interview questions for Django
+                    Developers.</p>
+                  <p><b>Visit the page Top 50<a> Django Interview Questions and Answers to check for interview questions</a></b>.</p>
+              </div>
+
+
+              <div id="item-12">
+              <h3>Online Django Quiz</h3>
+              <p>Test your Django knowledge by answering quiz questions. The quiz questions are meant to test your
+                  understanding of Django concepts.</p>
+                <a href="{% url 'djangoquiz_page' %}" style="text-decoration: none;"><p style="margin-top:10px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16" >
+                  <circle cx="4" cy="4" r="4" /></svg>
+                Take Django Quiz</p></a>
+             </div>
+
+             <div id="item-13">
+              <h3>FAQs on Django Tutorial</h3>
+              <p>1.Is Django easy to learn</p>
+                 <div class="div1" >
+                     <p style="text-align:center;font-size:17px;padding-top:10px;">Web framework Django is relatively easy to learn, if you have prior experience with Python.</p>
+                 </div>
+             </div>
+
+             <div id="item-14">
+              <p>2.Is Django for frontend or backend?</p>
+                 <div class="div1" >
+                     <p style="text-align:center;font-size:17px;padding-top:10px;">Django is a open-source framework that is used for backend development of web application.</p>
+                 </div>
+             </div>
+
+
+             <div id="item-15">
+                <h3>3.What are the Features of Django ?</h3>
+                <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                    Versatile which allows us to develop any kind of web page.</p></a>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 It is scalable</p></a>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 It is extremely fast.</p></a>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 Secure thereby helping developers.</p></a>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 It comes along with content administrations, authentications.</p></a>
+             </div>
+
+
+              <div id="item-16">
+              <p>4.What is Django Architecture ?</p>
+                 <div class="div1" >
+                     <h5 style="text-align:center;font-size:17px;padding-top:10px;">Django is based on MVT(Model View
+                         Template architecture) which is based on the MVC(Model View Controller architecture).
+                         The common difference between them is that Django take care of controller part.</h5>
+                 </div>
+             </div>
+
+
+
+              <div id="item-25">
+              <p style="margin-top:30px">5.What is the difference between Flask and Django ?</p>
+                  <p>Answer:</p>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">Django</th>
+                      <th scope="col">Flask</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>Supports large projects.</td>
+                      <td>Supports smaller projects.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>Templates, Admin and ORM is built-in.</td>
+                      <td>Templates, Admin and ORM requires to be installed..</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Not easy to as compare to Flask.</td>
+                      <td>It is easy to learn.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>Complete Web development no need any third party tools.</td>
+                      <td>User can choose any third party tools according to their needs.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Does not support visual debugging.</td>
+                      <td>Supports visual debugging.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>Inbuilt bootstrapping tool </td>
+                      <td>Bootstrapping tools are not available.</td>
+                    </tr>
+                  </tbody>
+                </table>
+             </div>
+
+
+             <div id="item-26">
+                 <p style="margin-top:30px">6.Name some companies that uses Django ?</p>
+                  <p>Answer:</p>
+                <a><p style="margin-top:10px;font-size:18px">Some companies that uses Django are: Instagram, DISCUS, Mozilla Firefox, Youtube,
+                    Instagram, Reddit etc. are using web framework Django.</p></a>
+             </div>
+
+
+          </div>
+            <div style="height:100px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="#" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Artificial Intelligence</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>POPULAR COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Database</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data Structure</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Python Programming</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Linux Shell</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Screen</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SkillUp</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Practice</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>SOLUTION</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Set Up a Skills Strategy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Showcase Your Talent Brand</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Optimize Your Hiring Process</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mobilize Your Internal Talent</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Embrace AI</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+<style>
+  .div1{
+    width:700px;
+    height:90px;
+    background-color:rgb(205, 205, 205);
+    margin-left:60px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  span{
+    font-size:17px;
+    color:rgb(91, 91, 91);
+  }
+  h3{
+    margin-top:50px
+  }
+  p{
+    font-size: 18px;
+    gap: 5px;
+    margin-top:10px
+  }
+  h4{
+    margin-top:50px
+  }
+  h4{
+    gap: 5px;
+  }
+</style>

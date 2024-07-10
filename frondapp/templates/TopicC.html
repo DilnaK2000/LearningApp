@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Programming Topics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="#" class="nav-item nav-link" style="margin-right:150px">Request Demo</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+    <div class="row" style="width:1400px;overflow: hidden;overflow-y: scroll;height:700px" >
+      <div class="row">
+        <div class="col-4" style="margin-top:50px;width:300px;">
+          <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+              <nav class="nav nav-pills flex-column" style="gap: 20px;">
+                <a class="nav-link" href="#item-1">C Programming Language Tutorial </a>
+                <a class="nav-link" href="#item-2">What is C?</a>
+                <a class="nav-link" href="#item-3">C Basics</a>
+                <a class="nav-link" href="#item-4">C Variables and Constants</a>
+                <a class="nav-link" href="#item-5">C Data Types</a>
+                <a class="nav-link" href="#item-6">C Input/Output</a>
+                <a class="nav-link" href="#item-7">C Operators</a>
+                <a class="nav-link" href="#item-8">C Control Statements Decision-Making</a>
+                <a class="nav-link" href="#item-9">C Functions</a>
+                <a class="nav-link" href="#item-10">C Array & Sting</a>
+                <a class="nav-link" href="#item-11">C Error Handling</a>
+                <a class="nav-link" href="#item-12">C Interview Questions</a>
+                <a class="nav-link" href="#item-13">Why Learn C?</a>
+                <a class="nav-link" href="#item-14">Features of C Language</a>
+                <a class="nav-link" href="#item-15">Applications of C Language</a>
+                <a class="nav-link" href="#item-16">Applications of C Language</a>
+              </nav>
+            </nav>
+        </div>
+
+
+
+        <div class="col-8" style="margin-top:50px">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="#item-1">
+              <h2>C Programming Language Tutorial</h2>
+                <div style="width:980px;height:2px;background-color:#adb5bd;"></div>
+              <p>In this C Tutorial, you’ll learn all<b> C programming</b> basic to advanced concepts like variables,
+                  arrays, pointers, strings, loops, etc. This C Programming Tutorial is designed for both beginners
+                  as well as experienced professionals, who’re looking to learn and enhance their knowledge of the C
+                  programming language.</p>
+            </div>
+
+
+            <div id="#item-2">
+              <h3>What is C?</h3>
+              <p>C is a general-purpose, procedural, high-level programming language used in the development of
+                  computer software and applications, system programming, games, and more.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C language was developed by Dennis M. Ritchie at the Bell Telephone Laboratories in 1972.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                It is a powerful and flexible language which was first developed for the programming of the UNIX operating System.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C is one of the most widely used programming languages.</p></a>
+                <p><b>C programming language</b> is known for its simplicity and efficiency. It is the best choice to start
+                    with programming as it gives you a foundational understanding of programming.</p>
+            </div>
+
+
+            <div id="item-3" style="margin-top:30px">
+              <h3>C Basics</h3>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 C Language Introduction</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Features of C Programming Language</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C Programming Language Standard</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+               Setting Up C Development Environment</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C Hello World Program</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Compiling a C Program: Behind the Scenes</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C Comments</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Tokens in C</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C Identifiers</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Keywords in C</p></a>
+            </div>
+
+
+            <div id="item-4">
+              <h3>C Variables and Constants</h3>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C Variables</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Constants in C</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Const Qualifier in C</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Different Ways to Declare Variable as Constant in C</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Scope Rules in C</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Internal Linkage and External Linkage in C</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Global Variables in C</p></a>
+            </div>
+
+
+            <div id="item-5">
+              <h3>C Data Types</h3>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Data Types in C</p></a>
+            </div>
+
+
+            <div id="item-6">
+              <h3>C Input/Output</h3>
+               <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Basic Input and Output in C</p></a>
+            </div>
+
+
+             <div id="item-7">
+              <h3>C Operators</h3>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 Operators in C</p></a>
+            </div>
+
+
+             <div id="item-8">
+              <h3>C Control Statements Decision-Making</h3>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                  Decision-Making in C</p></a>
+            </div>
+
+
+             <div id="item-9">
+              <h3>C Functions</h3>
+              <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C Functions</p></a>
+              </div>
+
+
+             <div id="item-10">
+              <h3>C Arrays & Strings</h3>
+                     <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                C Array</p></a>
+             </div>
+
+              <div id="item-11">
+              <h3>C Error Handling</h3>
+                  <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Error Handling in C</p></a>
+             </div>
+
+              <div id="item-12">
+                <h3>C Interview Questions</h3>
+                <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Top 50 C Programming Interview Questions and Answers</p></a>
+              </div>
+
+              <div id="item-13">
+              <h3>Why Learn C?</h3>
+              <p>C programming language is one of the most popular programming language. It is a must learn for
+                  software engineering students. C is called the mother of all modern programming languages so
+                  learning C will help you to learn other languages easily like Java, C++, C#, Python, etc. C
+                  language is faster than other programming languages like Java and Python. It can handle low-level
+                  programming and we can compile the C code in a variety of computer platforms.</p>
+                  <p>List of some key advantages of C language:</p>
+                <a href="{% url 'interview_page' %}" style="text-decoration: none;"><p style="margin-top:10px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16" >
+                  <circle cx="4" cy="4" r="4" /></svg>
+                Easy to learn.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Versatile Language, which can be used in both applications and technologies.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Mid-Level Programming Language</p></a>
+                <a><p style="margin-top:-20px;font-size:18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                </svg>
+                Structured Programming Language.</p></a>
+             </div>
+
+              <div id="item-14">
+                <h3>Features of C Language</h3>
+                <p>There are some key features of C language that show the ability and power of C language:</p>
+                  <h5>1.Simplicity and Efficiency:<span>The simple syntax and structured approach make the C language easy to learn.</span></h5>
+                  <h5>2.Fast Speed: <span> C is one of the fastest programming language because C is a static
+                      programming language, which is faster than dynamic languages like Java and Python. C is also a
+                      compiler-based which is the reason for faster code compilation and execution.</span> </h5>
+                  <h5>3.Portable:<span> C provides the feature that you write code once and run it anywhere on any computer. It shows the machine-independent nature of the C language.</span> </h5>
+                  <h5>4.Memory Management: <span> C provides lower level memory management using pointers and functions like realloc(), free(), etc.</span> </h5>
+                  <h5>5.Pointers:<span>C comes with pointers. Through pointers, we can directly access or interact with the memory. We can initialize a pointer as an array, variables, etc.</span> </h5>
+                  <h5>6.Structured Language:<span>C provides the features of structural programming that allows you to code into different parts using functions which can be stored as libraries for reusability.</span> </h5>
+              </div>
+
+             <div id="item-15">
+              <h3>Applications of C Language</h3>
+                 <p>C was used in programs that were used in making operating systems. C was known as a system
+                     development language because the code written in C runs as fast as the code written in assembly language.</p>
+                 <p>The use of C is given below:</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Operating Systems</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Language Compilers</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Assemblers</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Text Editors</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Print Spoolers</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Network Drivers</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Modern Programs</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Databases</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Language Interpreters</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Utilities</p></a>
+            </div>
+
+             <div id="item-16">
+                 <h3>FAQs on C Language</h3>
+              <p style="margin-top:30px">Q1. Difference between C and C++?</p>
+                  <p>Answer:</p>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">C</th>
+                      <th scope="col">CPP</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>C is a procedural programming language.</td>
+                      <td>C++ is both a procedural and object-oriented programming language.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>It does not support Function overloading.</td>
+                      <td>It supports function overloading.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Operator overloading is not supported.</td>
+                      <td>Operator overloading is supported.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>C does not support data hiding which leads to security concerns.</td>
+                      <td>Data hiding is supported in C++ by Data Encapsulation.</td>
+                    </tr>
+                  </tbody>
+                </table>
+             </div>
+
+          </div>
+            <div style="height:100px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="#" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Artificial Intelligence</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>POPULAR COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Database</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data Structure</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Python Programming</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Linux Shell</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Screen</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SkillUp</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Practice</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>SOLUTION</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Set Up a Skills Strategy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Showcase Your Talent Brand</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Optimize Your Hiring Process</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mobilize Your Internal Talent</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Embrace AI</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+<style>
+  .div1{
+    width:700px;
+    height:50px;
+    background-color:rgb(205, 205, 205);
+    margin-left:60px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  span{
+    font-size:17px;
+    color:rgb(91, 91, 91);
+  }
+  h3{
+    margin-top:50px
+  }
+  p{
+    font-size: 18px;
+    gap: 5px;
+    margin-top:10px
+  }
+  h4{
+    margin-top:50px
+  }
+  h4{
+    gap: 5px;
+  }
+</style>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C++Quiz</title>
+
+</head>
+<body>
+
+
+     <div class="app">
+            <h1>C++ Quiz</h1>
+            <div class="quiz">
+                <h2 id="question">Question goes here</h2>
+                <div id="answer_button">
+
+                    <button class="btn"> Answer 1</button>
+                    <button class="btn"> Answer 2</button>
+                    <button class="btn"> Answer 3</button>
+                    <button class="btn"> Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+
+     <div >
+         <a href="{% url 'fordeveloper_page' %}"><button style="width:150px;height:40px;margin-top:40px;margin-left:1005px;border-radius: 10px; background: none;
+            font-size: 18px;color: #033256; font-weight: 600;" type="button" class=" btn-outline-info">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+             Back to Skill
+         </button></a>
+     </div>
+
+
+
+
+<script>
+        const questions = [
+        {
+            questions:"What is a correct syntax to output 'Hello World' in C++?",
+            answers:[
+                { text : "print('Hello World';" , correct: false},
+                { text : "cout << 'Hello World' ;" , correct: true},
+                { text : "Console.Writeline('Hello World')" , correct: false},
+                { text : "System.out.printIn('Hello World')" , correct: false},
+            ]
+        },
+        {
+            questions:"How do you insert COMMENTS in C++ code?",
+            answers:[
+                { text : "/* " , correct: false},
+                { text : "**" , correct: false},
+                { text : "#", correct: false},
+                { text : "// " , correct: true},
+            ]
+
+        },
+        {
+            questions:"Which data type is used to create a variable that should store text?",
+            answers:[
+                { text : "string" , correct: false},
+                { text : "String" , correct: true},
+                { text : "myString" , correct: false},
+                { text : "Txt" , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you create a variable with the numeric value 5?",
+            answers:[
+                { text : "int x = 5"  , correct: true},
+                { text : "x = 5"  , correct: false},
+                { text : "double x = 5"  , correct: false},
+                { text : "num x = 5"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you create a variable with the floating number 2.8?",
+            answers:[
+                { text : "int x = 2.8"  , correct: false},
+                { text : "x = 2.8"  , correct: true},
+                { text : "double x = 2.8"  , correct: false},
+                { text : "num x = 2.8"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which method can be used to find the length of a string?",
+            answers:[
+                { text : "len()"  , correct: false},
+                { text : "getlength()"  , correct: false},
+                { text : "length()"  , correct: true},
+                { text : "getsize()"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which operator is used to add together two values?",
+            answers:[
+                { text : "The + Sign "  , correct: true},
+                { text : "The * Sign"  , correct: false},
+                { text : "The - Sign"  , correct: false},
+                { text : "The / Sign"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"Which operator can be used to compare two values?",
+            answers:[
+                { text : "="  , correct: false},
+                { text : "=="  , correct: true},
+                { text : "<>"  , correct: false},
+                { text : "><"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which header file lets us work with input and output objects?",
+            answers:[
+                { text : "#include <iostream>"  , correct: true},
+                { text : "#include <inputstr>"  , correct: false},
+                { text : "#include <stream>"  , correct: false},
+                { text : "#include <iosstream>"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"To declare an array in C++, define the variable type with:",
+            answers:[
+                { text : "{}"  , correct: false},
+                { text : "[]"  , correct: true},
+                { text : "()"  , correct: false},
+                { text : "''"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you create a function in C++?",
+            answers:[
+                { text : "FunctionName[]"  , correct: false},
+                { text : "FunctionName."  , correct: false},
+                { text : "FunctionName()"  , correct: true},
+                { text : "(FunctionName)"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you call a function in C++?",
+            answers:[
+                { text : "FunctionName();"  , correct: true},
+                { text : "FunctionName;"  , correct: false},
+                { text : "(FunctionName); "  , correct: false},
+                { text : "FunctionName[];"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which keyword is used to create a class in C++?",
+            answers:[
+                { text : "Class()"  , correct: false},
+                { text : "Classname"  , correct: false},
+                { text : "Class"  , correct: false},
+                { text : "MyClass"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"What is the correct way to create an object called myObj of MyClass?",
+            answers:[
+                { text : "Myclass Myobj;"  , correct: true},
+                { text : "new MyObj = Myclass();"  , correct: false},
+                { text : "class Myobj = new Myclass();"  , correct: false},
+                { text : "class Myclass = new object();"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which method can be used to find the highest value of x and y?",
+            answers:[
+                { text : "maxNum(x,y)" , correct: false},
+                { text : "Largest(x,y)" , correct: false},
+                { text : "max(x,y)"  , correct: true},
+                { text : "maximum(x,y)"   , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which operator is used to multiply numbers?",
+            answers:[
+                { text : "+"  , correct: false},
+                { text : "-"  , correct: false},
+                { text : "X"  , correct: false},
+                { text : "*"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"How do you create a reference variable of an existing variable?",
+            answers:[
+                { text : "with the *operator"  , correct: false},
+                { text : "with the ref word"  , correct: false},
+                { text : "with the REF word"  , correct: false},
+                { text : "with & operator"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"How do you start writing an if statement in C++?",
+            answers:[
+                { text : "if x < y then:"  , correct: false},
+                { text : "if (x < y):"  , correct: true},
+                { text : "if i < 15:"  , correct: false},
+                { text : "if x < y "  , correct: false},
+            ]
+
+        },
+        {
+            questions:"How do you start writing a while loop in C++?",
+            answers:[
+                { text : "x > y while:"  , correct: false},
+                { text : "while x > y:"  , correct: false},
+                { text : "while(x > y):"  , correct: true},
+                { text : "while x > y"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which keyword is used to return a value inside a method?",
+            answers:[
+                { text : " break"  , correct: false},
+                { text : "get"  , correct: false},
+                { text : "return"  , correct: true},
+                { text : "void"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"Which statement is used to stop a loop?",
+            answers:[
+                { text : "stop"  , correct: false},
+                { text : "exit"  , correct: false},
+                { text : "break"  , correct: true},
+                { text : "return"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"A trigraph character begins with?",
+            answers:[
+                { text : " ##"  , correct: false},
+                { text : "#"  , correct: false},
+                { text : "?"  , correct: true},
+                { text : "??"  , correct: false},
+            ]
+
+        },
+        {
+            questions:"A protected member of the class in accessible in?",
+            answers:[
+                { text : " Same class and derived class"  , correct:true},
+                { text : "Only same class"  , correct: false},
+                { text : "Outside the class"  , correct: false},
+                { text : "None of the above."  , correct: false},
+            ]
+
+        },
+        {
+            questions:"The programs machine instructions are store in __ memory segment.",
+            answers:[
+                { text : " Data"  , correct: false},
+                { text : "Stack"  , correct: false},
+                { text : "Heap"  , correct: false},
+                { text : "Code"  , correct: true},
+            ]
+
+        },
+        {
+            questions:"Choose the invalid identifier from the below",
+            answers:[
+                { text : "bool"  , correct: false},
+                { text : "exit"  , correct: false},
+                { text : "DOUBLE"  , correct: true},
+                { text : "__0__"  , correct: false},
+            ]
+
+        }
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButton = document.getElementById("answer_button");
+    const nextbutton = document.getElementById("next-btn");
+
+    let currectquestionindex = 0;
+    let score = 0;
+
+    function startQuiz(){
+        currectquestionindex = 0;
+        score = 0;
+        nextbutton.innerHTML = "Next";
+        showQuestion();
+
+    }
+
+    function showQuestion(){
+        resetState();
+        let currectquestion = questions[currectquestionindex];
+        let questionNo = currectquestionindex + 1;
+        questionElement.innerHTML = questionNo + ". " + currectquestion.questions;
+
+
+        currectquestion.answers.forEach(answers =>{
+            const button = document.createElement("button")
+            button.innerHTML=answers.text;
+            button.classList.add("btn");
+            answerButton.appendChild(button)
+            if(answers.correct){
+                button.dataset.correct = answers.correct;
+            }
+            button.addEventListener("click",selectAnswer)
+        });
+    }
+
+    function resetState(){
+        nextbutton.style.display = "none";
+        while(answerButton.firstChild){
+            answerButton.removeChild(answerButton.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectbtn = e.target;
+        const iscorrect = selectbtn.dataset.correct == "true";
+        if(iscorrect){
+            selectbtn.classList.add("correct");
+            score++;
+        }else{
+            selectbtn.classList.add("incorrect");
+        }
+        Array.from(answerButton.children).forEach(button => {
+            if(button.dataset.correct == "true"){
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+        });
+        nextbutton.style.display = "block";
+    }
+    function showscore(){
+        resetState();
+        questionElement.innerHTML = `you score ${score} out of ${questions.length}!`;
+        nextbutton.innerHTML  = "Play Again";
+        nextbutton.style.display = "block"
+    }
+
+    function handlenextbtn(){
+        currectquestionindex++;
+        if(currectquestionindex < questions.length){
+            showQuestion();
+        }else{
+            showscore();
+
+        }
+    }
+
+    nextbutton.addEventListener("click",()=>{
+        if(currectquestionindex < questions.length){
+            handlenextbtn();
+
+        }else{
+            startQuiz();
+        }
+    })
+
+    startQuiz();
+
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+  {% for i in messages %}
+    {% if i.tags == 'warning' %}
+      <script>
+        swal('{{i}}','','warning')
+      </script>
+    {% elif i.tags == 'error' %}
+      <script>
+        swal('{{i}}','','error')
+      </script>
+    {% elif i.tags == 'info' %}
+      <script>
+        swal('{{i}}','','info')
+      </script>
+    {% else %}
+      <script>
+        swal('{{i}}','','success')
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+</body>
+</html>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: url({% static 'load/img/quiz6.jpg' %});
+    background-size: cover;
+    background-position: center;
+}
+.app{
+    background: none;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.app h1{
+    font-size: 50px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+
+}
+.quiz h2{
+    font-size: 30px;
+    color: #001e4d;
+    font-weight: 600px;
+}
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}
+</style>

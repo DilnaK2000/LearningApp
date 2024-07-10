@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Topics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="#" class="nav-item nav-link" style="margin-right:150px">Request Demo</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+    <div class="row" style="width:1400px;overflow: hidden;overflow-y: scroll;height:700px" >
+      <div class="row">
+        <div class="col-4" style="margin-top:50px;width:300px;">
+          <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+              <nav class="nav nav-pills flex-column" style="gap: 20px;">
+                <a class="nav-link" href="#item-1">SQL Tutorial </a>
+                <a class="nav-link" href="#item-2">What is a Database?</a>
+                <a class="nav-link" href="#item-3">SQL Example </a>
+                <a class="nav-link" href="#item-4">SQL Basics </a>
+                <a class="nav-link" href="#item-5">Create Database in SQL </a>
+                <a class="nav-link" href="#item-6">Tables in SQL  </a>
+                <a class="nav-link" href="#item-7">SQL Queries </a>
+                <a class="nav-link" href="#item-8">SQL Clauses </a>
+                <a class="nav-link" href="#item-9">SQL Operators  </a>
+                <a class="nav-link" href="#item-10">SQL Aggregate Functions  </a>
+                <a class="nav-link" href="#item-11">SQL Data Constraints </a>
+                <a class="nav-link" href="#item-12">SQL Joining Data </a>
+                <a class="nav-link" href="#item-13">SQL Views</a>
+                <a class="nav-link" href="#item-14">SQL Tutorial Important Note </a>
+                <a class="nav-link" href="#item-15">SQL Important Commands </a>
+                <a class="nav-link" href="#item-16">Applications of SQL </a>
+                <a class="nav-link" href="#item-17">SQL Online Quiz Test</a>
+                <a class="nav-link" href="#item-18">Advantages of SQL</a>
+                <a class="nav-link" href="#item-19">Frequently Asked Questions About SQL</a>
+              </nav>
+            </nav>
+        </div>
+
+        <div class="col-8" style="margin-top:50px">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="#item-1">
+              <h2>SQL Tutorial</h2>
+                <div style="width:980px;height:2px;background-color:#adb5bd;"></div>
+              <p>In this SQL tutorial, you’ll learn all the basic to advanced SQL concepts like SQL queries, SQL join,
+                  SQL injection, SQL insert, and creating tables in SQL. SQL is easy to learn, there are no prerequisites
+                  to learning SQL.<br>
+                  So, SQL is a standard database language used to access and manipulate data in databases.
+                  SQL stands for Structured Query Language. It was developed by IBM Computer Scientists in
+                  the 1970s. By executing queries SQL can create, update, delete, and retrieve data in databases
+                  like MySQL, Oracle, PostgreSQL, etc. Overall, SQL is a query language that communicates with
+                  databases.</p>
+            </div>
+
+            <div id="#item-2">
+              <h3>What is a Database?</h3>
+              <p>Before deep diving into this free SQL tutorial, let’s understand what a database is.
+                  So, data is the new fuel of this world, but data is unorganized information, so to organize that data,
+                  we make a database. A database is an organized collection of structured data, usually controlled by
+                  a database management system (DBMS). Databases help us easily store, access, and manipulate data
+                  held on a computer.</p>
+            </div>
+
+
+            <div id="item-3">
+              <h4>SQL Example</h4>
+                <p>In this detailed SQL tutorial for beginners, we’ll explore practical <b>SQL</b> examples for managing
+                    employee data within a database. We’ll create a table to store employee information and
+                    populate it with sample data like<b> Employee_Id, Name, Age, Department,</b> and <b>Salary</b>.</p>
+                 <img style="height:400px;width:800px;margin-left:40px;border-radius:7px;" src="{% static 'load/img/Employee_Table.webp' %}">
+                <p>If you want to retrieves data from the employees table where the salary is greater than 55000.00 then we will use SELECT Statement.</p>
+                <h5 style="margin-top:25px;">Query:</h5>
+              <div class="div1" >
+                <p style="text-align:center;font-size:17px;padding-top:10px;">SELECT * FROM employees WHERE Salary > 55000.00;</p>
+              </div>
+                <h5 style="margin-top:25px;">Output:</h5>
+              <img style="height:400px;width:800px;margin-left:40px;border-radius:7px;" src="{% static 'load/img/emp-output1.png' %}">
+                <h6><b>Explanation:</b></h6>
+                <p>This SELECT statement retrieves records from the employees table where the Salary column is greater
+                    than 55000.00. The * symbol indicates that we want to retrieve all columns for the matching
+                    records. The WHERE clause filters the results based on the specified condition.</p>
+            </div>
+
+
+            <div id="item-4" style="margin-top:30px">
+              <h3>SQL Basics</h3>
+              <p>SQL or Structure Query Language is a fundamental skill for anyone who wants to interact with databases.
+                  This standard Query Language all users to create, manage, and retrieve data from relational databases.
+                  In this SQL tutorial PDF, we have listed all the basics of SQL. Explore this section to sharpen your SQL
+                  basics.</p>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                What is a Database</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Types of Databases</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                What is DBMS</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Relational and Non Relational Databases</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                What is SQL?</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Data Types</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Operators</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Commands</p></a>
+            </div>
+
+
+            <div id="item-5">
+              <h3>Create Database in SQL</h3>
+              <p>The first step to storing the information electronically using SQL includes creating database.
+                  And in this section we will learn how to Create, Select, Drop, and Rename databases with examples.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL CREATE Database</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL DROP Database</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL RENAME Database</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SELECT Database</p></a>
+            </div>
+
+
+            <div id="item-6">
+              <h3>Tables in SQL</h3>
+              <p>The cornerstone of any SQL database is the table. Basically, these structure
+                  functions is very similar to spreadsheets, which store data in very organized
+                  grid format. In this section, you will learn how to Create, Drop, Delete, and
+                  more related to Table.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL CREATE TABLE</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL DROP TABLE</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL DELETE TABLE</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL RENAME TABLE</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL TRUNCATE TABLE</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL COPY TABLE</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL TEMP TABLE</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL ALTER TABLE</p></a>
+            </div>
+
+
+            <div id="item-7">
+              <h3>SQL Queries</h3>
+              <p>In this section, you will learn about the SQL Queries like SELECT statement, SELECT LAST, and more.
+                  Explore this section and learn how to use these queries.</p>
+               <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SELECT Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SELECT TOP</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SELECT FIRST</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SELECT LAST</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SELECT RANDOM</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SELECT IN</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SELECT Multiple</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SELECT DATE</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL INSERT Multiple Rows</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL INSERT INTO</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL UPDATE Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL DELETE Statement</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL DELETE Duplicate Rows</p></a>
+            </div>
+
+
+             <div id="item-8">
+              <h3>SQL Clauses</h3>
+              <p>Unlock the power of SQL Clauses with this SQL tutorial. Here in this section, you will learn how to
+                  use SELECT, WHERE, JOIN, GROUP BY, and more to query databases effectively.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                 SQL WHERE Clause</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL WITH Clause</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL HAVING Clause</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL ORDER By Clause</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Group By Clause</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL LIMIT Clause</p></a>
+            </div>
+
+
+             <div id="item-9">
+              <h3>SQL Operators</h3>
+              <p> SQL Operators” refers to the fundamental symbols and keywords within the SQL that
+                  enable users to perform various operations and SQL AND, OR, LIKE, NOT, and more operators on
+                  databases. Here, we have discussed all the SQL operators in a detailed manner with examples.</p>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL AND Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL OR Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL LIKE Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL IN Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL NOT Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL NOT EQUAL Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL IS NULL Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL UNION Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL UNION ALL Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL EXCEPT Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL BETWEEN Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL ALL Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL ANY Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL INTERSECT Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL EXISTS Operator</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL CASE Operator</p></a>
+            </div>
+
+
+             <div id="item-10">
+              <h3>SQL Aggregate Functions</h3>
+              <p>Whether you are calculating the total sales revenue for a particular product, finding the average
+                  age of customers, or determining the highest value in a dataset, SQL Aggregate Functions
+                  make these tasks straightforward and manageable.</p>
+              <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Aggregate Function</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Count() Function</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL SUM() Function</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL MIN() Function</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL MAX() Function</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL AVG() Function</p></a>
+              </div>
+
+
+             <div id="item-11">
+              <h3>SQL Data Constraints</h3>
+              <p>Constraints act as rules or conditions imposed on the data, dictating what values are permissible
+                  and what actions can be taken. They play a crucial role in maintaining the quality and coherence
+                  of the database by preventing errors. So, explore this section to get a hand on SQL Data Constraints.</p>
+                <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL NOT NULL Constraints</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL UNIQUE Constraints</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Primary Key Constraints</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Foreign Key Constraints</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Composite Key</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Unique Constraints</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Alternate Key</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL CHECK Constraints</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL DEFAULT Constraints</p></a>
+             </div>
+
+
+            <div id="item-12">
+              <h3>SQL Joining Data</h3>
+              <p> SQL joins serve as the weaver’s tool, allowing you to seamlessly merge data from
+                  multiple tables based on common threads. So explore this section to learn how to use JOIN command.</p>
+                <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL JOIN</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Outer Join</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Left Join</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Right Join</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Full Join</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Cross Join</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Self Join</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Update with JOIN</p></a>
+                 <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL DELETE JOIN</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL Recursive JOIN</p></a>
+            </div>
+
+
+
+            <div id="item-13">
+              <h3>SQL Views</h3>
+              <p>Views makes easier for anyone to access the information they need, without getting bogged down in
+                  complicated queries. Views also act like a helpful security guard, keeping the most sensitive
+                  information in the back room, while still allowing access to what’s needed.</p>
+                <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL CREATE VIEW</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL DROP VIEW</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL UPDATE VIEW</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL RENAME VIEW</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL DELETE VIEW</p></a>
+            </div>
+
+
+             <div id="item-14">
+              <h3>SQL Tutorial Important Note</h3>
+              <div class="div1" >
+                <p style="text-align:center;font-size:17px;padding-top:10px;">In SQL, keywords are not case-sensitive, meaning “update” is equivalent to “UPDATE“.</p>
+              </div>
+                 <h3>SQL Important Commands</h3>
+              <p>Here is the list of some important SQL Commands:</p>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">Commands</th>
+                      <th scope="col">Descriptions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>  SELECT</td>
+                      <td>Used to retrieve data from a database.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>INSERT</td>
+                      <td>Adds new records or rows to a table.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>UPDATE</td>
+                      <td>Modifies existing records in a table.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>DELETE</td>
+                      <td>Removes records from a table.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>CREATE TABLE</td>
+                      <td>Creates a new table in the database.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>ALTER TABLE </td>
+                      <td>Modifies an existing table structure.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>DROP TABLE</td>
+                      <td>Deletes a table from the database..</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>CREATE INDEX.</td>
+                      <td>Creates an index on a table column to speed up data retrieval.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>DROP INDEX</td>
+                      <td>Removes an index from a table.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>CREATE VIEW</td>
+                      <td>Creates a virtual table based on the result of a SQL statement.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td> DROP VIEW</td>
+                      <td>Deletes a view from the database.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>INSERT INTO SELECT</td>
+                      <td>Inserts data from one table into another based on a query.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>TRUNCATE TABLE</td>
+                      <td>Removes all records from a table, but keeps the table structure intact.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>ALTER TABLE ADD CONSTRAINT</td>
+                      <td>Adds a constraint to a table after it has been created.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>GRANT</td>
+                      <td>Gives specific privileges to database users.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>REVOKE</td>
+                      <td>Removes specific privileges from database users.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>COMMIT</td>
+                      <td>Saves all changes made since the last commit.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>ROLLBACK</td>
+                      <td>Discards all changes made since the last commit.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>BEGIN TRANSACTION</td>
+                      <td>Starts a new transaction.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>SET TRANSACTION</td>
+                      <td>Sets characteristics for the transaction.</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+
+
+              <div id="item-15">
+              <h3>Applications of SQL</h3>
+              <p>In data-driven industries where managing databases is very important in regular, Here are some
+                  important SQL applications.</p>
+                <p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                To support client/server architecture, software engineers use SQL to establish the connection between the back-end and front-end.</p>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL can also be used in the 3-tier architecture of a client, an application server, and a database.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL is used as a Data Definition Language(DDL) in which we can independently create a database, define the structure, use it, and discard it when its work is done.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL is used as a <b>Data Manipulation Language(DML)</b> in which we can enter data, modify data, and extract data.</p></a>
+                <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                SQL is used as a Data Control Language(DCL) it specifies how we can protect our database against corruption and misuse.</p></a>
+            </div>
+
+
+
+             <div id="item-16">
+              <h3>SQL Online Quiz Test</h3>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Start your Online<a href="{% url 'sqlquiz_page' %}"> SQL Quiz</a></p></a>
+            </div>
+
+
+            <div id="item-17">
+              <h3>Advantages of SQL</h3>
+                <p>SQL or Structured Query Language, is one of the most popular query languages in the field of
+                    data science. SQL is the perfect query language that allows data professionals and developers
+                    to communicate with their databases.<br> In the below section, we have listed some of the most
+                    prominent advantages or benefits of Structured Query Language:</p>
+                  <h5>1.Simple and Easy to Learn:<span>Most of the commands and syntax in SQL are like normal English, which makes SQL easy to learn. Along with this, SQL follows a logical structure that helps promote readability and understanding.</span></h5>
+                  <h5>2.Efficiency and Speed Execution: <span> Well, SQL is optimized for RDBMS, which means relational database, and this thing ensures fast query execution.</span> </h5>
+                  <h5>3.Standardization: <span>SQL is a widely accepted standard query language and ensures compatibility across different database systems.</span> </h5>
+                  <h5>4.Scalable:<span>SQL can efficiently manage massive datasets, accommodating growth without compromising performance.</span> </h5>
+            </div>
+
+
+
+              <div id="item-18">
+                  <h3>Frequently Asked Questions About SQL</h3>
+                 <p style="margin-top:30px">1. What are the types of SQL?</p>
+                  <p>Answer:</p>
+                <a><p style="margin-top:10px;font-size:18px;margin-left:50px">There are 5 types of SQL of commands DDL (Data Definition Language),
+                    DML (Data Manipulation Language), DCL, (Data Control Language), TCL (Transaction Control Language),
+                    DQL (Data Query Language)</p></a>
+             </div>
+
+
+               <div id="item-19">
+                 <p style="margin-top:30px">2. How do I start learning SQL?</p>
+                  <p>Answer:</p>
+                <a><p style="margin-top:10px;font-size:18px;margin-left:50px">Well, if you want to start learning SQL, then first you have to set your goals,
+                    and after that, you have to find the resource from which you can easily learn SQL. After that,
+                    you have to do the regular practice to upscale your skills.</p></a>
+             </div>
+
+
+               <div id="item-20">
+                 <p style="margin-top:30px">3. What are the basic commands of SQL?</p>
+                  <p>Answer:</p>
+                <a><p style="margin-top:10px;font-size:18px;margin-left:50px">The basic commands of SQL are UPDATE, SELECT, INSERT, and DELETE.</p></a>
+             </div>
+
+              <div id="item-21">
+                 <p style="margin-top:30px">4. What are data types in SQL?</p>
+                  <p>Answer:</p>
+                <a><p style="margin-top:10px;font-size:18px;margin-left:50px">SQL has String Data Type, Numeric Data Type, Date and time Data Type.</p></a>
+             </div>
+          </div>
+            <div style="height:100px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="#" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Artificial Intelligence</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>POPULAR COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Database</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data Structure</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Python Programming</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Linux Shell</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Screen</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SkillUp</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Practice</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>SOLUTION</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Set Up a Skills Strategy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Showcase Your Talent Brand</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Optimize Your Hiring Process</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mobilize Your Internal Talent</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Embrace AI</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+<style>
+  .div1{
+    width:750px;
+    height:50px;
+    background-color:rgb(197, 197, 197);
+    margin-left:50px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  span{
+    font-size:17px;
+    color:rgb(91, 91, 91);
+  }
+  h3{
+    margin-top:50px
+  }
+  p{
+    font-size: 18px;
+    gap: 7px;
+    margin-top:10px
+
+  }
+  h4{
+    margin-top:50px
+  }
+  h4{
+    gap: 5px;
+  }
+</style>

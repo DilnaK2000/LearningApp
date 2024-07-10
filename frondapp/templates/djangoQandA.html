@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>django Q&A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="#" class="nav-item nav-link" style="margin-right:150px">Request Demo</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+
+    <div class="row">
+        <div class="col-4">
+             <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center"
+                  style="width:300px;overflow: hidden;overflow-y: scroll;height:700px;margin-top:27px;">
+                 <p class="p-1 rounded" style="text-align:center;" ><u>Basic Django Interview Questions & Answers</u></p>
+                 <a class="p-1 rounded" href="#item-1">1. What is Python? List some popular applications of Python in the world of technology.</a>
+                 <a class="p-1 rounded" href="#item-2">2. What are the benefits of using Python language as a tool in the present scenario?</a>
+                 <a class="p-1 rounded" href="#item-3">3. Is Python a compiled language or an interpreted language?</a>
+                 <a class="p-1 rounded" href="#item-4">4. What does the ‘#’ symbol do in Python? </a>
+                 <a class="p-1 rounded" href="#item-5">5. What is the difference between a Mutable datatype and an Immutable data type? </a>
+                 <a class="p-1 rounded" href="#item-6">6. How are arguments passed by value or by reference in Python? </a>
+                 <a class="p-1 rounded" href="#item-7">7. What is the difference between a Set and Dictionary?</a>
+                 <a class="p-1 rounded" href="#item-8">8. What is List Comprehension? Give an Example.</a>
+                 <a class="p-1 rounded" href="#item-9">9. What is a lambda functions</a>
+                 <a class="p-1 rounded" href="#item-10">10. What is a pass in Python?</a>
+                 <a class="p-1 rounded" href="#item-11">11. What is the difference between / and // in Python?</a>
+                 <a class="p-1 rounded" href="#item-12">12. How is Exceptional handling done in Python?</a>
+                 <a class="p-1 rounded" href="#item-13">13. What is swapcase function in Python?</a>
+                 <a class="p-1 rounded" href="#item-14">14. Difference between for loop and while loop in Python </a>
+                 <a class="p-1 rounded" href="#item-15">15. Can we Pass a function as an argument in Python? </a>
+                 <a class="p-1 rounded" href="#item-16">16. What are *args and *kwargs? </a>
+                 <a class="p-1 rounded" href="#item-17">17. Is Indentation Required in Python? </a>
+                 <a class="p-1 rounded" href="#item-18">18. What is Scope in Python? </a>
+                 <a class="p-1 rounded" href="#item-19">19. What is docstring in Python? </a>
+                 <a class="p-1 rounded" href="#item-20">20. What is a dynamically typed language? </a>
+                 <a class="p-1 rounded" href="#item-21">21. What is a break, continue, and pass in Python? </a>
+                 <a class="p-1 rounded" href="#item-22">22. What are Built-in data types in Python? </a>
+                 <a class="p-1 rounded" href="#item-23">23. How do you floor a number in Python? </a>
+                 <a class="p-1 rounded" href="#item-24">24. What is the difference between xrange and range functions? </a>
+                 <a class="p-1 rounded" href="#item-25">25. What is Dictionary Comprehension? Give an Example </a>
+                 <a class="p-1 rounded" href="#item-26">26.Is Tuple Comprehension? If yes, how, and if not why? </a>
+                 <a class="p-1 rounded" href="#item-27">27. Differentiate between List and Tuple? </a>
+                 <a class="p-1 rounded" href="#item-28">28. What is the difference between a shallow copy and a deep copy? </a>
+                 <a class="p-1 rounded" href="#item-29">29. Which sorting technique is used by sort() and sorted() functions of python? </a>
+                 <a class="p-1 rounded" href="#item-30">30. What are Decorators? </a>
+                 <a class="p-1 rounded" href="#item-31">31. How do you debug a Python program? </a>
+                 <a class="p-1 rounded" href="#item-32">32. What are Iterators in Python? </a>
+                 <a class="p-1 rounded" href="#item-33">33. What are Generators in Python? </a>
+                 <a class="p-1 rounded" href="#item-34">34. Does Python supports multiple Inheritance? </a>
+                 <a class="p-1 rounded" href="#item-35">35. What is Polymorphism in Python? </a>
+                 <a class="p-1 rounded" href="#item-36">36. Define encapsulation in Python? </a>
+                 <a class="p-1 rounded" href="#item-37">37. How do you do data abstraction in Python? </a>
+                 <a class="p-1 rounded" href="#item-38">38. How is memory management done in Python? </a>
+                 <a class="p-1 rounded" href="#item-39">39. How to delete a file using Python? </a>
+                 <a class="p-1 rounded" href="#item-40">40. What is slicing in Python?</a>
+
+             </div>
+        </div>
+    </div>
+
+    <div class="row" style="overflow: hidden;overflow-y: scroll;height:700px;margin-left:370px;width:1000px;margin-top:-720px" >
+      <div class="row">
+        <div class="col-8" style="margin-top:50px;width:950px;">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="#item-1">
+              <h2>Top 50 Django Interview Questions and Answers</h2>
+                <div style="width:850px;height:2px;background-color:#adb5bd;"></div>
+              <p>Django is one of the high-level Python-based free and open-source web frameworks
+                  and was created in 2003. It follows the model-view-template (MVT) architectural pattern.
+                  Nowadays, It is one of the most demanding skills. It has been managed by Django Software
+                  Foundation (DSF), a Non-benefit Organization based in the United States. If you are a beginner
+                  or even a professional who wanted to become a Django Developer and wants to prepare yourself
+                  for the upcoming interview – here, GeeksforGeeks provides the top Django Interview Questions
+                  and Answers that definitely help you to crack your interview.</p><br>
+                <p>Django is the most used framework in top companies such as PBS, Mozilla,
+                    Nextdoor, Netflix, Instagram, The Washington Times, Amazon, and many more because
+                    of its features and performance. To get into these companies and other software
+                    companies as a Django web developer, you need to master some important Django interview
+                    questions to crack their Django Online Assessment round and Django interview.</p>
+            </div>
+            <div id="#item-2">
+                <h3><u>Basic Django Interview Questions & Answers</u></h3>
+                <h3 style="margin-top:20px">Q 1. What is Django?</h3>
+                <p>Django is a Full-stack web development framework that facilitates the creation and maintenance
+                    of high-quality Dynamic pages while also encouraging rapid development and a clean, pragmatic
+                    style. Django makes it easier to automate repeated operations, resulting in a more efficient
+                    development process with fewer lines of code. <br>It is used for:</p>
+            </div>
+
+
+
+            <div id="item-3">
+              <h3>Q2. What is the difference between Flask and Django?</h3>
+                  <p>Answer:</p>
+                <table class="table table-bordered" style="margin-left:50px;text-align:center;">
+                  <thead>
+                    <tr style="height:60px;">
+                      <th scope="col">Django</th>
+                      <th scope="col">Flask</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:50px;">
+                      <td>Supports large projects.</td>
+                      <td>Supports smaller projects.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>Templates, Admin and ORM is built-in.</td>
+                      <td>Templates, Admin and ORM requires to be installed..</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Not easy to as compare to Flask.</td>
+                      <td>It is easy to learn.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>Complete Web development no need any third party tools.</td>
+                      <td>User can choose any third party tools according to their needs.</td>
+                    </tr>
+                    <tr style="height:50px;">
+                      <td>Does not support visual debugging.</td>
+                      <td>Supports visual debugging.</td>
+                    </tr>
+                    <tr style="height:90px;">
+                      <td>Inbuilt bootstrapping tool </td>
+                      <td>Bootstrapping tools are not available.</td>
+                    </tr>
+                  </tbody>
+                </table>
+             </div>
+            </div>
+
+
+            <div id="item-4" style="margin-top:30px">
+              <h3>Q 3. Name some Companies that use Django.</h3>
+              <p>Some companies that use the Django framework are Instagram, Mozilla,
+                  Disqus, Bitbucket, Nextdoor, and Clubhouse.</p>
+            </div>
+
+
+            <div id="item-5">
+              <h3>Q 4. What is the difference between a Project and an App?</h3>
+              <p>The main difference between a project and an app is that a project is defined as
+                  the entire application whereas, an app is part of the project that is self-sufficient
+                  to perform any task.</p>
+            </div>
+
+
+            <div id="item-6">
+              <h3>Q 5. Explain Django’s architecture.</h3>
+              <p>The Model-View-Template also known as MVT architecture is used by Django. It is a software
+                  design pattern for developing a web application. The Django MVT Structure is made up of three
+                  parts:</p>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                The model will serve as an interface for your data. It is in charge of data management.
+                    A database represents the logical data structure that supports the entire application
+                    such as MySql and Postgres.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                The View is the user interface, that renders a website page in your browser.
+                  HTML/CSS/Javascript and Jinja files are used to represent it.e</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                A template is made up of both static sections of the desired HTML output and specific
+                  syntax that describes how dynamic content will be included.</p></a>
+                <img style="height:400px;width:700px;margin-left:20px;border-radius:7px;" src="{% static 'load/img/imgdj.jpg' %}">
+            </div>
+
+
+
+
+            <div id="item-7">
+              <h3>Q 6. What are the Features of using Django?</h3>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Flexible server arrangement, </p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Model relation database</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Provide object-relational mapper</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Web templating system</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Middleware class support</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Regex-based URL Dispatcher</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Admin Interface</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Django is SEO optimized.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                In-build mitigation</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Easy inheritance</p></a>
+            </div>
+
+
+             <div id="item-8">
+              <h3>Q 7. Explain the Django project directory structure.</h3>
+              <p>When you first start a Django project, it comes with some basic files like manage.py and view.py.</p>
+                 <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                init.py – It’s an empty Python file. It is called when the package or one of its modules is imported.
+                     This file tells the Python interpreter that this directory is a package and that the presence of the
+                     __init.py_ file makes it a Python project.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                manage.py – This file is used to interact with your project from the command line utility. with the
+                  help of this command, we can manage several commands such as:<br>1.manage.py runserver <br>2.manage.py makemigration <br>3.manage.py migrate’ etc</p></a>
+              <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                setting.py – It is the most important file in Django projects. It holds all the configuration
+                  values that your web app needs to work, i.e. pre-installed, apps, middleware, default database,
+                  API keys, and a bunch of other stuff. </p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                views.py - The View shows the user the model’s data. The view knows
+                  how to get to the data in the model, but it has no idea what that data represents or what the
+                  user may do with it.</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                urls.py -  It is a universal resource locator which contains all the endpoints, we store all
+                  links of the project and functions to call it.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                models.py - The Model represents the models of web applications in the form of classes, it
+                  contains no logic that describes how to present the data to a user.</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                wsgi.py - WSGI stands for Web Server Gateway Interface, This file is used for deploying
+                  the project in WSGI. It helps communication between your Django application and the web
+                  server.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                admin.py -  It is used to create a superuser Registering model, login, and use the
+                  web application.</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                app.py - It is a file that helps the user to include the application configuration for their app.</p></a>
+
+             </div>
+
+
+
+             <div id="item-9">
+              <h3>Q 8. How do you create a Django project?</h3>
+              <p>We can create a Django project with the help of the following command<br>For Example:</p>
+              <div class="div1" >
+                <p style="text-align:center;font-size:17px;padding-top:10px;">django-admin startproject projectname</p>
+              </div>
+            </div>
+
+
+             <div id="item-10">
+                <h3>Q 9. How do you create a Django app?</h3>
+                    <p>We can create a Django app with the help of the following command</p>
+                    <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">python manage.py startapp appname</p>
+                    </div>
+              </div>
+
+
+              <div id="item-11">
+                <h3>Q 10. How do we start our development server?</h3>
+                    <p>We can start our development server with the help of the following command</p>
+                  <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">python manage.py runserver</p>
+                    </div>
+              </div>
+
+
+              <div id="item-12">
+                  <h3>Q 11. Importance of virtual environment setup for Django.</h3>
+                     <p>A virtual environment allows you to establish separate dependencies of the
+                         different projects by creating an isolated environment that isn’t related to each
+                         other and can be quickly enabled and deactivated when you’re done.<br> It is not necessary to
+                         use a virtual environment without a virtual environment we can work with Django projects.
+                         However, using virtualenv is thought to be the ideal practice. Because it eliminates
+                         dependencies and conflicts.</p>
+              </div>
+
+
+              <div id="item-13">
+                  <h3>Q 12. Give a brief about the Django admin interface.</h3>
+                     <p>Django provides us with a default admin interface that is very helpful for creating,
+                         reading, updating, and deleting model objects that allow the user to do administrative
+                         tasks. It reads a set of data that explains and provides information about data from the
+                         model in order to create a quick interface where the user can alter the application’s
+                         contents. This is an in-built module.</p>
+              </div>
+
+
+
+              <div id="item-14">
+                  <h3>Q 13. What are Django URLs?</h3>
+                     <p>The routing of a website is determined by its URLs. In the program, we build a python
+                         module or a file called urls.py. The navigation of your website is determined by this
+                         file. When a user visits a given URL route in the browser, the URLs in the urls.py file
+                         are compared. The user then receives the response for the requested URL after retrieving
+                         a corresponding view method.</p>
+              </div>
+
+
+              <div id="item-15">
+                  <h3>Q 14. What are the views of Django?</h3>
+                     <p>Django views are an important feature of the MVT Structure. This is a function
+                         or class that takes a web request and delivers a Web response, according to the
+                         Django script. This response could be an HTML template, a content of a Web page,
+                         an XML document, a PDF, or images. the view is a part of the user interface that
+                         renders the HTML/CSS/Javascript in your Template files into what you see in your
+                         browser when we render a web page.</p>
+              </div>
+
+
+              <div id="item-16">
+                  <h3>Q 15. What are the models in Django?</h3>
+                     <p>Model is a built-in feature of Django that contain a definitive source
+                         of information such as behavior and essential fields about the data we are storing.
+                         It allows us to build tables, fields, and constraints and organize tables into models
+                         . Generally, each model maps to a single database table. To use Django Models, you’ll
+                         need a project and an app to work with. Also, Django makes use of SQL to access the database.
+                         SQL is a complex language with many queries for generating, removing, updating, and other
+                         database-related tasks.</p>
+              </div>
+
+
+
+             <div id="item-17">
+              <h3>Q 16. What do the following commands do?</h3>
+                 <a><p style="margin-top:10px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                python manage.py makemigrations</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                python manage.py migrate</p></a>
+              <p>The makemigration command scans the model in your application and generates a new set of
+                  migrations based on the model file modifications. This command generates the SQL statement,
+                  and when we run it, we obtain a new migration file. After running this command, no tables will
+                  be created in the database.</p>
+               <p>Running migrate command helps us to make these modifications to our database. The migrate
+                   command runs the SQL instructions (produced by makemigrations) and applies the database
+                   changes. After running this command, tables will be created.</p>
+             </div>
+
+
+              <div id="item-18">
+                <h3>Q 17. What are the sessions?</h3>
+                <p>Sessions are the technique for keeping track of a site’s and a browser’s state.
+                    During the session, the user data is stored in sessions, which are server-side files.
+                    The session ends when the user closes the browser or logs out of the program. Within a session,
+                    we can keep as much data as we want, We must use the session start() method to start the session.
+                    There is one advantage of using a session is that the data is stored in an encrypted format.</p>
+              </div>
+
+
+               <div id="item-19">
+                <h3>Q 18. Define static files and explain their uses.</h3>
+                <p>Static files are used to save files such as CSS, JavaScript, pictures, and other types of static
+                    files. We keep them in distinct folders, for as the js folder, which has all of the JavaScript
+                    files, and the images folder, which contains all of the images. These files are kept in the
+                    static subfolder of the project app. Django provides django.contrib.staticfiles which helps
+                    us to manage static files. There are different uses for static files:</p>
+              </div>
+
+
+               <div id="item-20">
+                <h3>Q 19. What are templates in the Django language?</h3>
+                <p>A Django template is a text document that is used to give a front and a layout for our website
+                    . It is the third and most significant aspect of Django’s MVT Structure. In Django, a template
+                    is an HTML file that contains HTML, CSS, and Javascript. The Django framework efficiently manages
+                    and generates dynamically generated HTML web pages for end-user viewing. Django is mostly a backend
+                    framework, thus we use templates to give a layout for our website. There are two ways to incorporate
+                    the template into our website.</p>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    We can utilize a single template directory that will be distributed throughout the project.</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    We can make a separate template directory for each app in our project.</p></a>
+
+              </div>
+
+
+
+               <div id="item-21">
+                <h3>Q 20. What does the settings.py file do?</h3>
+                <p>settings.py is a core file in Django projects. It holds all the configuration values that
+                    your web app needs to work; database settings, logging configuration, where to find static files,
+                    API keys if you work with external APIs, and a bunch of other stuff.</p>
+              </div>
+
+
+
+               <div id="item-22">
+                <h3>Q 21. Difference between MVC and MVT design patterns?</h3>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Model and View are both driven by the controller in MVC, whereas Views in MVT are used to receive HTTP requests and return HTTP responses.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                We must write all of the control-specific code in MVC whereas, We must write all of the control-specific code in MVC.</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                MVC is Highly coupled whereas, MVT is loosely coupled.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                In MVC, it is difficult to modify whereas, Modification is easy in MVT.</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                MVC is suitable for large applications, but MVT is suitable for both small and large applications.</p></a>
+              <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                MVC does not involve any URL mapping, whereas in MVT URL pattern mapping takes place.</p></a>
+              <a><p  style="font-size:-20px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="4" cy="4" r="4"/></svg>
+                Flow is clear and easy to understand, whereas MVT is sometimes harder to understand.</p></a>
+              </div>
+
+
+
+
+               <div id="item-23">
+                <h3>Q 22. What is Django ORM?</h3>
+                   <p>ORM which is also known as the object relation model enables us to interact with our database.
+                       It allows us to add, delete, change, and query objects (Object Relational Mapper). Django uses
+                       a database abstraction API called ORM to interface Viewed with its database models, to use
+                       Django object relation Models, we must first have a project and an app running. Models can be
+                       created in app/models.py after an app has been started. The Django ORM may be accessed by running
+                       the following command in our project directory.</p>
+                      <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">python manage.py shell</p>
+                    </div>
+                   <p>This opens a Python console where we may add objects, retrieve objects, modify existing items, and delete objects.</p>
+              </div>
+
+
+
+               <div id="item-24">
+                <h3>Q 23. What is Superuser?</h3>
+                   <p>superuser is the most powerful user with permission to create, read, delete, and update on
+                       the admin page which includes model records and another user. Users of Django have access to
+                       an Admin Panel. Before using this feature, you must have to migrate your project; otherwise,
+                       the superuser database will not be created. To create a superuser,  first, reach the same directory,
+                       and run the following command</p>
+                <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">python manage.py createsuperuser</p>
+                    </div>
+               </div>
+
+
+
+               <div id="item-25">
+                <h3>Q 24. What is Jinja templating?</h3>
+                <p>Jinja is also known as jinja2, which is the most recent version. It’s a template
+                    engine that allows you to make HTML, XML, and other markup types. Jinja2 is valuable
+                    since it features a templating tag syntax and because the project has been extracted as
+                    a standalone open-source project that may be utilized as a dependency by other code libraries.
+                    Some of its features are:</p>
+                    <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    HTML Escaping – It provides automatic HTML Escaping as <, >, & characters have special values in templates and if using a regular text, these symbols can lead to XSS Attacks which Jinja deals with automatically.</p></a>
+                   <a><p style="margin-top:-20px;font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    Sandbox Execution – This is a framework for automating the testing process in a sandbox (or protected) environment.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    Template Inheritance</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    Produces HTML templates far more quickly than the default engine.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                    When compared to the default engine, it is easier to debug.</p></a>
+
+              </div>
+
+
+               <div id="item-26">
+                <h3>Q 25. What do you mean by the csrf_token?</h3>
+                <p>Cross-Site Request Forgery (CSRF) is one of the most serious vulnerabilities, and it can be used
+                    to do everything from changing a user’s information without their knowledge to obtaining full
+                    control of their account. To prevent malicious attacks, Django provides a per cent token per cent
+                    tag {% csrf_token %} that is implemented within the form. When generating the page on the server,
+                    it generates a token and ensures that any requests coming back in are cross-checked against this token.
+                    The token is not included in the inbound requests, thus they are not executed.</p>
+              </div>
+
+
+               <div id="item-27">
+                <h3>Q 26. Explain the use of Middlewares in Django.</h3>
+                   <p>Middleware is a lightweight plugin in Django that is used to keep the application secure
+                       during request and response processing. The application’s middleware is utilized to complete
+                       a task. Security, session, CSRF protection, and authentication are responsible for doing some
+                       specific functions. The application’s security is maintained by the usage of the middleware
+                       component, AuthenticationMiddleware which is associated with user requests using sessions.</p>
+              </div>
+
+
+
+               <div id="item-28">
+                <h3>Q 27. What are ‘signals’?</h3>
+                <p>Signals are used to take action in response to the modification or creation of a
+                    database entry. Its utilities help us to connect events with their action. we can
+                    create methods that will run a signal when it is called. For example, as soon as a
+                    new user instance is generated in the Database, one might want to create a profile instance.
+                    Generally, There are 3 types of signals.</p>
+              </div>
+
+
+              <div id="item-29">
+                <h3>Q 28. What is Media Root?</h3>
+                <p>Media root is used to upload user-generated content. We can serve user-uploaded media
+                    files locally, using the MEDIA_ROOT and MEDIA_URL settings. User-upload these files are
+                    referred to as Media or Media Files in Django. The first step is to include the code below in
+                    the settings.py file. <br>MEDIA_ROOT = os.path.join(BASE_DIR, ‘media’) <br>MEDIA_URL = ‘/media/’</p>
+                  <p>MEDIA_ROOT: It is for the server path to store files in the computer.</p>
+                    <p> MEDIA_URL: It is the referring URL for the browser to access the files over HTTP.</p>
+              </div>
+
+
+
+              <div id="item-30">
+                <h3>Q 29. How you can include and inherit files in your application?</h3>
+                <p>Using the extends tag in Templates, we can inherit our files in Django, The extends tag is used to
+                    inherit these templates. The syntax for inheriting these templates is given as:</p>
+                  <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;"> extends 'template_name.html'  </p>
+                    </div>
+                  <p>This syntax helps us to add all the elements of an HTML file into another without copy-pasting the
+                      entire code. Django templates not only allow us to pass variables from view to template, but they also
+                      provide some programming capabilities like loops, comments, and extensions.</p>
+              </div>
+
+
+
+              <div id="item-31">
+                <h3>Q 30. How do you connect your Django Project to the database?</h3>
+                <p>We need to configure our database in the settings.py file. By default, SQLite is mentioned
+                    there, and we need to change this setting accordingly like Postgres, MongoDB, and MySql</p>
+              </div>
+
+
+
+              <div id="item-32">
+                  <h4>Advanced Django Interview Questions & Answers</h4>
+                <h3>Q 31. Explain the caching strategies of Django. ?</h3>
+                <p>Django has its own inbuilt caching system that allows us to store our dynamic pages. So that
+                    we don’t have to request them again when we need them. The advantage of the Django Cache
+                    framework is that it allows us to cache data such as templates or the entire site. Django
+                    provides four different types of caching options, they are:</p>
+                  <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   <b>per-site cache – </b> It is the most straightforward to set up and caches your entire website.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   <b> per-view cache –</b> Individual views can be cached using the per-view cache.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   Template fragment caching allows you to cache only a portion of a template.</p></a>
+                  <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                      <b>low-level cache API – </b>It can manually set, retrieve, and maintain particular objects in the cache using the low-level cache API.</p></a>
+              </div>
+
+
+
+
+              <div id="item-33">
+                <h3>Q 32. Give the exception classes present in Django.</h3>
+                <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   MultipleObjectsReturned – If just one item is anticipated but many objects are returned, this error is thrown by the query.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   ViewDoesNotExist – When a requested view does not exist, Django.URLs raise this exception.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                  PermissionDenied – It’s triggered when a user doesn’t have the necessary permissions to perform the requested activity.</p></a>
+                  <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   ValidationError – It’s triggered when data validation fails on a form or a model field.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   FieldDoesNotExist – It raises when the requested field does not exist.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   ObjectDoesNotExist – The base class for DoesNotExist exceptions.</p></a>
+                  <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   AppRegistryNotReady – It is raised when attempting to use models before the app loading process.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   EmptyResultSet – If a query does not return any result, this exception is raised.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   SuspiciousOperation – The query throws this error if only one item is expected but several things are returned.</p></a>
+              </div>
+
+
+              <div id="item-34">
+                <h3>Q 33. What is No SQL and Does Django support NoSQL?</h3>
+                <p>NoSql is also known as a non-relational database that stores data in a form of non-tabular, instead it stores
+                    data in the form of a storage model that is optimized for specific requirements of the type of data being
+                    stored. The types of NoSQL databases include pure documented databases, graph databases, wide column databases,
+                    and a key-value store.
+              No, Django does not officially support no-SQL databases such as CouchDB, Redis, Neo4j, MongoDB, etc. </p>
+              </div>
+
+
+              <div id="item-35">
+                <h3>Q 34. What are the different model inheritance styles in Django?</h3>
+                  <p>Django supports 3 types of inheritance. They are</p>
+                  <p>Abstract base classes</p>
+                  <p>Multi-table Inheritance</p>
+                   <p>Proxy models</p>
+              </div>
+
+
+
+              <div id="item-36">
+                <h3>Q 35. What databases are supported by Django?</h3>
+                <p>Databases that are supported by Django are SQLite(Inbuild), Oracle, PostgreSQL, and MySQL.
+                    Django also uses some third-party packages to handle databases including Microsoft SQL Server,
+                    IBM DB2, SAP SQL Anywhere, and Firebird. Django does not officially support no-SQL databases such
+                    as CouchDB, Redis, Neo4j, MongoDB, etc.</p>
+              </div>
+
+
+
+              <div id="item-37">
+                <h3>Q 36. How would you query all the items in the database table?</h3>
+                <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">XYZ.objects.all()</p>
+                    </div>
+                  <p>Where XYZ is some class created in the model.</p>
+              </div>
+
+
+
+              <div id="item-38">
+                <h3>Q 37. How to query one item from the database table?</h3>
+               <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">XYZ.objects.get(id=1) </p>
+                    </div>
+                  <p>Where XYZ is some class created in the model.</p>
+              </div>
+
+
+
+              <div id="item-39">
+                <h3>Q 38. What is Django Rest Frameworkcont</h3>
+                <p>The REST Framework is an HTTP-based standard for listing, generating, modifying,
+                    and deleting data on your server. The Django REST framework which is also known as DRF
+                    is a powerful and flexible toolkit built on top of the Django web framework that simplifies
+                    the creation of REST interfaces by reducing the amount of code required. there are different
+                    advantages of using REST Framework like:</p>
+                  <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   Web browsable API that provides huge usability for developer</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                  Authentication policy which includes packages for 0auth1 and auth2.</p></a>
+                   <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   It supports both ORM and non-ORM data sources.</p></a>
+                  <a><p  style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="4" cy="4" r="4"/></svg>
+                   It has extensive documentation and great community support.</p></a>
+              </div>
+
+
+              <div id="item-40">
+                <h3>Q 39. Explain the Django Response lifecycle.</h3>
+                <p>The Django Response lifecycle is responsible for data interchange between clients and servers
+                    with the help of the HttpRequest object, whenever a request is made by the client to the server
+                    it passes information through the system using request and response objects. these request/response
+                    objects are transmitted over the web which contains request metadata such as images, HTML, CSS, and
+                    javascript. These data are then loaded and presented to the user by Django, which passes the HttpRequest
+                    as the first argument to the view method. It is the responsibility of each view to return a HttpResponse
+                    object.</p>
+              </div>
+
+
+
+              <div id="item-41">
+                <h3>Q 40. How do filter items in the Model?</h3>
+                <p>To filters items present in our database we use a QuerySet. It is a database collection of
+                    data that is built up as a list of objects. QuerySet makes our work easy by allowing us to filter
+                    and organize the data, it is also easier to retrieve the information that we need with the help of
+                    QuerySet. we can filter our data with the help filter() method that allows us to return only the
+                    rows that match the search word.</p>
+
+              </div>
+
+
+
+              <div id="item-42">
+                <h3>Q 41. What is the difference between CharField and TextField in Django?</h3>
+                <p>TextField is a database field that is used to store big amounts of text. Paragraphs, data, and other
+                    items can be saved. CharField should be used to hold tiny text such as First name and Last name. Let’s make
+                    a new instance of the TextField we just made and see whether it works. CharField is a string field, for
+                    small- to large-sized strings. It is generally used for storing small strings like first names, last names,
+                    etc. To store larger text TextField is used.</p>
+              </div>
+
+
+              <div id="item-43">
+                <h3>Q 42. Give a brief about the settings.py file.</h3>
+                <p>It’s the Django file’s main settings file, as the name says. Everything inside the Django project is saved in
+                    this file as a dictionary or list, including databases, middlewares, backend engines, templating engines,
+                    installed applications, static file URLs, main URL configurations, authorized hosts, servers, and security
+                    keys. When Django files are started, the settings.py file is first executed, followed by the loading of the
+                    appropriate databases and engines to swiftly serve the request.</p>
+              </div>
+
+
+
+              <div id="item-44">
+                <h3>Q 43. What are Django cookies?</h3>
+                <p>A cookie is a piece of information stored in the client’s browser. To set and fetch cookies,
+                    Django provides built-in methods to use the set_cookie() method for setting a cookie and the get()
+                    method for getting the cookie. we can also use the request.COOKIES[‘key’] array to get cookie values.</p>
+              </div>
+
+
+
+
+              <div id="item-45">
+                <h3>Q 44. How to check the version of Django installed on your system?</h3>
+                <p>TOpen the command prompt and enter the following command</p>
+                  <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">py -m django --version</p>
+                    </div>
+              </div>
+
+
+
+              <div id="item-46">
+                <h3>Q 45. Why is Django called a loosely coupled framework?</h3>
+                <p>Django is known as a loosely connected framework because of its MTV architecture. Django’s design is an
+                    MVC variant, and MTV is advantageous since it totally separates server code from the client’s hardware.
+                    The client machine has Models and Views, and templates are only returned to the client. All of the
+                    architectural elements make distinct from one another.</p>
+              </div>
+
+
+
+              <div id="item-47">
+                <h3>Q 46. Explain Django Security.</h3>
+                <p>The security of users’ data is an important aspect of any website design. Django provides adequate security
+                    against a number of common threats. Django’s security features are as follows:
+
+                    Cross-site scripting (XSS) protection,
+                        SQL injection protection,
+                            Cross-site request forgery (CSRF) protection,
+                                Enforcing SSL/HTTPS,
+                                Session security,
+                            Clickjacking protection,
+                            Host header validation</p>
+              </div>
+
+
+
+              <div id="item-48">
+                <h3>Q 47. Explain user authentication in Django</h3>
+                <p>Django comes with an authentication system configured by default to handle objects like users, groups, permissions, and so on. The authentication system’s core is made up of user objects. It not only authenticates users but also authorizes them. Aside from using the default, we can employ a variety of web apps instead of using the default system to enable more user authentication. The default system objects are as follows:
+
+Users,
+Permissions,
+Groups,
+Password Hashing System,
+Forms Validation,
+A pluggable backend system</p>
+              </div>
+
+
+              <div id="item-49">
+                <h3>Q 48. What is the “Django.shortcuts.render” function?</h3>
+                <p>We need the render function when a View function produces a web page as a HttpResponse
+                    instead of a basic string. Render is a shortcut for passing a template and a data dictionary.
+                    This function combines templates with a data dictionary using a templating engine. Finally, render()
+                    provides a HttpResponse containing the rendered text as well as the data from the models.</p>
+                  <div class="div1" >
+                        <p style="margin-left:40px;font-size:17px;padding-top:10px;">Syntax: render(request, template_name, context=None, content_type=None, status=None, using=None)</p>
+                    </div>
+              </div>
+
+              <div id="item-50">
+                <h3>Q 49. What is a context in Django?</h3>
+                <p>In Django, a context is a dictionary in which the keys represent variable names and the
+                    values reflect the values of those variables. This dictionary or context is supplied to
+                    the template, which finally outputs the dynamic content using the variables. i.e. {var1:
+                    11, var2: 12}, when you pass this context to the template render method, {{ var1 }} would be
+                    replaced with 11 and {{ var2 }} with 12 in your template.</p>
+              </div>
+
+             <div id="item-51">
+                <h3>Q 50. What is serialization in Django?</h3>
+                <p>ISerializers in the Django REST Framework are responsible for transforming objects into
+                    data types that javascript and front-end frameworks can understand. After validating the
+                    incoming data, serializers also enable deserialization, which allows parsed data to be
+                    transformed back into complex types.</p>
+              </div>
+
+          </div>
+            <div style="height:100px"></div>
+        </div>
+      </div>
+
+
+
+
+
+<!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="#" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Artificial Intelligence</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>POPULAR COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Database</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data Structure</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Python Programming</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mathematics</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary ">Linux Shell</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Screen</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SkillUp</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Practice</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>SOLUTION</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Set Up a Skills Strategy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Showcase Your Talent Brand</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Optimize Your Hiring Process</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mobilize Your Internal Talent</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Embrace AI</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+<style>
+  .div1{
+    width:700px;
+    height:80px;
+    background-color:rgb(205, 205, 205);
+    margin-left:60px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  span{
+    font-size:17px;
+    color:rgb(91, 91, 91);
+  }
+  h3{
+    margin-top:50px
+  }
+  p{
+    font-size: 19px;
+    gap: 5px;
+    margin-top:10px
+  }
+  h4{
+    margin-top:50px
+  }
+  h4{
+    gap: 5px;
+  }
+  .p-1{
+    text-decoration: none;
+    text-align: left;
+  }
+  .p-1 :hover{
+     color: black
+  }
+</style>

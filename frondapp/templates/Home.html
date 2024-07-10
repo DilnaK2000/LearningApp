@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>learnleaf - Easy Learning</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'load/img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'load/lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'load/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'load/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'load/css/style.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+<!--     First start Navbar-->
+     <nav class="navbar navbar-expand-lg sticky-top p-0 " style="height:50px;background-color:rgb(149, 204, 247);" >
+        <div class="collapse navbar-collapse" >
+            <div class="navbar-nav ms-auto p-4 p-lg-0" style="margin-right:50px">
+
+                {% if request.session.uname %}
+                <a href="{% url 'logout_page' %}" class="nav-item nav-link" style="font-weight: 600;"><button class="btn1 ">Welcome {{request.session.uname}}/Logout</button></a>
+                {% else %}
+                <a href="{% url 'loginsigup_page' %}" class="nav-item nav-link" style="font-weight: 600;"><button class="btn1 btn">Login</button></a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+<!--    first end navbar-->
+
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top p-0 fixed"  style="height:50px;">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img style="height:100px;width:200px" src="{% static 'load/img/learnleaf1.png' %}">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home_page' %}" class="nav-item nav-link" >Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu fade-down m-10">
+                        <a href="{% url 'interview2page' %}" class="dropdown-item">Interview</a>
+                    </div>
+                </div>
+
+                <a href="{% url 'features_page' %}" class="nav-item nav-link">Features</a>
+
+                <a href="{% url 'fordeveloper_page' %}" class="nav-item nav-link">For developers<span style="color:black"> |</span></a>
+
+                <a href="{% url 'contact_page' %}" class="nav-item nav-link" style="margin-right:150px">Contact Us</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" style="height:850px;" src="{% static 'load/img/start3.jpg' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                                <h1 class="display-3 text-white animated slideInDown">The Best Online Learning Platform </h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Tech hiring needs a reset. From prepping for jobs and practicing coding to running a world-class technical interview, give developers the tools they need to showcase their skills, passion, and potential.</p>
+                                <a href="{% url 'fordeveloper_page' %}" class="btn btn-outline-info py-md-3 px-md-5 animated slideInRight">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img  class="img-fluid" style="height:850px;" src="{% static 'load/img/start2.jpg' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">✓ Study at your own pace and learn anywhere, anytime.</p>
+                                <p class="fs-5 text-white mb-4 pb-2">✓ Build career-ready skills and become a specialist in your field.</p>
+                                <p class="fs-5 text-white mb-4 pb-2">✓ Earn a degree from the world’s leading universities.</p>
+                                <p class="fs-5 text-white mb-4 pb-2">✓ Join a top-rated community.</p>
+                                <a href="{% url 'fordeveloper_page' %}" class="btn btn-outline-info py-md-3 px-md-5 animated slideInRight">More Details</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Service Start -->
+    <div style="text-align:center">
+        <p style="font-size: 60px; font-weight:900;font-family: 'Times New Roman', Times, serif;">Skills Speak Louder <br> than Words</p>
+        <h5 style="margin-left:400px;margin-right:400px">We help companies develop the strongest tech teams around. We help candidates sharpen their tech skills and pursue job opportunities.</h5>
+    </div>
+
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5" style="margin-top:70px">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow " data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'load/img/QandA.png' %}" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-wow-delay="0.3s" style="margin-top:150px">
+                    <h1 class="mb-4" >50+ Most Common Interview Questions and Answers</h1>
+                    <p class="mb-4">Wouldn’t it be great if you knew exactly what questions a hiring manager would be asking you in your next job interview?</p>
+
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'interview2page' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Courses Start -->
+
+     <div class="container-xxl py-5 " data-wow-delay="0.1s" style="margin-top:70px">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Course</h6>
+                <h1 class="mb-5">Popular Course</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                {% for i in data %}
+                <div class="testimonial-item text-center">
+                    <img class=" mx-auto mb-3" src="{{i.image.url}}" style="width: 300px; height: 230px;">
+                    <h5 class="mb-0">{{i.cname}}</h5>
+                    <p>Tutorial</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">{{i.price}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <!-- Course End -->
+
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow " data-wow-delay="0.1s" style="margin-top:70px">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">******</h6>
+                <h1 >Every company is a tech company.<br><span>We’re here to help ‘em all.</span></h1>
+                <h5 style="margin-left:200px;margin-right:200px" class="mb-5">More than 3,000 tech teams, representing all industries and from countries around the world, trust learnleaf to connect with developers and add cutting-edge skills to their teams.</h5>
+            </div>
+            <div  style="margin-left:250px">
+                <div class=" text ">
+                    <img  src="{% static 'load/img/img2.png' %}" style="width: 130px; height: 80px;">
+                </div>
+                <div class=" text">
+                    <img  src="{% static 'load/img/img3.png' %}" style="width: 100px; height: 80px;margin-left:130px;margin-top:-102px;">
+                </div>
+                <div class=" text">
+                    <img  src="{% static 'load/img/img4.png' %}" style="width: 100px; height: 80px;margin-left:230px;margin-top:-150px;">
+                </div>
+                <div class=" text">
+                    <img  src="{% static 'load/img/img5.png' %}" style="width: 100px; height: 80px;margin-left:330px;margin-top:-190px;">
+                </div>
+                <div class=" text">
+                    <img  src="{% static 'load/img/img6.png' %}" style="width: 100px; height: 80px;margin-left:430px;margin-top:-250px;">
+                </div>
+                <div class=" text">
+                    <img  src="{% static 'load/img/img8.png' %}" style="width: 100px; height: 80px;margin-left:530px;margin-top:-290px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!--    Practice Start-->
+      <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6" data-wow-delay="0.3s" >
+                    <h1 class="mb-4">Practice coding Topics & <br><span>prep for interviews</span> </h1>
+                    <p class="mb-4">Start practicing your skills now and land the job of your dreams.</p>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'fordeveloper_page' %}">Prepare Topics</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5" style="margin-top:-334px;">
+        <div class="container">
+            <div class="row g-5" >
+                <div class="col-lg-6 " data-wow-delay="0.3s" style="margin-left:650px">
+                    <h1 class="mb-4">Get started <span> Quiz with <br> learnleaf</span> </h1>
+                    <p class="mb-4">Quizzes are designed for both beginners and experienced Coding professionals. No registration is required to start the test. Simply choose a test and begin your Coding journey!</p>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'fordeveloper_page' %}" >Start Quizzes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Practice End -->
+
+
+
+    <!-- Footer Start -->
+        <div class="container" style="margin-top:120px">
+          <footer class="py-5">
+            <div class="row" style="margin-left:150px">
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2" ><a href="{% url 'topicPY_page' %}" class="nav-link p-0 text-body-secondary " >Python</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'topicjava_page' %}" class="nav-link p-0 text-body-secondary ">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'topicC_page' %}" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'topicds_page' %}" class="nav-link p-0 text-body-secondary ">Data Structure</a></li>
+
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>COURSE</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="{% url 'topiclinux_page' %}" class="nav-link p-0 text-body-secondary">Linux Shell</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'topicfp_page' %}" class="nav-link p-0 text-body-secondary">Functional Programming</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'topicsql' %}" class="nav-link p-0 text-body-secondary">SQL</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'topicCpro_page' %}" class="nav-link p-0 text-body-secondary">C</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>PRODUCTS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="{% url 'interview2page' %}" class="nav-link p-0 text-body-secondary">Interview Questions</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'interview2page' %}" class="nav-link p-0 text-body-secondary">Coding Questions</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h6>FEATURES</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="{% url 'features_page' %}" class="nav-link p-0 text-body-secondary">Python</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'features_page' %}" class="nav-link p-0 text-body-secondary">Javascript</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'features_page' %}" class="nav-link p-0 text-body-secondary">C++</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'features_page' %}" class="nav-link p-0 text-body-secondary">JS</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-7" style="width:300px">
+                <h6>DEVELOPERS</h6>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="{% url 'fordeveloper_page' %}" class="nav-link p-0 text-body-secondary">Python Quiz</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'fordeveloper_page' %}" class="nav-link p-0 text-body-secondary">Js Quiz</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'fordeveloper_page' %}" class="nav-link p-0 text-body-secondary">SQL Quiz</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'fordeveloper_page' %}" class="nav-link p-0 text-body-secondary">C++ Quiz</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'fordeveloper_page' %}" class="nav-link p-0 text-body-secondary">Django</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2024 Company, learnleaf All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+<!--    Footer End-->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'load/lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'load/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'load/lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'load/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'load/js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+  {% for i in messages %}
+    {% if i.tags == 'warning' %}
+      <script>
+        swal('{{i}}','','warning')
+      </script>
+    {% elif i.tags == 'error' %}
+      <script>
+        swal('{{i}}','','error')
+      </script>
+    {% elif i.tags == 'info' %}
+      <script>
+        swal('{{i}}','','info')
+      </script>
+    {% else %}
+      <script>
+        swal('{{i}}','','success')
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+
+</body>
+
+</html>
+
+<style>
+    span{
+        color: rgb(97, 203, 238);
+    }
+    .btn1{
+        border-radius: 5px;
+        background:#0cc6f0;
+        border: 3px solid blue;
+        color:beige;
+        font-weight: 600;
+        font-size:18px;
+    }
+
+</style>

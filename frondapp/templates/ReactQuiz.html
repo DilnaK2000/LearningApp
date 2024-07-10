@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReactQuiz</title>
+
+</head>
+<body>
+
+
+     <div class="app">
+            <h1>React Quiz</h1>
+            <div class="quiz">
+                <h2 id="question">Question goes here</h2>
+                <div id="answer_button">
+
+                    <button class="btn"> Answer 1</button>
+                    <button class="btn"> Answer 2</button>
+                    <button class="btn"> Answer 3</button>
+                    <button class="btn"> Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+
+     <div >
+         <a href="{% url 'fordeveloper_page' %}"><button style="width:150px;height:40px;margin-top:40px;margin-left:1005px;border-radius: 10px; background: none;
+            font-size: 18px;color: #033256; font-weight: 600;" type="button" class=" btn-outline-info">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+             Back to Skill
+         </button></a>
+     </div>
+
+
+
+
+<script>
+    const questions = [
+    {
+        questions:"What is the correct command to create a new React project?",
+        answers:[
+            { text : "npm create-react-app myReactApp" , correct: false},
+            { text : "npm create-react-app" , correct: true},
+            { text : "npx create-react-app myReactApp" , correct: false},
+            { text : "npx create-react-app" , correct: false},
+        ]
+    },
+    {
+        questions:"What does myReactApp refer to in the following command?  npx create-react-app myReactApp",
+        answers:[
+            { text : "The name you want to use for the new App" , correct: true},
+            { text : "The refernce to an existing app" , correct: false},
+            { text : "The type of app to create", correct: false},
+            { text : "The directory to create the new app in" , correct: false},
+        ]
+
+    },
+    {
+        questions:"What command is used to start the React local development server?",
+        answers:[
+            { text : "npm start" , correct: true},
+            { text : "npm build" , correct: false},
+            { text : "npm serve" , correct: false},
+            { text : "npm run dev" , correct: false},
+        ]
+
+    },
+    {
+        questions:"What is the default local host port that a React development server uses?",
+        answers:[
+            { text : "Port 8080 "  , correct: false},
+            { text : "Port 3000 "  , correct: true},
+            { text : "Port 5000 "  , correct: false},
+            { text : "Port 3500 "  , correct: false},
+        ]
+
+    },
+    {
+        questions:"What is the children prop?",
+        answers:[
+            { text : " A property that lets you nest components in other components"  , correct: true},
+            { text : " A property that lets you pass data to child components"  , correct: false},
+            { text : " A property that adds child values to state"  , correct: false},
+            { text : " A property that lets you set an object as a property"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which keyword creates a constant in JavaScript?",
+        answers:[
+            { text : " let"  , correct: false},
+            { text : "var"  , correct: false},
+            { text : "constant"  , correct: false},
+            { text : "'const'"  , correct: true},
+        ]
+
+    },
+    {
+        questions:"A copy of the 'real' DOM that is kept in memory is called what?",
+        answers:[
+            { text : "Virtual DOM "  , correct: true},
+            { text : "DOM"  , correct: false},
+            { text : "Shadow DOM"  , correct: false},
+            { text : "React DOM"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which operator can be used to conditionally render a React component?",
+        answers:[
+            { text : "::"  , correct: false},
+            { text : "&&"  , correct: false},
+            { text : "??"  , correct: true},
+            { text : "||"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"When rendering a list using the JavaScript map() method, what is required for each element rendered?",
+        answers:[
+            { text : "id"  , correct: false},
+            { text : "key"  , correct: false},
+            { text : "data"  , correct: false},
+            { text : "index"  , correct: true},
+        ]
+
+    },
+    {
+        questions:"What tool does React use to compile JSX?",
+        answers:[
+            { text : "Babel"  , correct: true},
+            { text : " React Router"  , correct: false},
+            { text : " ReactDOM"  , correct: false},
+            { text : " JSX Compiler"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"How can you optimize performance for a function component that always renders the same way?",
+        answers:[
+            { text : " Wrap it in the React.memo higher-order component."  , correct: false},
+            { text : " Use the useMemo Hook."  , correct: false},
+            { text : " Use the useReducer Hook."  , correct: false},
+            { text : " Use the should ComponentUpdate lifecycle method."  , correct: true},
+        ]
+
+    },
+    {
+        questions:"What is a common use case for ref?",
+        answers:[
+            { text : "To bind the function"  , correct: false},
+            { text : "To directly access to DOM node"  , correct: true},
+            { text : "To refer to a function"  , correct: false},
+            { text : "To refer to another javascript file"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"What is the correct syntax to import a Component from React?",
+        answers:[
+            { text : "import React.Component from 'react';"  , correct: false},
+            { text : "import  Component  from 'react';"  , correct: false},
+            { text : "import { Component } from 'react'"  , correct: true},
+            { text : "import [Component ]  from 'react';"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which of the following is a way to handle data in React.js ?",
+        answers:[
+            { text : "State & Props"  , correct: true},
+            { text : "Services & Components"  , correct: false},
+            { text : "State & Services"  , correct: false},
+            { text : "State & Component"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which of the following is must for the API in React.js ?",
+        answers:[
+            { text : "SetinitialComponent" , correct: false},
+            { text : "render" , correct: false},
+            { text : "renderComponent"  , correct: true},
+            { text : "All of the above"   , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which of the following is true regarding Babel ?",
+        answers:[
+            { text : "Compiler"  , correct: false},
+            { text : "Transpilar"  , correct: false},
+            { text : "Both of the above"  , correct: true},
+            { text : "None of the above"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"In React.js, how we can pass the data from one component to another in React.js ?",
+        answers:[
+            { text : "SetState"  , correct: false},
+            { text : "Render with arguments"  , correct: false},
+            { text : "PropTypes"  , correct: false},
+            { text : "Props"  , correct: true},
+        ]
+
+    },
+    {
+        questions:"Which of the following function is true about changing the state in React.js ?",
+        answers:[
+            { text : "this.setState"  , correct: true},
+            { text : "this.State{}"  , correct: false},
+            { text : "this.setChangeState"  , correct: false},
+            { text : "All of the above"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which of the following method is true about referring parent class in React.js ?",
+        answers:[
+            { text : "self()"  , correct: false},
+            { text : "inherits()"  , correct: false},
+            { text : "super()"  , correct: true},
+            { text : "this()"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which of the following is used to render components in web pages ?",
+        answers:[
+            { text : "DOM_render()"  , correct: false},
+            { text : "ReactDOM_render()"  , correct: false},
+            { text : "render()"  , correct: true},
+            { text : "transfer()"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which function in React.js is invoked before a component gets its props reassigned ?",
+        answers:[
+            { text : "componentWillStopProps()"  , correct: false},
+            { text : "componentWillControlProps()"  , correct: false},
+            { text : "componentWillRecieveProps()"  , correct: true},
+            { text : "componentRecieveProps()"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which of the following is true about key props ?",
+        answers:[
+            { text : "'Key' prop is a way to identify the newly added element"  , correct: true},
+            { text : "'Key' props are used to look beauty"  , correct: false},
+            { text : "It is one type of attribute of HTML"  , correct: false},
+            { text : "It is not used in the array"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"What is the best definition of React.js ?",
+        answers:[
+            { text : "Server-side Framework"  , correct: false},
+            { text : "User-interface framework"  , correct: false},
+            { text : "A Library for building interaction interfaces"  , correct: true},
+            { text : "None of These"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"Which below function in React.js is used to get the DOM node when the component is rendered ?",
+        answers:[
+            { text : "renderDOM()"  , correct: false},
+            { text : "findDOMNode()"  , correct: true},
+            { text : "getDOMNode()"  , correct: false},
+            { text : "componentAtNode()"  , correct: false},
+        ]
+
+    },
+    {
+        questions:"In React.js which one of the following is used to create a class for Inheritance ?",
+        answers:[
+            { text : "Extends"  , correct: true},
+            { text : "Create"  , correct: false},
+            { text : "inherits"  , correct: false},
+            { text : "Delete"  , correct: false},
+        ]
+
+    }
+];
+
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("answer_button");
+const nextbutton = document.getElementById("next-btn");
+
+let currectquestionindex = 0;
+let score = 0;
+
+function startQuiz(){
+    currectquestionindex = 0;
+    score = 0;
+    nextbutton.innerHTML = "Next";
+    showQuestion();
+
+}
+
+function showQuestion(){
+    resetState();
+    let currectquestion = questions[currectquestionindex];
+    let questionNo = currectquestionindex + 1;
+    questionElement.innerHTML = questionNo + ". " + currectquestion.questions;
+
+
+    currectquestion.answers.forEach(answers =>{
+        const button = document.createElement("button")
+        button.innerHTML=answers.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button)
+        if(answers.correct){
+            button.dataset.correct = answers.correct;
+        }
+        button.addEventListener("click",selectAnswer)
+    });
+}
+
+function resetState(){
+    nextbutton.style.display = "none";
+    while(answerButton.firstChild){
+        answerButton.removeChild(answerButton.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectbtn = e.target;
+    const iscorrect = selectbtn.dataset.correct == "true";
+    if(iscorrect){
+        selectbtn.classList.add("correct");
+        score++;
+    }else{
+        selectbtn.classList.add("incorrect");
+    }
+    Array.from(answerButton.children).forEach(button => {
+        if(button.dataset.correct == "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextbutton.style.display = "block";
+}
+function showscore(){
+    resetState();
+    questionElement.innerHTML = `you score ${score} out of ${questions.length}!`;
+    nextbutton.innerHTML  = "Play Again";
+    nextbutton.style.display = "block"
+}
+
+function handlenextbtn(){
+    currectquestionindex++;
+    if(currectquestionindex < questions.length){
+        showQuestion();
+    }else{
+        showscore();
+
+    }
+}
+
+nextbutton.addEventListener("click",()=>{
+    if(currectquestionindex < questions.length){
+        handlenextbtn();
+
+    }else{
+        startQuiz();
+    }
+})
+
+startQuiz();
+
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+  {% for i in messages %}
+    {% if i.tags == 'warning' %}
+      <script>
+        swal('{{i}}','','warning')
+      </script>
+    {% elif i.tags == 'error' %}
+      <script>
+        swal('{{i}}','','error')
+      </script>
+    {% elif i.tags == 'info' %}
+      <script>
+        swal('{{i}}','','info')
+      </script>
+    {% else %}
+      <script>
+        swal('{{i}}','','success')
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+
+</body>
+</html>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: url({% static 'load/img/quiz6.jpg' %});
+    background-size: cover;
+    background-position: center;
+}
+.app{
+    background: none;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.app h1{
+    font-size: 50px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+
+}
+.quiz h2{
+    font-size: 30px;
+    color: #001e4d;
+    font-weight: 600px;
+}
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}
+</style>
